@@ -17,7 +17,7 @@
 #
 # $v0 is for row / $v1 is for column
 
-# test 0 For the 16X16 frame size and 4X4 window size
+# test 0 For the 4X4 frame size and 2X2 window size
 # The result should be 12, 12
 asize0:  .word    4,  4,  2, 2    #i, j, k, l
 frame0:  .word    0,  0,  1,  2, 
