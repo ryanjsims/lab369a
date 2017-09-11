@@ -2,7 +2,8 @@
 # Max Score: 30 points
 #
 # Students: 
-#
+#		 	Dennis Hardy 49%
+#			Ryan Sims 51%
 # minimum.s 
 # Finds the index of the smallest element in an integer array
 # V[], which contains n items.  
