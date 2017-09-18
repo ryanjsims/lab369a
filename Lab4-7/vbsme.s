@@ -789,11 +789,13 @@ loop:
 		#awindow: located in $a2
 
 		lw		$t4, 0($a0)		#load length
-		addi	$t1, $t4, -1	#length - 1
+		lw      $t6, 8($a0)		#window length
+		sub 	$t1, $t4, $t6
 		sll		$t1, $t1, 2		#4 * (length - 1) = maxc
 
 		lw		$t5, 4($a0)		#load height
-		addi	$t3, $t5, -1	#height - 1
+		lw		$t6, 12($a0)
+		sub		$t3, $t5, $t6  
 		sll		$t3, $t3, 2		#4 * (height - 1) = maxr
 		
 		add		$s0, $0, $0		#col = 0
