@@ -814,8 +814,8 @@ right:
 		lw		$ra, 0($sp)
 		addi	$sp, $sp, 4
 		addi	$s0, $s0, 4		#c += 4
-		slt		$t7, $s0, $t1	#c < maxc
-		bne		$t7, $0, right  #if(c == maxc) break;
+		slt		$t6, $s0, $t1	#c < maxc
+		bne		$t6, $0, right  #if(c == maxc) break;
 
 		addi	$t2, $t2, 4		#minr += 4
 
@@ -830,8 +830,8 @@ down:	mult	$s1, $t4		#row * len
 		lw		$ra, 0($sp)
 		addi	$sp, $sp, 4
 		addi	$s1, $s1, 4		#row += 4
-		slt		$t7, $s1, $t3	#row < maxr
-		bne		$t7, $0, down	#if(r == maxr) break;
+		slt		$t6, $s1, $t3	#row < maxr
+		bne		$t6, $0, down	#if(r == maxr) break;
 
 		addi	$t1, $t1, -4	#maxc -= 4;
 
@@ -846,8 +846,8 @@ left:	mult	$s1, $t4		#row * len
 		lw		$ra, 0($sp)
 		addi	$sp, $sp, 4
 		addi	$s0, $s0, -4
-		slt		$t7, $t0, $s0	#minc < c
-		bne		$t7, $0, left	#if(minc < c) break;
+		slt		$t6, $t0, $s0	#minc < c
+		bne		$t6, $0, left	#if(minc < c) break;
 
 		addi	$t3, $t3, -4	#maxr -= 4;
 
@@ -862,15 +862,15 @@ up:		mult	$s1, $t4		#row * len
 		lw		$ra, 0($sp)
 		addi	$sp, $sp, 4
 		addi	$s1, $s1, -4
-		slt		$t7, $t2, $s1	#minr < r
-		bne		$t7, $0, up		#if(minr < r) break;
+		slt		$t6, $t2, $s1	#minr < r
+		bne		$t6, $0, up		#if(minr < r) break;
 
 		addi	$t0, $t0, 4
-		slt		$t7, $t0, $t1	#loop if minc < maxc
-		bne     $t7, $0, spiral
+		slt		$t6, $t0, $t1	#loop if minc < maxc
+		bne     $t6, $0, spiral
 		
-		slt		$t7, $t2, $t3	#loop if minr < maxr
-		bne		$t7, $0, spiral	
+		slt		$t6, $t2, $t3	#loop if minr < maxr
+		bne		$t6, $0, spiral	
 
 		jr		$ra				#return
 		

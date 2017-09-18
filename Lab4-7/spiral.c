@@ -48,7 +48,7 @@ int SAD(int* size, int* frameChunk, int* window) { //Frame chunk is address of t
 			diff = valFrame - valWindow;
 			if (diff < 0)			//Absolute value
 				diff = diff * -1;	//This can be done with either multi or two's complement
-			sum = sum + tempSum;
+			sum = sum + diff;
 		}
 	}
 	return sum;
