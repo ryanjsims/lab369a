@@ -53,26 +53,26 @@ window1: .word    0, 1, 2, 3,
 # test 2 For the 16X16 frame size and a 4X8 window size
 # The result should be 0, 4
 asize2:  .word    16, 16, 4, 8    #i, j, k, l
-frame2:  .word    7, 5, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-         .word    7, 5, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-         .word    7, 5, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-         .word    7, 5, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-         .word    0, 4, 2, 3, 4, 5, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60,
-         .word    0, 5, 3, 4, 5, 6, 30, 35, 40, 45, 0, 0, 0, 0, 70,  75,
-         .word    0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 0, 0, 0, 0, 84, 90,
-         .word    0, 4, 8, 8, 8, 8, 42, 49, 56, 63, 0, 0, 0, 0, 98, 105,
-         .word    0, 1, 8, 8, 8, 8, 48, 56, 64, 72, 0, 0, 0, 0, 112, 120,
-         .word    0, 1, 8, 8, 8, 8, 54, 63, 72, 81, 90, 99, 108, 117, 126, 135,
-         .word    0, 10, 8, 8, 8, 8, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150,
-         .word    0, 11, 22, 33, 44, 55, 66, 77, 88, 99, 110, 121, 132, 143, 154, 165,
-         .word    9, 9, 9, 9, 48, 60, 72, 84, 96, 108, 120, 132, 0, 1, 2, 3,
-         .word    9, 9, 9, 9, 52, 65, 78, 91, 104, 114, 130, 143, 1, 2, 3, 4,
-         .word    9, 9, 9, 9, 56, 70, 84, 98, 112, 126, 140, 154, 2, 3, 4, 5,
-         .word    9, 9, 9, 9, 60, 75, 90, 105, 120, 135, 150, 165, 3, 4, 5, 6
-window2: .word    0, 0, 0, 0, 0, 0, 0, 0,
-         .word    0, 0, 0, 0, 0, 0, 0, 0,
-         .word    0, 0, 0, 0, 0, 0, 0, 0,
-         .word    0, 0, 0, 0, 0, 0, 0, 0
+frame2:  .word    7,  5,  8,  8,  0,  0,  0,   0,   0,   0,   0,   0,   1,   0,   0,   0,
+         .word    7,  5,  8,  8,  0,  0,  0,   0,   0,   0,   0,   0,   1,   0,   0,   0,
+         .word    7,  5,  8,  8,  0,  0,  0,   0,   0,   0,   0,   0,   1,   0,   0,   0,
+         .word    7,  5,  8,  8,  0,  0,  0,   0,   0,   0,   0,   0,   1,   0,   0,   0,
+         .word    0,  4,  2,  3,  4,  5, 24,  28,  32,  36,  40,  44,  48,  52,  56,  60,
+         .word    0,  5,  3,  4,  5,  6, 30,  35,  40,  45,   0,   0,   0,   0,  70,  75,
+         .word    0,  6, 12, 18, 24, 30, 36,  42,  48,  54,   0,   0,   0,   0,  84,  90,
+         .word    0,  4,  8,  8,  8,  8, 42,  49,  56,  63,   0,   0,   0,   0,  98, 105,
+         .word    0,  1,  8,  8,  8,  8, 48,  56,  64,  72,   0,   0,   0,   0, 112, 120,
+         .word    0,  1,  8,  8,  8,  8, 54,  63,  72,  81,  90,  99, 108, 117, 126, 135,
+         .word    0, 10,  8,  8,  8,  8, 60,  70,  80,  90, 100, 110, 120, 130, 140, 150,
+         .word    0, 11, 22, 33, 44, 55, 66,  77,  88,  99, 110, 121, 132, 143, 154, 165,
+         .word    9,  9,  9,  9, 48, 60, 72,  84,  96, 108, 120, 132,   0,   1,   2,   3,
+         .word    9,  9,  9,  9, 52, 65, 78,  91, 104, 114, 130, 143,   1,   2,   3,   4,
+         .word    9,  9,  9,  9, 56, 70, 84,  98, 112, 126, 140, 154,   2,   3,   4,   5,
+         .word    9,  9,  9,  9, 60, 75, 90, 105, 120, 135, 150, 165,   3,   4,   5,   6
+window2: .word    0,  0,  0,  0,  0,  0,  0,   0,
+         .word    0,  0,  0,  0,  0,  0,  0,   0,
+         .word    0,  0,  0,  0,  0,  0,  0,   0,
+         .word    0,  0,  0,  0,  0,  0,  0,   0
 
 # test 3 For the 16X16 frame size and a 8X4 window size
 # The result should be 3, 2
@@ -498,7 +498,7 @@ main:
     la      $a2, window1    # 3rd parameter: address of window1[0]
 
     jal     vbsme           # call function
-    #jal     print_result    # print results to console
+    jal     print_result    # print results to console
 
     ############################################################
     # End of test 1
@@ -506,12 +506,12 @@ main:
 
     # # Start test 2
     # ############################################################
-    # la      $a0, asize2     # 1st parameter: address of asize2[0]
-    # la      $a1, frame2     # 2nd parameter: address of frame2[0]
-    # la      $a2, window2    # 3rd parameter: address of window2[0]
-    #
-    # jal     vbsme           # call function
-    # jal     print_result    # print results to console
+    la      $a0, asize2     # 1st parameter: address of asize2[0]
+    la      $a1, frame2     # 2nd parameter: address of frame2[0]
+    la      $a2, window2    # 3rd parameter: address of window2[0]
+    
+	jal     vbsme           # call function
+    jal     print_result    # print results to console
     # ############################################################
     # # End of test 2
     #
@@ -800,6 +800,10 @@ loop:
 		
 		add		$s0, $0, $0		#col = 0
 		add		$s1, $0, $0		#row = 0
+		addiu	$t5, $0, 0xffffffff	#Min SAD set to arbitrarily high unsigned value
+		addi	$sp, $sp, -8	#Make space for min SAD r and c on stack
+		sw		$0, 0($sp)		#Initialize min SAD c to 0
+		sw		$0, 4($sp)		#Initialize min SAD r to 0
 
 spiral:
 right:	
@@ -807,14 +811,25 @@ right:
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1	#get address of val in aframe
-		addi	$sp, $sp, -8
+
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
 		sw		$ra, 0($sp)
-		sw		$a0, 4($sp)
+
 		jal		SAD
-		jal		printVal
+
+		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		lw		$a0, 4($sp)
-		addi	$sp, $sp, 8
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextRight
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextRight:
+		
 		addi	$s0, $s0, 4		#c += 4
 		slt		$t6, $s0, $t1	#c < maxc
 		bne		$t6, $0, right  #if(c == maxc) break;
@@ -825,14 +840,25 @@ down:	mult	$s1, $t4		#row * len
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1
-		addi	$sp, $sp, -8
+		
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
 		sw		$ra, 0($sp)
-		sw		$a0, 4($sp)
+
 		jal		SAD
-		jal		printVal
+
+		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		lw		$a0, 4($sp)
-		addi	$sp, $sp, 8
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextDown
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextDown:
+		
 		addi	$s1, $s1, 4		#row += 4
 		slt		$t6, $s1, $t3	#row < maxr
 		bne		$t6, $0, down	#if(r == maxr) break;
@@ -843,14 +869,25 @@ left:	mult	$s1, $t4		#row * len
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1
-		addi	$sp, $sp, -8
+		
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
 		sw		$ra, 0($sp)
-		sw		$a0, 4($sp)
+
 		jal		SAD
-		jal		printVal
+
+		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		lw		$a0, 4($sp)
-		addi	$sp, $sp, 8
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextLeft
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextLeft:
+				
 		addi	$s0, $s0, -4
 		slt		$t6, $t0, $s0	#minc < c
 		bne		$t6, $0, left	#if(minc < c) break;
@@ -861,14 +898,25 @@ up:		mult	$s1, $t4		#row * len
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1
-		addi	$sp, $sp, -8
+		
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
 		sw		$ra, 0($sp)
-		sw		$a0, 4($sp)
+
 		jal		SAD
-		jal		printVal
+
+		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		lw		$a0, 4($sp)
-		addi	$sp, $sp, 8
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextUp
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextUp:
+		
 		addi	$s1, $s1, -4
 		slt		$t6, $t2, $s1	#minr < r
 		bne		$t6, $0, up		#if(minr < r) break;
@@ -879,6 +927,12 @@ up:		mult	$s1, $t4		#row * len
 		
 		slt		$t6, $t2, $t3	#loop if minr < maxr
 		bne		$t6, $0, spiral	
+
+		lw		$v0, 0($sp)		#Done searching, load min SAD x, y from stack to v0 and v1
+		lw		$v1, 4($sp)
+		addi	$sp, $sp, 8		#restore the stack
+		srl		$v0, $v0, 2		#x and y vals are 4 * their real values, so divide them by 4
+		srl		$v1, $v1, 2
 
 		jr		$ra				#return
 		
