@@ -29,22 +29,22 @@ window0: .word    1,  2,
 # test 1 For the 16X16 frame size and 4X4 window size
 # The result should be 12, 12
 asize1:  .word    16, 16, 4, 4    #i, j, k, l
-frame1:  .word    0, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-         .word    1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-         .word    2, 3, 32, 1, 2, 3, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30,
-         .word    3, 4, 1, 2, 3, 4, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45,
-         .word    0, 4, 2, 3, 4, 5, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60,
-         .word    0, 5, 3, 4, 5, 6, 30, 35, 40, 45, 50, 55, 60, 65, 70,  75,
-         .word    0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90,
-         .word    0, 4, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98, 105,
-         .word    0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120,
-         .word    0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99, 108, 117, 126, 135,
-         .word    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150,
-         .word    0, 11, 22, 33, 44, 55, 66, 77, 88, 99, 110, 121, 132, 143, 154, 165,
-         .word    0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 0, 1, 2, 3,
-         .word    0, 13, 26, 39, 52, 65, 78, 91, 104, 114, 130, 143, 1, 2, 3, 4,
-         .word    0, 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 2, 3, 4, 5,
-         .word    0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 3, 4, 5, 6
+frame1:  .word    0,  1,  2,  3,  0,  0,  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+         .word    1,  2,  3,  4,  4,  5,  6,   7,   8,   9,  10,  11,  12,  13,  14,  15,
+         .word    2,  3, 32,  1,  2,  3, 12,  14,  16,  18,  20,  22,  24,  26,  28,  30,
+         .word    3,  4,  1,  2,  3,  4, 18,  21,  24,  27,  30,  33,  36,  39,  42,  45,
+         .word    0,  4,  2,  3,  4,  5, 24,  28,  32,  36,  40,  44,  48,  52,  56,  60,
+         .word    0,  5,  3,  4,  5,  6, 30,  35,  40,  45,  50,  55,  60,  65,  70,  75,
+         .word    0,  6, 12, 18, 24, 30, 36,  42,  48,  54,  60,  66,  72,  78,  84,  90,
+         .word    0,  4, 14, 21, 28, 35, 42,  49,  56,  63,  70,  77,  84,  91,  98, 105,
+         .word    0,  8, 16, 24, 32, 40, 48,  56,  64,  72,  80,  88,  96, 104, 112, 120,
+         .word    0,  9, 18, 27, 36, 45, 54,  63,  72,  81,  90,  99, 108, 117, 126, 135,
+         .word    0, 10, 20, 30, 40, 50, 60,  70,  80,  90, 100, 110, 120, 130, 140, 150,
+         .word    0, 11, 22, 33, 44, 55, 66,  77,  88,  99, 110, 121, 132, 143, 154, 165,
+         .word    0, 12, 24, 36, 48, 60, 72,  84,  96, 108, 120, 132,   0,   1,   2,   3,
+         .word    0, 13, 26, 39, 52, 65, 78,  91, 104, 114, 130, 143,   1,   2,   3,   4,
+         .word    0, 14, 28, 42, 56, 70, 84,  98, 112, 126, 140, 154,   2,   3,   4,   5,
+         .word    0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165,   3,   4,   5,   6
 window1: .word    0, 1, 2, 3,
          .word    1, 2, 3, 4,
          .word    2, 3, 4, 5,
@@ -807,12 +807,14 @@ right:
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1	#get address of val in aframe
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 		jal		SAD
 		jal		printVal
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 		addi	$s0, $s0, 4		#c += 4
 		slt		$t6, $s0, $t1	#c < maxc
 		bne		$t6, $0, right  #if(c == maxc) break;
@@ -823,12 +825,14 @@ down:	mult	$s1, $t4		#row * len
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 		jal		SAD
 		jal		printVal
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 		addi	$s1, $s1, 4		#row += 4
 		slt		$t6, $s1, $t3	#row < maxr
 		bne		$t6, $0, down	#if(r == maxr) break;
@@ -839,12 +843,14 @@ left:	mult	$s1, $t4		#row * len
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 		jal		SAD
 		jal		printVal
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 		addi	$s0, $s0, -4
 		slt		$t6, $t0, $s0	#minc < c
 		bne		$t6, $0, left	#if(minc < c) break;
@@ -855,12 +861,14 @@ up:		mult	$s1, $t4		#row * len
 		mflo    $s2
 		add		$s2, $s2, $s0	#address = row * len + col
 		add		$s2, $s2, $a1
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 		jal		SAD
 		jal		printVal
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 		addi	$s1, $s1, -4
 		slt		$t6, $t2, $s1	#minr < r
 		bne		$t6, $0, up		#if(minr < r) break;
@@ -896,22 +904,28 @@ SAD:
 		addi $s7, $a2, 0 #s7 = address of first element in window
 		add $t8, $0, $0  #t8 = sum
 	
-		sll $s3, $s3, 2 #s3 = 4 * window length
-		addi $t6, $s3, -4
-		mult $t6, $s4
-		mflo $s5       #s5 = very last adress to be used
+		sll $s3, $s3, 2		#s3 = 4 * window length
+		addi $t6, $s3, 0	#t6 = 4 * (window length)
+		mult $t6, $s4		
+		mflo $s5			#s5 = 4 * (window length) * (window height) 
+							#     Total number of bytes in window
+		addi $s5, $s5, -4	#s5 = 4 * (window length) * (window height) - 4
+							#	  offset from window[0] to window[lengthWin - 1]
+		add $s5, $s5, $s7	#s5 = baseWinAddr + offset
+							#     very last address to be used
 		sll $s4, $t4, 2
 		sub $s4, $s4, $s3
 	
-newRow:
+
 		
 		add $t9, $s3, $s7 #s3 = addrress of last element in row bieng checked
-		
+		addi $t9, $t9, -4
+newRow:		
 		lw $t6, 0($s6)
 		lw $t7, 0($s7)
 		sub $t6, $t6, $t7
 		slt $t7, $t6, $0
-		bne $t7, $0, Sum
+		beq $t7, $0, Sum
 		sub $t6, $0, $t6
 Sum:
 		add $t8, $t8, $t6
@@ -919,7 +933,6 @@ Sum:
 		bne $s7, $t9, nextPixel
 		add $s6, $s6, $s4 #move down a row
 		add $t9, $s3, $s7 #s3 = addrress of last element in row bieng checked
-		addi $t9, $t9, 4
 		bne $s7, $s5, nextPixel
 		addi $v0, $t8, 0  #return sum
 		jr $ra
