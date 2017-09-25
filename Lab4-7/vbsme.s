@@ -491,91 +491,91 @@ main:
     addi    $sp, $sp, -4    # Make space on stack
     sw      $ra, 0($sp)     # Save return address
 
-   #  # Start test 1
-   #  ############################################################
-   #  la      $a0, asize1     # 1st parameter: address of asize1[0]
-   #  la      $a1, frame1     # 2nd parameter: address of frame1[0]
-   #  la      $a2, window1    # 3rd parameter: address of window1[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-    #
-   #  ############################################################
-   #  # End of test 1
-    #
-    #
-   #  # # Start test 2
-   #  # ############################################################
-   #  la      $a0, asize2     # 1st parameter: address of asize2[0]
-   #  la      $a1, frame2     # 2nd parameter: address of frame2[0]
-   #  la      $a2, window2    # 3rd parameter: address of window2[0]
-    #
-	#  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 2
-    #
-    #
-   #  # Start test 3
-   #  ############################################################
-   #  la      $a0, asize3     # 1st parameter: address of asize3[0]
-   #  la      $a1, frame3     # 2nd parameter: address of frame3[0]
-   #  la      $a2, window3    # 3rd parameter: address of window3[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 3
-    #
-    #
-   #  # Start test 4
-   #  ############################################################
-   #  la      $a0, asize4     # 1st parameter: address of asize4[0]
-   #  la      $a1, frame4     # 2nd parameter: address of frame4[0]
-   #  la      $a2, window4    # 3rd parameter: address of window4[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 4
-    #
-    #
-   #  # Start test 5
-   #  ############################################################
-   #  la      $a0, asize5     # 1st parameter: address of asize5[0]
-   #  la      $a1, frame5     # 2nd parameter: address of frame5[0]
-   #  la      $a2, window5    # 3rd parameter: address of window5[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 5
-    #
-    #
-   #  # Start test 6
-   #  ############################################################
-   #  la      $a0, asize6     # 1st parameter: address of asize6[0]
-   #  la      $a1, frame6     # 2nd parameter: address of frame6[0]
-   #  la      $a2, window6    # 3rd parameter: address of window6[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 6
-    #
-    #
-   #  # Start test 7
-   #  ############################################################
-   #  la      $a0, asize7     # 1st parameter: address of asize7[0]
-   #  la      $a1, frame7     # 2nd parameter: address of frame7[0]
-   #  la      $a2, window7    # 3rd parameter: address of window7[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 7
-    #
-    #
+    # Start test 1
+    ############################################################
+    la      $a0, asize1     # 1st parameter: address of asize1[0]
+    la      $a1, frame1     # 2nd parameter: address of frame1[0]
+    la      $a2, window1    # 3rd parameter: address of window1[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+
+    ############################################################
+    # End of test 1
+
+
+    # # Start test 2
+    # ############################################################
+    la      $a0, asize2     # 1st parameter: address of asize2[0]
+    la      $a1, frame2     # 2nd parameter: address of frame2[0]
+    la      $a2, window2    # 3rd parameter: address of window2[0]
+
+	 jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 2
+
+
+    # Start test 3
+    ############################################################
+    la      $a0, asize3     # 1st parameter: address of asize3[0]
+    la      $a1, frame3     # 2nd parameter: address of frame3[0]
+    la      $a2, window3    # 3rd parameter: address of window3[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 3
+
+
+    # Start test 4
+    ############################################################
+    la      $a0, asize4     # 1st parameter: address of asize4[0]
+    la      $a1, frame4     # 2nd parameter: address of frame4[0]
+    la      $a2, window4    # 3rd parameter: address of window4[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 4
+
+
+    # Start test 5
+    ############################################################
+    la      $a0, asize5     # 1st parameter: address of asize5[0]
+    la      $a1, frame5     # 2nd parameter: address of frame5[0]
+    la      $a2, window5    # 3rd parameter: address of window5[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 5
+
+
+    # Start test 6
+    ############################################################
+    la      $a0, asize6     # 1st parameter: address of asize6[0]
+    la      $a1, frame6     # 2nd parameter: address of frame6[0]
+    la      $a2, window6    # 3rd parameter: address of window6[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 6
+
+
+    # Start test 7
+    ############################################################
+    la      $a0, asize7     # 1st parameter: address of asize7[0]
+    la      $a1, frame7     # 2nd parameter: address of frame7[0]
+    la      $a2, window7    # 3rd parameter: address of window7[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 7
+
+
     # Start test 8
     ############################################################
     la      $a0, asize8     # 1st parameter: address of asize8[0]
@@ -586,78 +586,78 @@ main:
     jal     print_result    # print results to console
     ############################################################
     # End of test 8
-    # 
-    #
-   #  # Start test 9
-   #  ############################################################
-   #  la      $a0, asize9     # 1st parameter: address of asize9[0]
-   #  la      $a1, frame9     # 2nd parameter: address of frame9[0]
-   #  la      $a2, window9    # 3rd parameter: address of window9[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 9
-    #
-    #
-   #  # Start test 10
-   #  ############################################################
-   #  la      $a0, asize10        # 1st parameter: address of asize10[0]
-   #  la      $a1, frame10        # 2nd parameter: address of frame10[0]
-   #  la      $a2, window10       # 3rd parameter: address of window10[0]
-    #
-   #  jal     vbsme               # call function
-   #  jal     print_result        # print results to console
-   #  ############################################################
-   #  # End of test 10
-    #
-    #
-   #  # Start test 11
-   #  ############################################################
-   #  la      $a0, asize11     # 1st parameter: address of asize11[0]
-   #  la      $a1, frame11     # 2nd parameter: address of frame11[0]
-   #  la      $a2, window11    # 3rd parameter: address of window11[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 11
-    #
-    #
-   #  # Start test 12
-   #  ############################################################
-   #  la      $a0, asize12     # 1st parameter: address of asize12[0]
-   #  la      $a1, frame12     # 2nd parameter: address of frame12[0]
-   #  la      $a2, window12    # 3rd parameter: address of window12[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 12
-    #
-    #
-   #  # Start test 13
-   #  ############################################################
-   #  la      $a0, asize13     # 1st parameter: address of asize13[0]
-   #  la      $a1, frame13     # 2nd parameter: address of frame13[0]
-   #  la      $a2, window13    # 3rd parameter: address of window13[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 13
-    #
-    #
-   #  # Start test 14
-   #  ############################################################
-   #  la      $a0, asize14     # 1st parameter: address of asize14[0]
-   #  la      $a1, frame14     # 2nd parameter: address of frame14[0]
-   #  la      $a2, window14    # 3rd parameter: address of window14[0]
-    #
-   #  jal     vbsme           # call function
-   #  jal     print_result    # print results to console
-   #  ############################################################
-   #  # End of test 14
+
+
+    # Start test 9
+    ############################################################
+    la      $a0, asize9     # 1st parameter: address of asize9[0]
+    la      $a1, frame9     # 2nd parameter: address of frame9[0]
+    la      $a2, window9    # 3rd parameter: address of window9[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 9
+
+
+    # Start test 10
+    ############################################################
+    la      $a0, asize10        # 1st parameter: address of asize10[0]
+    la      $a1, frame10        # 2nd parameter: address of frame10[0]
+    la      $a2, window10       # 3rd parameter: address of window10[0]
+
+    jal     vbsme               # call function
+    jal     print_result        # print results to console
+    ############################################################
+    # End of test 10
+
+
+    # Start test 11
+    ############################################################
+    la      $a0, asize11     # 1st parameter: address of asize11[0]
+    la      $a1, frame11     # 2nd parameter: address of frame11[0]
+    la      $a2, window11    # 3rd parameter: address of window11[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 11
+
+
+    # Start test 12
+    ############################################################
+    la      $a0, asize12     # 1st parameter: address of asize12[0]
+    la      $a1, frame12     # 2nd parameter: address of frame12[0]
+    la      $a2, window12    # 3rd parameter: address of window12[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 12
+
+
+    # Start test 13
+    ############################################################
+    la      $a0, asize13     # 1st parameter: address of asize13[0]
+    la      $a1, frame13     # 2nd parameter: address of frame13[0]
+    la      $a2, window13    # 3rd parameter: address of window13[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 13
+
+
+    # Start test 14
+    ############################################################
+    la      $a0, asize14     # 1st parameter: address of asize14[0]
+    la      $a1, frame14     # 2nd parameter: address of frame14[0]
+    la      $a2, window14    # 3rd parameter: address of window14[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+    ############################################################
+    # End of test 14
 
     lw      $ra, 0($sp)         # Restore return address
     addi    $sp, $sp, 4         # Restore stack pointer
@@ -789,12 +789,12 @@ loop:
 		#awindow: located in $a2
 
 		lw		$t4, 0($a0)		#load length
-		lw      $t6, 8($a0)		#window length
+		lw      $t6, 12($a0)		#window length
 		sub 	$t1, $t4, $t6
 		sll		$t1, $t1, 2		#4 * (length - 1) = maxc
 
 		lw		$t5, 4($a0)		#load height
-		lw		$t6, 12($a0)
+		lw		$t6, 8($a0)
 		sub		$t3, $t5, $t6
 		sll		$t3, $t3, 2		#4 * (height - 1) = maxr
 
@@ -928,8 +928,8 @@ nextUp:
 		slt		$t6, $t2, $t3	#loop if minr < maxr
 		bne		$t6, $0, spiral
 
-		lw		$v0, 0($sp)		#Done searching, load min SAD x, y from stack to v0 and v1
-		lw		$v1, 4($sp)
+		lw		$v1, 0($sp)		#Done searching, load min SAD x, y from stack to v0 and v1
+		lw		$v0, 4($sp)
 		addi	$sp, $sp, 8		#restore the stack
 		srl		$v0, $v0, 2		#x and y vals are 4 * their real values, so divide them by 4
 		srl		$v1, $v1, 2
@@ -949,7 +949,7 @@ printVal:
 
 SAD:
 		lw $s3, 12($a0)  #$s3 = window length
-		lw $s4, 8($a0) #$s4 = window height
+		lw $s4,  8($a0) #$s4 = window height
 
 		#$s2 has adress of top left pixel to be checked
 		#$a2 has adress of top left of window
