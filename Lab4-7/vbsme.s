@@ -1,5 +1,5 @@
-#  Team Members:
-#  % Effort    :
+#  Team Members: Ryan Sims, Dennis Hardy
+#  % Effort    50%:50%
 #
 # ECE369A,
 #
