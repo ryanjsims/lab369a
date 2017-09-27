@@ -22,6 +22,7 @@ module RegisterFile_tb();
 
 	wire [31:0] ReadData1;
 	wire [31:0] ReadData2;
+	integer i;
 
 
 	RegisterFile u0(
@@ -43,6 +44,35 @@ module RegisterFile_tb();
 	initial begin
 	
     /* Please fill in the implementation here... */
+    RegWrite <= 1;
+    for(i = 0; i < 32; i = i + 1) begin
+        @(posedge Clk)
+        #5
+        WriteRegister <= i;
+        WriteData <= i;
+    end
+    RegWrite <= 0;
+    
+    @(posedge Clk)
+    #5
+    RegWrite <= 1;
+    ReadRegister1 <= 7;
+    ReadRegister2 <= 15;
+    WriteRegister <= 14;
+    WriteData <= 32'hcafed00d;
+    
+    @(posedge Clk)
+    #5
+    ReadRegister1 <= 10;
+    ReadRegister2 <= 14;
+    WriteRegister <= 22;
+    WriteData <= 32'hf00dca75;
+    
+    @(posedge Clk)
+    #5
+    RegWrite <= 0;
+    ReadRegister1 <= 22;
+    ReadRegister2 <= 14;
 	
 	end
 
