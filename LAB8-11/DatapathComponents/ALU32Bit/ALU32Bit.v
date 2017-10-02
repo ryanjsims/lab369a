@@ -34,30 +34,36 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module ALU32Bit(ALUControl, A, B, ALUResult, Zero);
+module ALU32Bit(ALUControl, A, B, ALUResult, ALUResultHI, Zero);
 
 	input [3:0] ALUControl; // control bits for ALU operation
 	input [31:0] A, B;	    // inputs
-
-	output reg [31:0] ALUResult;	// answer
+    reg [63:0] multResult;
+	output reg [31:0] ALUResult, ALUResultHI;	// answer(s)
 	output reg Zero;	    // Zero=1 if ALUResult == 0
 
     /* Please fill in the implementation here... */
+ 
     always@(*)begin
         case(ALUControl)
-            4'b0010: begin //Add
+            4'b0000: begin //Add
                 ALUResult <= A + B;  
-            end        
-            4'b0110: begin //sub
+            end
+            4'b0001: begin //sub
                 ALUResult <= A - B;
             end
-            4'b0000: begin //and
+            4'b0010: begin //
+                multResult = A * B;
+                ALUResult <= multResult[31:0];
+                ALUResultHI <= multResult[63:32];
+            end
+            4'b0110: begin //and
                 ALUResult <= A & B;
             end
-            4'b0001: begin //Or
+            4'b0111: begin //Or
                 ALUResult <= A | B;
             end
-            4'b0111: begin //SLT
+            4'b1110: begin //SLT
                 ALUResult <= A < B;
             end
         endcase

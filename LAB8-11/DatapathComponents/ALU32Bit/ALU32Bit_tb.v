@@ -27,12 +27,15 @@ module ALU32Bit_tb();
 	
     /* Please fill in the implementation here... */
 	#10
-	   ALUControl = 4'b0010;
+	   ALUControl = 4'b0000;
 	   A = 12;
 	   B = 16;
     #10
        A = 12;
        B = -12;
+    #10
+       A = 12;
+       B = 32'hfffffff4;
     #10
        ALUControl = 4'b0110;
        A = 55;
