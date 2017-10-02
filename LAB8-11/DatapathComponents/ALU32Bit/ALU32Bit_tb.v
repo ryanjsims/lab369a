@@ -26,7 +26,42 @@ module ALU32Bit_tb();
 	initial begin
 	
     /* Please fill in the implementation here... */
-	
+	#10
+	   ALUControl = 4'b0010;
+	   A = 12;
+	   B = 16;
+    #10
+       A = 12;
+       B = -12;
+    #10
+       ALUControl = 4'b0110;
+       A = 55;
+       B = 48;
+    #10
+       A = 6;
+       B = -45;
+    #10
+       ALUControl = 4'b0000;
+       A = 32'hffffffff;
+       B = 0;
+    #10
+       A = 32'hf0f0f0f0;
+       B = 32'hffff0000;
+    #10
+       ALUControl = 4'b0001;
+       A = 32'hffffffff;
+       B = 0;
+    #10
+       A = 32'hf0f0f0f0;
+       B = 32'hffff0000;
+    #10
+       ALUControl = 4'b0111;
+       A = 78;
+       B = 5;
+    #10
+       A = 4;
+       B = 25343;
+       
 	end
 
 endmodule
