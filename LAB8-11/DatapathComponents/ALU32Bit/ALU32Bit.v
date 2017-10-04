@@ -34,17 +34,17 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module ALU32Bit(ALUControl, A, B, ALUResult, ALUResultHI, Zero);
+module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero);
 
 	input [3:0] ALUControl; // control bits for ALU operation
-	input [31:0] A, B;	    // inputs
-    reg [63:0] multResult;
+	input [31:0] A, B, HI, LO;	    // inputs
+    reg [65:0] multResult;
 	output reg [31:0] ALUResult, ALUResultHI;	// answer(s)
 	output reg Zero;	    // Zero=1 if ALUResult == 0
 
     /* Please fill in the implementation here... */
- 
     always@(*)begin
+        ALUResultHI <= 32'd0;
         case(ALUControl)
             4'b0000: begin //Add
                 ALUResult <= A + B;  
@@ -52,8 +52,23 @@ module ALU32Bit(ALUControl, A, B, ALUResult, ALUResultHI, Zero);
             4'b0001: begin //sub
                 ALUResult <= A - B;
             end
-            4'b0010: begin //
+            4'b0010: begin //mult signed
                 multResult = A * B;
+                ALUResult <= multResult[31:0];
+                ALUResultHI <= multResult[63:32];
+            end
+            4'b0011: begin //mult unsigned
+                multResult = {0, A} * {0, B};
+                ALUResult <= multResult[31:0];
+                ALUResultHI <= multResult[63:32];
+            end
+            4'b0100: begin //madd
+                multResult = A * B + {HI, LO};
+                ALUResult <= multResult[31:0];
+                ALUResultHI <= multResult[63:32];
+            end
+            4'b0101: begin //msub
+                multResult = {HI, LO} - A * B;
                 ALUResult <= multResult[31:0];
                 ALUResultHI <= multResult[63:32];
             end
@@ -63,16 +78,31 @@ module ALU32Bit(ALUControl, A, B, ALUResult, ALUResultHI, Zero);
             4'b0111: begin //Or
                 ALUResult <= A | B;
             end
+            4'b1000: begin //xor
+                ALUResult <= A ^ B;
+            end
+            4'b1001: begin //nor
+                ALUResult <= ~(A | B);
+            end
+            4'b1010: begin //SLL
+                ALUResult <= A << B;
+            end
+            4'b1011: begin //SRL
+                ALUResult <= A >> B;
+            end
+            4'b1100: begin //SRA
+                ALUResult <= {{32{A[31]}}, A} >> B;
+            end
+            4'b1101: begin
+                ALUResult <= ({A, A} >> B);
+            end
             4'b1110: begin //SLT
-                ALUResult <= A < B;
+                ALUResult <= ($signed(A)) < ($signed(B));
             end
         endcase
-        if (ALUResult == 0) begin
-            Zero <= 1;
-        end
-        else begin
-            Zero <= 0;
-        end 
+        Zero <= ALUResult == 0;
+        
+        
     end
 endmodule
 
