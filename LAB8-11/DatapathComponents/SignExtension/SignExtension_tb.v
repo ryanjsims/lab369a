@@ -11,13 +11,14 @@ module SignExtension_tb();
 
     reg	[15:0] in;
     wire [31:0]	out;
+    reg Z;
 
     SignExtension u0(
-        .in(in), .out(out)
+        .in(in), .out(out), .Z(Z)
     );
         
     initial begin
-
+            Z <= 0;
 			#100 in <= 16'h0004;
 			#20 $display("in=%h, out=%h", in, out);
 
