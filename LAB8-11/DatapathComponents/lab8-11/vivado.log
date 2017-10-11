@@ -2,10 +2,10 @@
 # Vivado v2015.4.2 (64-bit)
 # SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
 # IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
-# Start of session at: Mon Oct 09 13:58:31 2017
-# Process ID: 16332
+# Start of session at: Wed Oct 11 14:00:54 2017
+# Process ID: 9108
 # Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2020 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5856 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
 # Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/vivado.log
 # Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11\vivado.jou
 #-----------------------------------------------------------
@@ -16,15 +16,9 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v w ]
-add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v
+close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v w ]
+add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v
 update_compile_order -fileset sources_1
-add_files -norecurse {C:/Users/ryanjsims/lab369a/PCAdder.v C:/Users/ryanjsims/lab369a/ProgramCounter.v C:/Users/ryanjsims/lab369a/InstructionMemory.v C:/Users/ryanjsims/lab369a/InstructionFetchUnit.v}
-update_compile_order -fileset sources_1
-close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v w ]
-add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v
-update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v
-update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v
+close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v w ]
+add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v
 update_compile_order -fileset sources_1

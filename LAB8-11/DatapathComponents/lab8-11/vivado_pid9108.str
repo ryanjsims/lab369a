@@ -1,0 +1,925 @@
+/*
+
+Vivado v2015.4.2 (64-bit)
+SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
+Process ID: 9108
+
+Current time: 	10/11/17 2:01:01 PM PDT
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.4/tps/win64/jre
+
+User name: 	ryanjsims
+User home directory: C:/Users/ryanjsims
+User working directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/ryanjsims/AppData/Roaming/Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: C:/Users/ryanjsims/AppData/Roaming/Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	212 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 458 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bF:g (cq:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr. Version: Vivado v2015.4.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.xpr 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 46 MB (+46258kb) [00:00:03]
+// [Engine Memory]: 417 MB (+286165kb) [00:00:03]
+// [GUI Memory]: 59 MB (+10721kb) [00:00:03]
+// [GUI Memory]: 68 MB (+5922kb) [00:00:03]
+// [Engine Memory]: 450 MB (+12281kb) [00:00:04]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: lab8-11; location: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bF:g (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 473 MB (+1019kb) [00:00:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 475 MB. GUI used memory: 30 MB. Current time: 10/11/17 2:01:03 PM PDT
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegisterFile_tb (RegisterFile_tb.v)]", 6, true, false, false, false, true, false); // y:k (I:JPanel, cq:JFrame) - Popup Trigger - Node
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v)]", 2, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v)]", 2, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v)]", 2, true, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), RegDstMux - Mux32Bit2to1]", 11, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), RegDstMux - Mux32Bit2to1]", 11, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), RegDstMux - Mux32Bit2to1]", 11, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), RegDstMux - Mux32Bit2to1]", 11, false, false, false, false, true, false); // y:k (I:JPanel, cq:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa:JMenu (al:JPopupMenu, cq:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa:JMenu (al:JPopupMenu, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Mux32Bit2To1_tb (Mux32Bit2To1_tb.v)]", 14, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Mux32Bit2To1_tb (Mux32Bit2To1_tb.v)]", 14, true, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), RegDstMux - Mux32Bit2to1]", 11, false); // y:k (I:JPanel, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), RegDstMux - Mux32Bit2to1]", 11, false, false, false, false, true, false); // y:k (I:JPanel, cq:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa:JMenu (al:JPopupMenu, cq:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa:JMenu (al:JPopupMenu, cq:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_GOTO_INSTANTIATION, "Go To Source"); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_INSTANTIATION
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 96, 520); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Processor.v", 198, 444); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 588, 522); // bl:J (JPanel:JComponent, cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 504 MB. GUI used memory: 33 MB. Current time: 10/11/17 2:02:39 PM PDT
+// [Engine Memory]: 504 MB (+6808kb) [00:01:42]
+// Elapsed time: 110 seconds
+selectCodeEditor("Processor.v", 564, 523); // bl:J (JPanel:JComponent, cq:JFrame)
+// [GUI Memory]: 72 MB (+867kb) [00:03:41]
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cq:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a:JButton (H:JPanel, b:g)
+// I:x (b:g): Create Source File: addNotify
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ShiftLeft2"); // ao:JTextField (JPanel:JComponent, I:x)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_LOCATION, "Choose Location...", 1); // f:JComboBox (JPanel:JComponent, I:x)
+// Elapsed time: 18 seconds
+setFolderChooser("C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, I:x)
+dismissDialog("Create Source File"); // I:x (b:g)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'g' command handler elapsed time: 35 seconds
+dismissDialog("Add Sources"); // b:g (cq:JFrame)
+// Tcl Message: close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v 
+// L:x (cq:JFrame): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, L:x)
+// [GUI Memory]: 76 MB (+423kb) [00:04:19]
+// TclEventType: DG_GRAPH_STALE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, U:JDialog)
+dismissDialog("Define Module"); // L:x (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ShiftLeft2 (ShiftLeft2.v)]", 19, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ShiftLeft2 (ShiftLeft2.v)]", 19, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+selectCodeEditor("ShiftLeft2.v", 120, 396); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 72 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+// Elapsed time: 66 seconds
+selectCodeEditor("Processor.v", 290, 512); // bl:J (JPanel:JComponent, cq:JFrame)
+// [GUI Memory]: 80 MB (+270kb) [00:06:53]
+// Elapsed time: 19 seconds
+selectCodeEditor("Processor.v", 263, 280); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 357, 198); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 38 seconds
+selectCodeEditor("Processor.v", 511, 142); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cq:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a:JButton (H:JPanel, b:g)
+// I:x (b:g): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Adder32"); // ao:JTextField (JPanel:JComponent, I:x)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_LOCATION, "Choose Location...", 1); // f:JComboBox (JPanel:JComponent, I:x)
+// Elapsed time: 14 seconds
+setFolderChooser("C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, I:x)
+dismissDialog("Create Source File"); // I:x (b:g)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'g' command handler elapsed time: 27 seconds
+dismissDialog("Add Sources"); // b:g (cq:JFrame)
+// Tcl Message: close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v 
+// L:x (cq:JFrame): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, L:x)
+// TclEventType: DG_GRAPH_STALE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, U:JDialog)
+dismissDialog("Define Module"); // L:x (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Adder32 (Adder32.v)]", 19, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Adder32 (Adder32.v)]", 19, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+selectCodeEditor("Adder32.v", 105, 400); // bl:J (JPanel:JComponent, cq:JFrame)
+// [GUI Memory]: 84 MB (+308kb) [00:08:38]
+// [GUI Memory]: 90 MB (+1154kb) [00:08:47]
+// Elapsed time: 15 seconds
+selectCodeEditor("Adder32.v", 72, 449); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 46 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("Processor.v", 492, 246); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Processor.v", 408, 525); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 140 seconds
+selectCodeEditor("Processor.v", 259, 300); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 231, 211); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 310, 217); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 310, 217, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 224, 281); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 207, 398); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 201, 397); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 299, 450); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 299, 450, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 113, 381); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), de - DecodeExecuteReg (DecodeExecuteReg.v)]", 10, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v), de - DecodeExecuteReg (DecodeExecuteReg.v)]", 10, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 98, 404); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 79, 412); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 63, 418); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 73, 423); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 97, 420); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 79, 430); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 120, 435); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 27, 456); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 229, 404); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 73, 229); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 73, 229, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 75, 210); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 75, 210, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 232, 394); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 243, 452); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 104, 396); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 160, 413); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 134, 430); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 102, 445); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 101, 457); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 105, 468); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 134, 483); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 131, 503); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 213, 507); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 292, 380); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 292, 380, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 93, 506); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 89, 517); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 220, 524); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 56, 538); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DecodeExecuteReg.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Processor.v]", 2, false); // y:k (I:JPanel, cq:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cq:JFrame)
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // h:JCheckBox (JPanel:JComponent, cq:JFrame): FALSE
+selectCodeEditor("Processor.v", 237, 523); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 51 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DecodeExecuteReg.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Mux32Bit2To1_tb.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("Processor.v", 109, 224); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 216, 305); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 140, 327); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 224, 333); // bl:J (JPanel:JComponent, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 125, 182); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 130, 217); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 130, 217, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 69, 194); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 69, 209); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 98, 217); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 93, 202); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 25, 95); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 101, 230); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 55, 267); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 105, 252); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("DecodeExecuteReg.v", 273, 313); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 53, 333); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 460, 317); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 287, 313); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 321, 366); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 412, 372); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 239, 423); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 397, 364); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 397, 364, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 43, 439); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 69, 436); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 526 MB. GUI used memory: 40 MB. Current time: 10/11/17 2:18:24 PM PDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DecodeExecuteReg.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("Processor.v", 211, 264); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 113, 131); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 138, 276); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 215, 296); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 137, 300); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 152, 304); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 154, 278); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Processor.v", 619, 436); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 23 seconds
+selectCodeEditor("Processor.v", 212, 519); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 80 seconds
+selectCodeEditor("Processor.v", 351, 311); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("Processor.v", 608, 525); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 34 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU32Bit_tb (ALU32Bit_tb.v)]", 4); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU32Bit_tb (ALU32Bit_tb.v), u0 - ALU32Bit (ALU32Bit.v)]", 5, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU32Bit_tb (ALU32Bit_tb.v), u0 - ALU32Bit (ALU32Bit.v)]", 5, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+selectCodeEditor("ALU32Bit.v", 50, 178); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "ALU32Bit.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU32Bit.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 111, 534); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 211, 538); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("Processor.v", 180, 245); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 180, 245, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 200, 534); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 334, 538); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 386, 538); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 400, 536); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 446, 543); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 419, 533); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 549, 537); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 203, 537); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 236, 557); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 164, 518); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 170, 521); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 536); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 162, 550); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 190, 522); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 202, 535); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("Processor.v", 201, 518); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 107, 522); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 110, 502); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 113, 494); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 134, 421); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 134, 421, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 379, 173); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 362, 176); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 63 seconds
+selectCodeEditor("Processor.v", 355, 198); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 402, 247); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 78 seconds
+selectCodeEditor("Processor.v", 28, 398); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 445 seconds
+selectCodeEditor("Processor.v", 266, 374); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 22, 383); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 29, 379); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 146, 383); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 27, 386); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 219, 107); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 225, 111); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 277, 114); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 52 seconds
+selectCodeEditor("Processor.v", 386, 114); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 377, 111); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 334, 126); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 437, 125); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 437, 125, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 110, 228); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 345, 128); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 282, 116); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Processor.v", 158, 130); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 158, 130, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+// Elapsed time: 77 seconds
+selectCodeEditor("DecodeExecuteReg.v", 102, 282); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 79, 299); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 79, 299, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 101, 456); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 212, 282); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 272, 344); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DecodeExecuteReg.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("Processor.v", 103, 247); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 205, 350); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 151, 249); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 151, 249, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 110, 364); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 141, 79); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 141, 79, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 210, 193); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 216, 361); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Processor.v", 121, 401); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor("Processor.v", 564, 386); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 23 seconds
+selectCodeEditor("Processor.v", 218, 521); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 42 seconds
+selectCodeEditor("Processor.v", 463, 260); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("Processor.v", 480, 261); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 473, 262); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 562, 265); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 562, 265, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 596, 266); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 4); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("ALU32Bit.v", 325, 261); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 42 seconds
+selectCodeEditor("ALU32Bit.v", 232, 401); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("ALU32Bit.v", 269, 455); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU32Bit.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectCodeEditor("Processor.v", 40, 521); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 143 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DecodeExecuteReg.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("DecodeExecuteReg.v", 50, 386); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 155, 384); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 139, 382); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 91, 382); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 101, 383); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 14 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenuItem(RDIResourceCommand.RDICommands_SAVE_FILE_AS, "Save File As..."); // ae:JMenuItem (JPopupMenu:JComponent, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+// Elapsed time: 12 seconds
+setFileChooser("C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v");
+// [Engine Memory]: 532 MB (+2878kb) [00:45:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 532 MB. GUI used memory: 44 MB. Current time: 10/11/17 2:48:24 PM PDT
+// Elapsed time: 150 seconds
+selectCodeEditor("DecodeExecuteReg.v", 28, 217); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 114 seconds
+selectCodeEditor("DecodeExecuteReg.v", 120, 247); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("DecodeExecuteReg.v", 28, 210); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 34, 211); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 38, 532); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 181, 364); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 111 seconds
+selectCodeEditor("DecodeExecuteReg.v", 122, 232); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 111, 249); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 126, 267); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 126, 267, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 28, 282); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 29, 267); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 26, 249); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 26, 266); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("DecodeExecuteReg.v", 13, 260); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 13, 260, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// Elapsed time: 108 seconds
+selectCodeEditor("DecodeExecuteReg.v", 155, 352); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 118, 337); // bl:J (JPanel:JComponent, cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 550 MB. GUI used memory: 47 MB. Current time: 10/11/17 2:55:54 PM PDT
+selectCodeEditor("DecodeExecuteReg.v", 43, 291); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 74 seconds
+selectCodeEditor("DecodeExecuteReg.v", 135, 333); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 25 seconds
+selectCodeEditor("DecodeExecuteReg.v", 123, 351); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("DecodeExecuteReg.v", 73, 395); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 30, 299); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 59, 398); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 53, 415); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 87, 476); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 100, 471); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 98, 401); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("DecodeExecuteReg.v", 54, 245); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 54, 245, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 105, 378); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 105, 378, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 197, 383); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 197, 383, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 61, 109); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 61, 109, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 119, 326); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 64, 129); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 64, 129, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 195, 329); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 190, 330); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 90, 146); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 90, 146, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 290, 335); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 85, 163); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 85, 163, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 397, 332); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 42, 186); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 42, 186, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 493, 333); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("DecodeExecuteReg.v", 508, 330); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 508, 330, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 487, 329); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor("DecodeExecuteReg.v", 151, 387); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 58, 209); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 58, 209, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 150, 382); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 157, 381); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 60, 231); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 60, 231, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 245, 385); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("DecodeExecuteReg.v", 74, 243); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 74, 243, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 328, 384); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 80, 269); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 80, 269, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 452, 382); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 569, 385); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 72, 274); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 72, 274, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 165, 395); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 62 seconds
+selectCodeEditor("DecodeExecuteReg.v", 289, 323); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 289, 323, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 300, 319); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 300, 319, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 81, 400); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 81, 400, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 226, 261); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 226, 261, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 180, 400); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 180, 400, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 375, 318); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 375, 318, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 89, 421); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 89, 421, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 330, 269); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 330, 269, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 203, 422); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 203, 422, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 463, 271); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 463, 271, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 480, 322); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 481, 322, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 76, 433); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 76, 433, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 431, 258); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 431, 258, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 201, 446); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 204, 434); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 204, 434, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("DecodeExecuteReg.v", 165, 284); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 165, 284, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("DecodeExecuteReg.v", 69, 450); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 69, 450, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 173, 443); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 170, 445); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 170, 445, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 161, 335); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 161, 335, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 164, 445); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 164, 445, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 126, 356); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 126, 356, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 73, 463); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 73, 463, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 224, 451); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 137, 472); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 137, 472, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("DecodeExecuteReg.v", 54, 482); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("DecodeExecuteReg.v", 200, 348); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 80, 229); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 89, 494); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 89, 494, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 47, 233); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 45, 246); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 92, 535); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 93, 535, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 61, 260); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("DecodeExecuteReg.v", 54, 536); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 54, 522); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 108, 248); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 106, 124); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("DecodeExecuteReg.v", 25, 286); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("DecodeExecuteReg.v", 47, 6); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "DecodeExecuteReg.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ExecuteMemoryReg.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 139, 296); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 298); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 298); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 298, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("Processor.v", 201, 307); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 218, 294); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 177, 314); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 177, 314, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 445, 127); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 445, 127, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 174, 311); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 174, 311, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 173, 248); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 173, 248, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 167, 331); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 167, 331, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 184, 269); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 184, 269, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 190, 348); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 190, 348, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 301, 141); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 301, 141, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 180, 368); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 180, 368, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("Processor.v", 154, 90); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 154, 90, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 380); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 380, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Processor.v", 508, 149); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 508, 149, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 265, 143); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 265, 143, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 177, 429); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 177, 429, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 154, 325); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 154, 325, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 453); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 453, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 179, 114); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 179, 114, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 182, 383); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 182, 383, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 172, 400); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 172, 400, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 209, 394); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 186, 302); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 186, 302, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 183, 416); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 183, 416, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 185, 419); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 190, 421); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 173, 435); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 173, 435, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 137, 432); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 230, 430); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 194, 460); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 185, 450); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 185, 447); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 185, 447, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("Processor.v", 196, 343); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 196, 343, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 175, 462); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 175, 462, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 188, 467); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 155, 249); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 155, 249, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 150, 487); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 150, 487, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 187, 481); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Processor.v", 191, 366); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 381); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 178, 381, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 168, 499); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 168, 499, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 186, 501); // bl:J (JPanel:JComponent, cq:JFrame)
+// [GUI Memory]: 96 MB (+1396kb) [01:06:47]
+selectCodeEditor("Processor.v", 253, 497); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 137, 401); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Processor.v", 28, 162); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 400, 255); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 27 seconds
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 210, 316); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 158, 327); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 158, 327, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 152, 335); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 152, 335, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 152, 335); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 152, 335, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 589, 317); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 39, 329); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 333); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 333, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 65, 334); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 215, 336); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 347); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 347, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("Processor.v", 161, 347); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 347, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 161, 347); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 161, 347); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 128, 364); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 128, 364, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 251, 347); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 138, 514); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 270, 500); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 247, 512); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("Processor.v", 28, 535); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 215, 263); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 198, 276); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 198, 276, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 41, 290); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 40, 280); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 155, 217); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 155, 217, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 155, 217); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 28, 162); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 51, 168); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 49, 158); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 57, 160); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 100, 230); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 100, 230, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+selectCodeEditor("Processor.v", 100, 230); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 383, 192); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 27, 214); // bl:J (JPanel:JComponent, cq:JFrame)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 43, 211); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("Processor.v", 56, 216); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Processor.v", 261, 517); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

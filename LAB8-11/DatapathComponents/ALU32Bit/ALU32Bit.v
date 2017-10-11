@@ -93,7 +93,7 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero);
             4'b1100: begin //SRA
                 ALUResult <= {{32{A[31]}}, A} >> B;
             end
-            4'b1101: begin
+            4'b1101: begin //ROTR
                 ALUResult <= ({A, A} >> B);
             end
             4'b1110: begin //SLT
