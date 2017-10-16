@@ -22,3 +22,5 @@ update_compile_order -fileset sources_1
 close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v w ]
 add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v
 update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 11 15:15:03 2017...
