@@ -19,11 +19,15 @@
 
 # test 0 For the 4X4 frame size and 2X2 window size
 # The result should be 12, 12
-asize0:  .word    4,  4,  2,  2    #i, j, k, l
-frame0:  .word    0,  0,  1,  2,
-         .word    0,  0,  3,  4
-         .word    0,  0,  0,  0
-         .word    0,  0,  0,  0,
+asize0:  .word    4,  8,  1,  1    #i, j, k, l
+frame0:  .word    0,  1,  2,  3,
+         .word    19,  20,  21,  4,
+         .word    18,  31,  22,  5,
+         .word    17,  30,  23,  6,
+		 .word    16,  29,  24,  7,
+         .word    15,  28,  25,  8,
+         .word    14,  27,  26,  9,
+         .word    13,  12,  11,  10
 window0: .word    1,  2,
          .word    3,  4,
 # test 1 For the 16X16 frame size and 4X4 window size
@@ -491,6 +495,22 @@ main:
     addi    $sp, $sp, -4    # Make space on stack
     sw      $ra, 0($sp)     # Save return address
 
+	# Start test 0
+    ############################################################
+    la      $a0, asize0     # 1st parameter: address of asize1[0]
+    la      $a1, frame0     # 2nd parameter: address of frame1[0]
+    la      $a2, window0    # 3rd parameter: address of window1[0]
+
+    jal     vbsme           # call function
+    jal     print_result    # print results to console
+
+    ############################################################
+    # End of test 0
+
+	lw		$ra, 0($sp)
+	addi	$sp, $sp, 4
+	jr		$ra
+
     # Start test 1
     ############################################################
     la      $a0, asize1     # 1st parameter: address of asize1[0]
@@ -692,6 +712,18 @@ print_result:
 
     jr      $ra                   #function return
 
+print_val:
+    # Printing $v0
+    add     $a0, $v0, $zero     # Load $v0 for printing
+    li      $v0, 1              # Load the system call numbers
+    syscall
+
+    # Print newline.
+    la      $a0, newline          # Load value for printing
+    li      $v0, 4                # Load the system call numbers
+    syscall
+
+	jr		$ra	
 #####################################################################
 ### vbsme
 #####################################################################
@@ -813,14 +845,18 @@ right:
 		add		$s2, $s2, $a1	#get address of val in aframe
 
 		#Store values on stack before SAD function call
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 
-		jal		SAD
+		#jal		SAD
+		lw		$v0, 0($s2)
+		jal		print_val
 
 		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 
 		#Check for new min SAD, write values to stack if necessary
 		sltu	$t6, $v0, $t5
@@ -842,14 +878,18 @@ down:	mult	$s1, $t4		#row * len
 		add		$s2, $s2, $a1
 
 		#Store values on stack before SAD function call
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 
-		jal		SAD
+		#jal		SAD
+		lw		$v0, 0($s2)
+		jal		print_val
 
 		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 
 		#Check for new min SAD, write values to stack if necessary
 		sltu	$t6, $v0, $t5
@@ -871,14 +911,18 @@ left:	mult	$s1, $t4		#row * len
 		add		$s2, $s2, $a1
 
 		#Store values on stack before SAD function call
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 
-		jal		SAD
+		#jal		SAD
+		lw		$v0, 0($s2)
+		jal		print_val
 
 		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 
 		#Check for new min SAD, write values to stack if necessary
 		sltu	$t6, $v0, $t5
@@ -900,14 +944,18 @@ up:		mult	$s1, $t4		#row * len
 		add		$s2, $s2, $a1
 
 		#Store values on stack before SAD function call
-		addi	$sp, $sp, -4
+		addi	$sp, $sp, -8
 		sw		$ra, 0($sp)
+		sw		$a0, 4($sp)
 
-		jal		SAD
+		#jal		SAD
+		lw		$v0, 0($s2)
+		jal		print_val
 
 		#Load values from stack after function call
 		lw		$ra, 0($sp)
-		addi	$sp, $sp, 4
+		lw		$a0, 4($sp)
+		addi	$sp, $sp, 8
 
 		#Check for new min SAD, write values to stack if necessary
 		sltu	$t6, $v0, $t5

@@ -922,3 +922,226 @@ print_result:
 #####################################################################
 
 
+vbsme:
+    li      $v0, 0              # reset $v0 and $V1
+    li      $v1, 0
+
+    lw      $t0, 1020($a1)
+    #jr      $ra
+    # insert your code here
+loop:
+		li		$t0, 0			#minc
+		li		$t2, 0			#minr
+
+		#asize: i, j, k, l, located in $a0
+		#aframe: located in $a1
+		#awindow: located in $a2
+
+		lw		$t4, 4($a0)		#load length
+		lw      $t6, 12($a0)		#window length
+		sub 	$t1, $t4, $t6
+		sll		$t1, $t1, 2		#4 * (length - 1) = maxc
+
+		lw		$t5, 0($a0)		#load height
+		lw		$t6, 8($a0)
+		sub		$t3, $t5, $t6
+		sll		$t3, $t3, 2		#4 * (height - 1) = maxr
+
+		add		$s0, $0, $0		#col = 0
+		add		$s1, $0, $0		#row = 0
+		addiu	$t5, $0, 0xffffffff	#Min SAD set to arbitrarily high unsigned value
+		addi	$sp, $sp, -8	#Make space for min SAD r and c on stack
+		sw		$0, 0($sp)		#Initialize min SAD c to 0
+		sw		$0, 4($sp)		#Initialize min SAD r to 0
+
+spiral:
+right:
+		mult	$s1, $t4		#row * len
+		mflo    $s2
+		add		$s2, $s2, $s0	#address = row * len + col
+		add		$s2, $s2, $a1	#get address of val in aframe
+
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
+		sw		$ra, 0($sp)
+
+		jal		SAD
+
+		#Load values from stack after function call
+		lw		$ra, 0($sp)
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextRight
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextRight:
+
+		addi	$s0, $s0, 4		#c += 4
+		slt		$t6, $s0, $t1	#c < maxc
+		bne		$t6, $0, right  #if(c == maxc) break;
+
+		addi	$t2, $t2, 4		#minr += 4
+
+down:	mult	$s1, $t4		#row * len
+		mflo    $s2
+		add		$s2, $s2, $s0	#address = row * len + col
+		add		$s2, $s2, $a1
+
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
+		sw		$ra, 0($sp)
+
+		jal		SAD
+
+		#Load values from stack after function call
+		lw		$ra, 0($sp)
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextDown
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextDown:
+
+		addi	$s1, $s1, 4		#row += 4
+		slt		$t6, $s1, $t3	#row < maxr
+		bne		$t6, $0, down	#if(r == maxr) break;
+
+		addi	$t1, $t1, -4	#maxc -= 4;
+
+left:	mult	$s1, $t4		#row * len
+		mflo    $s2
+		add		$s2, $s2, $s0	#address = row * len + col
+		add		$s2, $s2, $a1
+
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
+		sw		$ra, 0($sp)
+
+		jal		SAD
+
+		#Load values from stack after function call
+		lw		$ra, 0($sp)
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextLeft
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextLeft:
+
+		addi	$s0, $s0, -4
+		slt		$t6, $t0, $s0	#minc < c
+		bne		$t6, $0, left	#if(minc < c) break;
+
+		addi	$t3, $t3, -4	#maxr -= 4;
+
+up:		mult	$s1, $t4		#row * len
+		mflo    $s2
+		add		$s2, $s2, $s0	#address = row * len + col
+		add		$s2, $s2, $a1
+
+		#Store values on stack before SAD function call
+		addi	$sp, $sp, -4
+		sw		$ra, 0($sp)
+
+		jal		SAD
+
+		#Load values from stack after function call
+		lw		$ra, 0($sp)
+		addi	$sp, $sp, 4
+
+		#Check for new min SAD, write values to stack if necessary
+		sltu	$t6, $v0, $t5
+		beq		$t6, $0, nextUp
+		add		$t5, $v0, $0	#set min SAD to curr SAD if curr < min
+		sw		$s0, 0($sp)		#set min SAD c to current c
+		sw		$s1, 4($sp)		#set min SAD r to current r
+nextUp:
+
+		addi	$s1, $s1, -4
+		slt		$t6, $t2, $s1	#minr < r
+		bne		$t6, $0, up		#if(minr < r) break;
+
+		addi	$t0, $t0, 4
+		slt		$t6, $t0, $t1	#loop if minc < maxc
+		bne     $t6, $0, spiral
+
+		slt		$t6, $t2, $t3	#loop if minr < maxr
+		bne		$t6, $0, spiral
+
+		lw		$v1, 0($sp)		#Done searching, load min SAD x, y from stack to v0 and v1
+		lw		$v0, 4($sp)
+		addi	$sp, $sp, 8		#restore the stack
+		srl		$v0, $v0, 2		#x and y vals are 4 * their real values, so divide them by 4
+		srl		$v1, $v1, 2
+
+		jr		$ra				#return
+
+printVal:
+		add     $a0, $v0, $zero     # Load $v0 for printing
+		li      $v0, 1              # Load the system call numbers
+        syscall
+
+		# Print newline.
+		la      $a0, newline          # Load value for printing
+		li      $v0, 4                # Load the system call numbers
+		syscall
+		jr $ra
+
+SAD:
+		lw $s3, 12($a0)  #$s3 = window length
+		lw $s4,  8($a0) #$s4 = window height
+
+		#$s2 has adress of top left pixel to be checked
+		#$a2 has adress of top left of window
+
+		addi $s6, $s2, 0 #s6 = address of top left pixel to be checked
+		addi $s7, $a2, 0 #s7 = address of first element in window
+		add $t8, $0, $0  #t8 = sum
+
+		sll $s3, $s3, 2		#s3 = 4 * window length
+		addi $t6, $s3, 0	#t6 = 4 * (window length)
+		mult $t6, $s4
+		mflo $s5			#s5 = 4 * (window length) * (window height)
+							#     Total number of bytes in window
+		addi $s5, $s5, -4	#s5 = 4 * (window length) * (window height) - 4
+							#	  offset from window[0] to window[lengthWin - 1]
+		add $s5, $s5, $s7	#s5 = baseWinAddr + offset
+							#     very last address to be used
+		sll $s4, $t4, 2
+		sub $s4, $s4, $s3
+
+
+
+		add $t9, $s3, $s7 #s3 = addrress of last element in row bieng checked
+		addi $t9, $t9, -4
+newRow:
+		lw $t6, 0($s6)
+		lw $t7, 0($s7)
+		sub $t6, $t6, $t7
+		slt $t7, $t6, $0
+		beq $t7, $0, Sum
+		sub $t6, $0, $t6
+Sum:
+		add $t8, $t8, $t6
+
+		bne $s7, $t9, nextPixel
+		add $s6, $s6, $s4 #move down a row
+		add $t9, $s3, $s7 #s3 = addrress of last element in row bieng checked
+		bne $s7, $s5, nextPixel
+		addi $v0, $t8, 0  #return sum
+		jr $ra
+
+nextPixel:
+		addi $s6, $s6, 4
+		addi $s7, $s7, 4
+
+		j newRow

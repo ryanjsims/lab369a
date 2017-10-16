@@ -53,10 +53,15 @@ module RegisterFile(ReadRegister1, ReadRegister2, WriteRegister, WriteData, RegW
     input [31:0] WriteData;
     input RegWrite, Clk;
     output reg [31:0] ReadData1, ReadData2;
-    
+    integer i;
     reg [31:0]registers [0:31];
 
 	/* Please fill in the implementation here... */
+	initial begin
+	   for(i = 0; i < 32; i = i + 1) begin
+	       registers[i] <= 0;
+	   end
+	end
 	
 	always@(posedge Clk) begin
 	   if(RegWrite) begin

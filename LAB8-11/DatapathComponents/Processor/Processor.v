@@ -73,7 +73,7 @@ module Processor(
                 DecodeReadData1, 
                 DecodeReadData2);
     SignExtension se(DecodeInst[15:0], DecodeSignExtend, ZeroExtend);
-    //Controller ctrl(DecodeInst, RegDst, ZeroExtend, DecodeALUControl, MemWrite, MemRead, MemToReg, RegWrite, Branch);
+    //Controller ctrl(DecodeInst, DecodeRegDst, ZeroExtend, DecodeALUControl, MemWrite, MemRead, MemToReg, RegWrite, Branch);
     //END INSTRUCTION DECODE COMPONENTS
 
     DecodeExecuteReg de(Clk,

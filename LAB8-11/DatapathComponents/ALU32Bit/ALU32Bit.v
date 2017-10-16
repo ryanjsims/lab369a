@@ -34,10 +34,11 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero);
+module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mtlo);
 
 	input [3:0] ALUControl; // control bits for ALU operation
 	input [31:0] A, B, HI, LO;	    // inputs
+	input mtlo, mthi;
     reg [65:0] multResult;
 	output reg [31:0] ALUResult, ALUResultHI;	// answer(s)
 	output reg Zero;	    // Zero=1 if ALUResult == 0
@@ -58,7 +59,7 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero);
                 ALUResultHI <= multResult[63:32];
             end
             4'b0011: begin //mult unsigned
-                multResult = {0, A} * {0, B};
+                multResult = {1'b0, A} * {1'b0, B};
                 ALUResult <= multResult[31:0];
                 ALUResultHI <= multResult[63:32];
             end
@@ -100,6 +101,12 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero);
                 ALUResult <= ($signed(A)) < ($signed(B));
             end
         endcase
+        if(mthi) begin
+            ALUResultHI <= A;
+        end
+        else if(mtlo) begin
+            ALUResult <= A;
+        end
         Zero <= ALUResult == 0;
         
         
