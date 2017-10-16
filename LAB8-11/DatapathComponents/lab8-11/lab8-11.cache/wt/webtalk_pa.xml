@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Oct 09 15:15:10 2017">
+<application name="pa" timeStamp="Mon Oct 16 15:24:23 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="ba6ae5c8fa544604af2e2f9c71880ab6" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -16,10 +16,237 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
+<item name="Java Command Handlers">
+<property name="AddSources" value="3" type="JavaHandler"/>
+<property name="EditDelete" value="1" type="JavaHandler"/>
+<property name="OpenProject" value="1" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="1" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
+<property name="SimulationRun" value="2" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="ALU32Bit.v, 126, 482" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 128, 469" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 211, 486" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 216, 485" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 293, 486" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 342, 46" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 372, 439" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 418, 479" value="1" type="GuiResourceData"/>
+<property name="ALU32Bit.v, 491, 298" value="1" type="GuiResourceData"/>
+<property name="APPLY, Apply" value="1" type="GuiResourceData"/>
+<property name="FINISH, Finish" value="3" type="GuiResourceData"/>
+<property name="HILORegisters.v, 100, 499" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 101, 555" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 103, 485" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 103, 498" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 103, 563" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 109, 484" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 115, 488" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 115, 506" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 123, 469" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 125, 476" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 130, 521" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 132, 502, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 133, 568" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 135, 401" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 135, 503" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 137, 332" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 137, 332, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 139, 510" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 141, 465" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 146, 281" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 147, 492" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 152, 495" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 154, 523" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 154, 540" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 160, 537" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 161, 522" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 163, 457" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 171, 467" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 172, 470" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 174, 504" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 197, 528" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 204, 503" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 204, 517" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 204, 534" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 208, 503" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 217, 536" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 219, 502" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 219, 517" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 220, 504" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 238, 537" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 239, 501" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 24, 472" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 247, 503" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 254, 518" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 264, 536" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 27, 400" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 27, 500" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 28, 473" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 29, 489" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 29, 570" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 296, 487" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 308, 498" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 32, 317" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 32, 352" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 322, 571" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 34, 316" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 34, 333" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 44, 576" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 46, 146" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 47, 487" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 48, 538" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 58, 518" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 68, 484" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 78, 465" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 79, 471" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 85, 533" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 87, 525" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 87, 531" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 90, 495" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 90, 536" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 90, 555" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 93, 435" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 93, 435, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILORegisters.v, 97, 498" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 100, 572" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 103, 368" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 104, 585" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 106, 582" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 107, 568" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 107, 608" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 108, 397" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 110, 568, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 110, 569" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 110, 584" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 110, 602" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 111, 548" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 112, 517" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 112, 531" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 112, 583" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 113, 534" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 113, 585" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 113, 603" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 114, 603" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 115, 381" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 115, 588" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 118, 570" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 119, 398" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 119, 603" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 121, 599" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 123, 73" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 123, 73, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 134, 380" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 136, 609" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 137, 590" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 139, 588" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 140, 451" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 141, 606" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 144, 556" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 145, 446" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 149, 553" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 151, 606" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 152, 378" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 161, 588" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 162, 582" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 164, 555" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 166, 542" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 166, 575" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 168, 575" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 170, 499" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 171, 549" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 171, 555" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 181, 383" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 181, 602" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 187, 383" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 222, 378" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 229, 371" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 23, 600" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 23, 604" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 23, 604, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 236, 336" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 25, 449" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 26, 604" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 28, 279" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 28, 401" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 28, 435" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 308, 330" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 312, 329" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 332, 327" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 332, 327, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 337, 363" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 54, 197" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 54, 384" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 54, 450" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 54, 501" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 54, 520" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 55, 520" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 56, 382" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 56, 482" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 56, 502" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 56, 503" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 59, 384" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 65, 565" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 67, 601" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 69, 514" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 71, 364" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 72, 539" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 78, 402" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 82, 401" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 84, 453" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 86, 587" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 92, 398" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 95, 589" value="1" type="GuiResourceData"/>
+<property name="HILOregisters_tb.v, 97, 399" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="3" type="GuiResourceData"/>
+<property name="OK, OK" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_LOCATION, Choose Location..., 1" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, HILORegisters" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, HILOregisters_tb" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, ALU32Bit_tb (ALU32Bit_tb.v" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, DataMemory_tb (DataMemory_tb.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, HILORegisters (HILORegisters.v" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, HILOregisters_tb (HILOregisters_tb.v" value="5" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, HILORegisters.v], 2, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files], 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Processor (Processor.v" value="8" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, RegisterFile_tb (RegisterFile_tb.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Simulation Settings], 10, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_OPEN_PROJECT, Open Project" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_TOOLS, Tools" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsSimulationPanel_SELECT_TESTBENCH_TOP_MODULE, (String" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, Also delete the project local file/directory from disk, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SelectTopModuleDialog_SELECT_TOP_MODULE, HILOregisters_tb, 3" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="3" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="2" type="GuiResourceData"/>
+<property name="Processor.v, 233, 519" value="1" type="GuiResourceData"/>
+<property name="Processor.v, 241, 515" value="1" type="GuiResourceData"/>
+<property name="Processor.v, 242, 427" value="1" type="GuiResourceData"/>
+<property name="Processor.v, 25, 266" value="1" type="GuiResourceData"/>
+<property name="Processor.v, 273, 213" value="1" type="GuiResourceData"/>
+<property name="Processor.v, 329, 297" value="1" type="GuiResourceData"/>
+<property name="Processor.v, 545, 515" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="8" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, a_" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 19, 13" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, Untitled 1" value="1" type="GuiResourceData"/>
+<property name="RegisterFile.v, 168, 366" value="1" type="GuiResourceData"/>
+<property name="RegisterFile.v, 225, 360" value="1" type="GuiResourceData"/>
+<property name="RegisterFile.v, 249, 315" value="1" type="GuiResourceData"/>
+<property name="RegisterFile.v, 386, 361" value="1" type="GuiResourceData"/>
+<property name="RegisterFile.v, 62, 394" value="1" type="GuiResourceData"/>
+<property name="RegisterFile.v, 81, 391" value="1" type="GuiResourceData"/>
+</item>
 <item name="Other">
-<property name="GuiMode" value="4" type="GuiMode"/>
+<property name="GuiMode" value="15" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="3" type="TclMode"/>
+<property name="TclMode" value="11" type="TclMode"/>
 </item>
 </section>
 </application>
