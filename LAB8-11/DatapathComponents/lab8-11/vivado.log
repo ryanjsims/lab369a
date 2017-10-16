@@ -2,23 +2,50 @@
 # Vivado v2015.4.2 (64-bit)
 # SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
 # IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
-# Start of session at: Wed Oct 11 14:00:54 2017
-# Process ID: 9108
+# Start of session at: Mon Oct 16 14:11:59 2017
+# Process ID: 9016
 # Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5856 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9212 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
 # Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/vivado.log
 # Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11' since last save.
 Scanning sources...
 Finished scanning sources
+CRITICAL WARNING: [Project 1-532] XML ERROR: Project Option CompiledLibDirXSim has no valid value
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTXSimLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTModelSimLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTQuestaLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTIesLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTVcsLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTRivieraLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTActivehdlLaunchSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTXSimExportSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTModelSimExportSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTQuestaExportSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTIesExportSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTVcsExportSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTRivieraExportSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name WTActivehdlExportSim
+WARNING: [Project 1-231] Project 'lab8-11.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v w ]
-add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v
+save_project_as lab8-11_lab C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11_lab -force
+add_files -norecurse C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v
 update_compile_order -fileset sources_1
-close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v w ]
-add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v
+file mkdir C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.srcs/sources_1/new
+close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.srcs/sources_1/new/And2Gate.v w ]
+add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.srcs/sources_1/new/And2Gate.v
 update_compile_order -fileset sources_1
+remove_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.srcs/sources_1/new/And2Gate.v
+file delete -force C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.srcs/sources_1/new/And2Gate.v
+close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v w ]
+add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 15:16:40 2017...

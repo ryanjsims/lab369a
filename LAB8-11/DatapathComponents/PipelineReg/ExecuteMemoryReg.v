@@ -29,27 +29,39 @@ module ExecuteMemoryReg(
     WriteRegIn,
     ZeroIn,
     BranchIn,
+    MemWriteIn,
+    MemReadIn,
+    MFHIIn,
+    RegWriteIn,
     JumpAddrOut,
     ALUResultOut,
     ALUResultHIOut,
     ReadData2Out,
     WriteRegOut,
     ZeroOut,
-    BranchOut
+    BranchOut,
+    MemWriteOut,
+    MemReadOut,
+    MFHIOut,
+    RegWriteOut
     );
     input [31:0] JumpAddrIn, ALUResultIn, ALUResultHIIn, ReadData2In;
     input [5:0] WriteRegIn;
-    input ZeroIn;
+    input ZeroIn, MemWriteIn, MemReadIn, MFHIIn;
     output reg [31:0] JumpAddrOut, ALUResultOut, ALUResultHIOut, ReadData2Out;
     output reg [5:0] WriteRegOut;
-    output reg ZeroOut;
+    output reg ZeroOut, MemReadOut, MemWriteOut, MFHIOut;
     always@(posedge Clk) begin
-        JumpAddrOut = JumpAddrIn;
-        ALUResultOut = ALUResultIn;
-        ALUResultHIOut = ALUResultHIIn;
-        ReadData2Out = ReadData2In;
-        WriteRegOut = WriteRegIn;
-        ZeroOut = ZeroIn;
-        BranchOut = BranchIn;
+        JumpAddrOut <= JumpAddrIn;
+        ALUResultOut <= ALUResultIn;
+        ALUResultHIOut <= ALUResultHIIn;
+        ReadData2Out <= ReadData2In;
+        WriteRegOut <= WriteRegIn;
+        ZeroOut <= ZeroIn;
+        BranchOut <= BranchIn;
+        MemReadOut <= MemReadIn;
+        MemWriteOut <= MemWriteIn;
+        MFHIOut <= MFHIIn;
+        RegWriteOut <= RegWriteIn;
     end
 endmodule
