@@ -33,7 +33,10 @@ module Processor(
     wire [31:0] DecodeInst, DecodePCAddr, DecodeReadData1, DecodeReadData2;
     wire [31:0] DecodeSignExtend;
     wire [3:0] DecodeALUControl;
-    wire ZeroExtend, DecodeBranch, DecodeALUSrc;
+    wire [1:0] DecodeALUSrc;
+    wire ZeroExtend, DecodeBranch, DecodeReadHI, DecodeReadLO;
+    wire DecodeWriteHI, DecodeWriteLO, DecodeRegWrite, DecodeMemToReg, DecodeMemRead;
+    wire DecodeMemWrite;
     
     //Execute Wires
     wire [31:0] ExecuteSignExtend, ExecutePCAddrOut, ExecuteJumpOffset, ExecuteJumpAddr;
@@ -41,16 +44,22 @@ module Processor(
     wire [31:0] ExecuteALUResultHI;
     wire [4:0] ExecuteRT, ExecuteRD, ExecuteDstAddr;
     wire [3:0] ExecuteALUControl;
-    wire ExecuteBranch, ExecuteRegDst, ExecuteALUSrc;
+    wire [1:0] ExecuteALUSrc;
+    wire ExecuteBranch, ExecuteRegDst, ExecuteReadHI, ExecuteReadLO;
+    wire ExecuteWriteHI, ExecuteWriteLO, ExecuteRegWrite, ExecuteMemToReg;
+    wire ExecuteMemRead, ExecuteMemWrite;
+                        
     
     //Memory Wires
-    wire [31:0] MemoryJumpAddr, MemoryALUResult, MemoryALUResultHI, MemoryReadData2;
-    wire  [5:0] MemoryDstAddr;
-    wire MemoryZero, MemoryBranch;
+    wire [31:0] MemoryJumpAddr, MemoryALUResult, MemoryALUResultHI, MemoryReg2Data, MemoryReadData;
+    wire  [4:0] MemoryDstAddr;
+    wire MemoryZero, MemoryBranch, MemoryWriteHI, MemoryWriteLO, MemoryRegWrite;
+    wire MemoryMemToReg, MemoryMemRead, MemoryMemWrite;
     
     //Write Back Wires
-    wire [31:0] WBRegAddr, WBWriteData;
-    wire WBRegWrite;
+    wire [31:0] WBWriteData, WBDataMemOut, WBMuxOut;
+    wire  [4:0] WBDstAddr;
+    wire WBRegWrite, WBMemToReg;
     
     //Instruction Fetch
     Mux32Bit2To1 PCSrcMux(PCAddrIn, PCAddrAdd4, AddrBranch, PCsrc);
@@ -66,14 +75,32 @@ module Processor(
     //Instruction Decode
     RegisterFile rf(DecodeInst[25:21], 
                 DecodeInst[20:16], 
-                WBRegAddr, 
+                WBDstAddr, 
                 WBWriteData, 
                 WBRegWrite, 
                 Clk, 
                 DecodeReadData1, 
                 DecodeReadData2);
     SignExtension se(DecodeInst[15:0], DecodeSignExtend, ZeroExtend);
-    //Controller ctrl(DecodeInst, DecodeRegDst, ZeroExtend, DecodeALUControl, MemWrite, MemRead, MemToReg, RegWrite, Branch);
+    /*Controller ctrl(DecodeInst, 
+                        DecodeRegDst,
+                        ALUSrc,
+                        ZeroExtend, 
+                        DecodeALUControl, 
+                        DecodeMemWrite, 
+                        DecodeMemRead, 
+                        DecodeMemToReg, 
+                        DecodeRegWrite, 
+                        DecodeBranch,
+                        DecodeReadHI, 
+                        DecodeReadLO, 
+                        DecodeWriteHI, 
+                        DecodeWriteLO,
+                        DecodeMFHI,
+                        mtlo,
+                        mthi
+                        );
+    */
     //END INSTRUCTION DECODE COMPONENTS
 
     DecodeExecuteReg de(Clk,
@@ -87,6 +114,8 @@ module Processor(
                 DecodeRegDst,
                 DecodeALUSrc,
                 DecodeALUControl,
+                DecodeMFHI,
+                DecodeRegWrite,
                 ExecuteReadData1, 
                 ExecuteReadData2,
                 ExecuteSignExtend,
@@ -96,14 +125,16 @@ module Processor(
                 ExecuteBranch,
                 ExecuteRegDst,
                 ExecuteALUSrc,
-                ExecuteALUControl);
+                ExecuteALUControl,
+                ExecuteMFHI,
+                ExecuteRegWrite);
     
     
     //Execute
     Mux32Bit2To1 RegDstMux(ExecuteDstAddr, ExecuteRT, ExecuteRD, ExecuteRegDst);
     ShiftLeft2 shf(ExecuteSignExtend, ExecuteJumpOffset);
     Adder32 addj(ExecutePCAddrOut, ExecuteJumpOffset, ExecuteJumpAddr);
-    Mux32Bit2To1 ALUImmMux(ALUInB, ExecuteReadData2, ExecuteSignExtend, ExecuteALUSrc);
+    Mux32Bit3To1 ALUImmMux(ALUInB, ExecuteReadData2, ExecuteSignExtend, 32'd0, ExecuteALUSrc);
     ALU32Bit ALU(ExecuteALUControl, 
                 ALUInA, 
                 ALUInB, 
@@ -122,15 +153,56 @@ module Processor(
                     ExecuteDstAddr,
                     ExecuteZero,
                     ExecuteBranch,
+                    ExecuteMemWrite,
+                    ExecuteMemRead,
+                    ExecuteMFHI,
+                    ExecuteRegWrite,
                     MemoryJumpAddr,
                     MemoryALUResult,
                     MemoryALUResultHI,
-                    MemoryReadData2,
+                    MemoryReg2Data,
                     MemoryDstAddr,
                     MemoryZero,
-                    MemoryBranch);
+                    MemoryBranch,
+                    MemoryMemWrite,
+                    MemoryMemRead,
+                    MemoryMFHI,
+                    MemoryRegWrite);
     
     //Memory
+    DataMemory data_memory(MemoryALUResult, 
+                MemoryReg2Data, 
+                Clk, 
+                MemoryMemWrite, 
+                MemoryMemRead, 
+                MemoryReadData);
+    HILORegisters hilo(
+                    Clk,
+                    MemoryALUResultHI,
+                    MemoryALUResult,
+                    HIout,
+                    LOout,
+                    ExecuteReadHI,
+                    ExecuteReadLO,
+                    MemoryWriteHI,
+                    MemoryWriteLO
+                    );
+    And2Gate jand(MemoryBranch, MemoryZero, PCSrc);
+    Mux32Bit2To1 mvhi(MemoryDataToReg, MemoryALUResult, MemoryALUResultHI, MemoryMFHI);
+    //END MEMORY COMPONENTS
     
+    MemoryWriteBackReg mw(Clk,
+                        MemoryRegWrite,
+                        MemoryDstAddr,
+                        MemoryMemToReg,
+                        MemoryReadData,
+                        MemoryDataToReg,
+                        WBRegWrite,
+                        WBDstAddr,
+                        WBMemToReg,
+                        WBDataMemOut,
+                        WBMuxOut);
+                        
+                        
     
 endmodule
