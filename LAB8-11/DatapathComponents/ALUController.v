@@ -5,146 +5,198 @@ module ALUControler (instruction, ALUControl);
    case(instruction[31:26])
       6'b000000: begin
          case(instruction[5:0])
-            6'b100000: //add
+            6'b100000: begin: //add
                ALUControl = 4'b0000;
-            6'b100001: //addu
+            end
+            6'b100001: begin: //addu
                ALUControl = 4'b0000;
-            6'b100010: //Sub
+            end
+				6'b100010: begin: //Sub
                ALUControl = 4'b0001;
-            6'b011000: //Mult (signed)
+				end
+				6'b011000: begin: //Mult (signed)
                ALUControl = 4'b0010;
-            6'b011001: //Mult unsigned
+				end
+				6'b011001: begin: //Mult unsigned
                ALUControl = 4'b0011;
-            6'b100100: //and
+				end
+				6'b100100: begin: //and
                ALUControl = 4'b0110;
-            6'b100101: //or
+				end
+				6'b100101: begin: //or
                ALUControl = 4'b0111;
-            6'b100110: //xor
+				end
+				6'b100110: begin: //xor
                ALUControl = 4'b1000;
-            6'b100111: //nor
+				end
+				6'b100111: begin: //nor
                ALUControl = 4'b1001;
-            6'b000000: //sll
+				end
+				6'b000000: begin: //sll
                ALUControl = 4'b1010;
-            6'b000100: //sllv
+				end
+				6'b000100: begin: //sllv
                ALUControl = 4'b1010;
-            6'b000010: begin //srl, rotr
+				end
+				6'b000010: begin //srl, rotr
                case(instruction[25:21])
-                  5'b00000: //srl
+                  5'b00000: begin: //srl
                      ALUControl = 4'b1011;
-                  5'b00001:  //rotr
+                     end
+                  5'b00001: begin: //rotr
                      ALUControl = 4'b1101;
+                     end
                   default:
                      ALUControl = 4'b1111:
                   endcase;
                end
             6'000110: begin //srlv, rotrv
                case(instruction[10:6])
-                  5'b00000: //srlv
+                  5'b00000: begin: //srlv
                      ALUControl = 4'b1011;
-                  5'b00001: //rotrv
+                     end
+                  5'b00001: begin: //rotrv
                      ALUControl = 4'b1101;
+                     end
                   default:
                      ALUControl = 4'b1111;
                   endcase;
                end
-            6'b000011: //sra
+            6'b000011: begin: //sra
                ALUControl = 4'b1100;
-            6'b000111: //srav
+				end
+				6'b000111: begin: //srav
                ALUControl = 4'b1100;
-            6'b101010: //slt
+				end
+				6'b101010: begin: //slt
                ALUControl = 4'b1110;
-            6'b101011: //sltu
+				end
+				6'b101011: begin: //sltu
                ALUControl = 4'b1110;
-            6'b001000: //jr
+				end
+				6'b001000: begin: //jr
 
-            6'b001010: //movz
+				end
+				6'b001010: begin: //movz
 
-            6'b001011: //movn
+				end
+				6'b001011: begin: //movn
 
-            6'b010000: //mfhi
+				end
+				6'b010000: begin: //mfhi
 
-            6'b010001: //mthi
+				end
+				6'b010001: begin: //mthi
 
-            6'b010010: //mflo
+				end
+				6'b010010: begin: //mflo
 
-            6'b010011: //mtlo
+				end
+				6'b010011: begin: //mtlo
 
-            default: //something is wrong
+            default: begin: //something is wrong
                ALUControl = 4'b1111;
+            end
          endcase
       end
       6'b000001: begin //bgez, bltz
          case(instruction[20:16])
-            5'b00000: //bltz
+            5'b00000: begin: //bltz
                ALUControl = 4'b0001;
-            5'b00001: //bgez
+               end
+            5'b00001: begin: //bgez
                ALUControl = 4'b0001;
+               end
             default:
                ALUControl = 4'b1111;
          endcase
       end
-      6'b000010: //j
+      6'b000010: begin: //j
 
-      6'b000011: //jal
+		end
+		6'b000011: begin: //jal
 
-      6'b000100: //beq
+		end
+		6'b000100: begin: //beq
 
-      6'b000101: //bne
+		end
+		6'b000101: begin: //bne
 
-      6'b000110: //blez
+		end
+		6'b000110: begin: //blez
 
-      6'b000111: //bgtz
+		end
+		6'b000111: begin: //bgtz
 
-      6'b001000: //addi
+		end
+		6'b001000: begin: //addi
 
-      6'b001001: //addiu
+		end
+		6'b001001: begin: //addiu
 
-      6'b001010: //slti
+		end
+		6'b001010: begin: //slti
 
-      6'b001011: //sltiu
+		end
+		6'b001011: begin: //sltiu
 
-      6'b001100: //andi
+		end
+		6'b001100: begin: //andi
 
-      6'b001101: //ori
+		end
+		6'b001101: begin: //ori
 
-      6'b001110: //xori
+		end
+		6'b001110: begin: //xori
 
-      6'b001111: //lui
+		end
+		6'b001111: begin: //lui
 
-      6'b011100: begin //mul, madd, msub
+		end
+		6'b011100: begin //mul, madd, msub
          case (instruction[5:0])
-            6'b000000: //madd
+            6'b000000: begin: //madd
 
-            6'b000010: //mul
+				end
+				6'b000010: begin: //mul
 
-            6'b000100: //msub
-
+				end
+				6'b000100: begin: //msub
+            end
             default:
                ALUControl = 4'b1111;
          endcase
       end
       6'b011111: begin//seh, seb
          case(instruction[9])
-            1'b0: //seb
+            1'b0: begin: //seb
 
-            1'b1: //seh
+            end
+            1'b1: begin: //seh
 
+            end
             default:
                ALUControl = 4'b1111;
          endcase
       end
-      6'b100000: //lb
+      6'b100000: begin: //lb
 
-      6'b100001: //lh
+		end
+		6'b100001: begin: //lh
 
-      6'b100011: //lw
+		end
+		6'b100011: begin: //lw
 
-      6'b101000: //sb
+		end
+		6'b101000: begin: //sb
 
-      6'b101001: //sh
+		end
+		6'b101001: begin: //sh
 
-      6'b101011: //sw
+		end
+		6'b101011: begin: //sw
 
+      end
       default:
          ALUControl = 4'b1111;
    endcase
