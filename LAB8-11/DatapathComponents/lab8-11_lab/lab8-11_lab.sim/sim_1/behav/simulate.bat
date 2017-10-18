@@ -1,6 +1,6 @@
 @echo off
-set xv_path=C:\\Xilinx\\Vivado\\2016.2\\bin
-call %xv_path%/xsim HILOregisters_tb_behav -key {Behavioral:sim_1:Functional:HILOregisters_tb} -tclbatch HILOregisters_tb.tcl -log simulate.log
+set xv_path=C:\\vivado\\Vivado\\2016.3\\bin
+call %xv_path%/xsim IFU_tb_behav -key {Behavioral:sim_1:Functional:IFU_tb} -tclbatch IFU_tb.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

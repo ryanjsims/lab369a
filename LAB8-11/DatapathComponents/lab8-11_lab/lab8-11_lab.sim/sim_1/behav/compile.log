@@ -1,6 +1,12 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module HILORegisters
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module HILOregisters_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/ProgramCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/PCAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionFetchUnit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
