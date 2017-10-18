@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1508354617">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1508355521">
   <File Type="RDS-PROPCONSTRS" Name="Processor_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="Processor.tcl"/>
   <File Type="RDS-RDS" Name="Processor.vds"/>
@@ -38,7 +38,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/SignExtensionHalfByte.v">
+    <File Path="$PPRDIR/../SignExtension/SignExtensionHalfByte.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

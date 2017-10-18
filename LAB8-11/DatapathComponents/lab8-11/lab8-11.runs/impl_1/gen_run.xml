@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1508354694">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1508355580">
   <File Type="OPT-DCP" Name="Processor_opt.dcp"/>
   <File Type="ROUTE-STATUS-PB" Name="Processor_route_status.pb"/>
   <File Type="PA-TCL" Name="Processor.tcl"/>
@@ -87,7 +87,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/SignExtensionHalfByte.v">
+    <File Path="$PPRDIR/../SignExtension/SignExtensionHalfByte.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
