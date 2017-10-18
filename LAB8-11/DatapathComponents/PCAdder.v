@@ -23,7 +23,7 @@ module PCAdder(PCResult, PCAddResult);
 
     input [31:0] PCResult;
 
-    (* mark_debug = "true" *) output [31:0] PCAddResult;
+    /*(* mark_debug = "true" *)*/ output [31:0] PCAddResult;
 
     
     assign PCAddResult = PCResult + 4;
