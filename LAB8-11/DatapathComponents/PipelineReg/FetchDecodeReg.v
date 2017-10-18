@@ -27,6 +27,7 @@ module FetchDecodeReg(
     instrOut,
     PCAddrOut
     );
+    input Clk;
     input [31:0] instrIn, PCAddrIn;
     output reg[31:0] instrOut, PCAddrOut;
     always@(negedge Clk) begin

@@ -50,11 +50,13 @@ module DecodeExecuteReg(
     input [31:0] SignExtendIn, PCAddrIn, ReadData1In, ReadData2In;
     input [4:0] rtIn, rdIn;
     input [3:0] ALUControlIn;
-    input BranchIn, Clk, RegDstIn, ALUSrcIn, MFHIIn, RegWriteIn;
+    input [1:0] ALUSrcIn;
+    input BranchIn, Clk, RegDstIn, MFHIIn, RegWriteIn;
     output reg [31:0] SignExtendOut, PCAddrOut, ReadData1Out, ReadData2Out;
-    output reg  [4:0] rtOut, rdOut;
-    output reg  [3:0] ALUControlOut;
-    output reg BranchOut, RegDstOut, ALUSrcOut, MFHIOut, RegWriteOut;
+    output reg [4:0] rtOut, rdOut;
+    output reg [3:0] ALUControlOut;
+    output reg [1:0] ALUSrcOut;
+    output reg BranchOut, RegDstOut, MFHIOut, RegWriteOut;
     always@(posedge Clk) begin
         ReadData1Out = ReadData1In;
         ReadData2Out = ReadData2In;
@@ -66,5 +68,7 @@ module DecodeExecuteReg(
         RegDstOut = RegDstIn;
         ALUSrcOut = ALUSrcIn;
         MFHIOut = MFHIIn;
+        ALUControlOut = ALUControlIn;
+        RegWriteOut = RegWriteIn;
     end
 endmodule

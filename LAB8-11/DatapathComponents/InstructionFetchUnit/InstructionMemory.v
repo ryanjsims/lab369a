@@ -447,7 +447,7 @@ module InstructionMemory(Address, Instruction);
     end
 
     always @ (*) begin
-        Instruction <= memory[Address[31:2]];
+        Instruction <= memory[Address<<2];
     end
 
 

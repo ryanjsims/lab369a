@@ -35,14 +35,14 @@ module MemoryWriteBackReg(
     );
     input [31:0] ReadDataIn, DataToRegIn;
     input [4:0] DstAddrIn;
-    input RegWriteIn, MemToRegIn;
+    input RegWriteIn, MemToRegIn, Clk;
     output reg [31:0] ReadDataOut, DataToRegOut;
-    output reg [4:0] DstAddrOut;
-    output reg RegWriteOut, MemToRegOut;
+    output reg [4:0] WBDstAddrOut;
+    output reg RegWriteOut, WBMemToRegOut;
     always@(posedge Clk) begin
         RegWriteOut <= RegWriteIn;
-        MemToRegOut <= MemToRegIn;
-        DstAddrOut <= DstAddrIn;
+        WBMemToRegOut <= MemToRegIn;
+        WBDstAddrOut <= DstAddrIn;
         ReadDataOut <= ReadDataIn;
         DataToRegOut <= DataToRegIn;
     end

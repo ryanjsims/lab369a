@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/ProgramCounter.v"
+verilog xil_defaultlib  "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/PCAdder.v"
+verilog xil_defaultlib  "../../../../Mux32Bit2To1/Mux32Bit2To1.v"
+verilog xil_defaultlib  "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionMemory.v"
+verilog xil_defaultlib  "//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionFetchUnit_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
