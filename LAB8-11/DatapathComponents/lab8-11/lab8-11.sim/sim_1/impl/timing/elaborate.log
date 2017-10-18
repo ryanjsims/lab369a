@@ -35,9 +35,8 @@ Compiling module xil_defaultlib.ExecuteMemoryReg
 Compiling module simprims_ver.x_lut1_mux2
 Compiling module simprims_ver.LUT1
 Compiling module xil_defaultlib.HILORegisters
-Compiling module simprims_ver.GND
-Compiling module simprims_ver.MUXF8
 Compiling module simprims_ver.MUXF7
+Compiling module simprims_ver.MUXF8
 Compiling module xil_defaultlib.InstructionMemory
 Compiling module xil_defaultlib.Mux32Bit2To1
 Compiling module xil_defaultlib.MemoryWriteBackReg

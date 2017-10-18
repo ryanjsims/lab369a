@@ -17,22 +17,22 @@ set_property parent.project_path D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
+  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PCAdder.v
+  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v
+  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v
+  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.srcs/sources_1/new/SignExtensionHalfByte.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v
-  D:/Users/Ryan/Documents/ECE369a/lab369a/ProgramCounter.v
-  D:/Users/Ryan/Documents/ECE369a/lab369a/PCAdder.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v
-  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/InstructionMemory.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v
-  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v

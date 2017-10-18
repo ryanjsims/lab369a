@@ -11,11 +11,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="99794999999fs"></ZoomStartTime>
-      <ZoomEndTime time="99974793650fs"></ZoomEndTime>
-      <Cursor1Time time="101000000000fs"></Cursor1Time>
+      <ZoomStartTime time="78113296666fs"></ZoomStartTime>
+      <ZoomEndTime time="79425296667fs"></ZoomEndTime>
+      <Cursor1Time time="79206630000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="7" />
    <wvobject fp_name="/Processor_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -34,12 +34,18 @@
       <obj_property name="ObjectShortName">WBWriteData[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/WBRegWriteXorOut" type="logic">
+      <obj_property name="ElementShortName">WBRegWriteXorOut</obj_property>
+      <obj_property name="ObjectShortName">WBRegWriteXorOut</obj_property>
+   </wvobject>
    <wvobject fp_name="/Processor_tb/u0/HIout" type="array">
       <obj_property name="ElementShortName">HIout[31:0]</obj_property>
       <obj_property name="ObjectShortName">HIout[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Processor_tb/u0/LOout" type="array">
       <obj_property name="ElementShortName">LOout[31:0]</obj_property>
       <obj_property name="ObjectShortName">LOout[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

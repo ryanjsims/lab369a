@@ -1,0 +1,528 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Oct 18 01:59:57 2017
+# Process ID: 6740
+# Current directory: Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.runs/synth_1
+# Command line: vivado.exe -log Processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Processor.tcl
+# Log file: Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.runs/synth_1/Processor.vds
+# Journal file: Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Processor.tcl -notrace
+Command: synth_design -top Processor -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5152 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 279.520 ; gain = 70.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Processor' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:23]
+INFO: [Synth 8-638] synthesizing module 'Mux32Bit2To1' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Mux32Bit2To1' (1#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:10]
+INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/ProgramCounter.v:27]
+INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (2#1) [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/ProgramCounter.v:27]
+INFO: [Synth 8-638] synthesizing module 'PCAdder' [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/PCAdder.v:22]
+INFO: [Synth 8-256] done synthesizing module 'PCAdder' (3#1) [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/PCAdder.v:22]
+INFO: [Synth 8-638] synthesizing module 'InstructionMemory' [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionMemory.v:39]
+INFO: [Synth 8-256] done synthesizing module 'InstructionMemory' (4#1) [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionMemory.v:39]
+INFO: [Synth 8-638] synthesizing module 'FetchDecodeReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'FetchDecodeReg' (5#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterFile' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:51]
+INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (6#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:51]
+INFO: [Synth 8-638] synthesizing module 'SignExtension' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:8]
+INFO: [Synth 8-256] done synthesizing module 'SignExtension' (7#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:8]
+INFO: [Synth 8-638] synthesizing module 'DecodeExecuteReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'DecodeExecuteReg' (8#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'ALUSrcIn' does not match port width (1) of module 'DecodeExecuteReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:115]
+WARNING: [Synth 8-689] width (2) of port connection 'ALUSrcOut' does not match port width (1) of module 'DecodeExecuteReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:127]
+WARNING: [Synth 8-689] width (5) of port connection 'out' does not match port width (32) of module 'Mux32Bit2To1' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:134]
+WARNING: [Synth 8-689] width (5) of port connection 'inA' does not match port width (32) of module 'Mux32Bit2To1' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:134]
+WARNING: [Synth 8-689] width (5) of port connection 'inB' does not match port width (32) of module 'Mux32Bit2To1' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:134]
+INFO: [Synth 8-638] synthesizing module 'ShiftLeft2' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ShiftLeft2' (9#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:23]
+INFO: [Synth 8-638] synthesizing module 'Adder32' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Adder32' (10#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:23]
+INFO: [Synth 8-638] synthesizing module 'Mux32Bit3To1' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Mux32Bit3To1' (11#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:10]
+INFO: [Synth 8-638] synthesizing module 'ALU32Bit' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:37]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:49]
+INFO: [Synth 8-256] done synthesizing module 'ALU32Bit' (12#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:37]
+WARNING: [Synth 8-689] width (1) of port connection 'HI' does not match port width (32) of module 'ALU32Bit' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:141]
+WARNING: [Synth 8-689] width (1) of port connection 'LO' does not match port width (32) of module 'ALU32Bit' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:142]
+WARNING: [Synth 8-350] instance 'ALU' of module 'ALU32Bit' requires 10 connections, but only 8 given [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:138]
+INFO: [Synth 8-638] synthesizing module 'ExecuteMemoryReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ExecuteMemoryReg' (13#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'WriteRegIn' does not match port width (6) of module 'ExecuteMemoryReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:153]
+WARNING: [Synth 8-689] width (5) of port connection 'WriteRegOut' does not match port width (6) of module 'ExecuteMemoryReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:164]
+INFO: [Synth 8-638] synthesizing module 'DataMemory' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:38]
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (14#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:38]
+INFO: [Synth 8-638] synthesizing module 'HILORegisters' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:23]
+INFO: [Synth 8-256] done synthesizing module 'HILORegisters' (15#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'hi_out' does not match port width (32) of module 'HILORegisters' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:183]
+WARNING: [Synth 8-689] width (1) of port connection 'lo_out' does not match port width (32) of module 'HILORegisters' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:184]
+INFO: [Synth 8-638] synthesizing module 'And2Gate' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:23]
+INFO: [Synth 8-256] done synthesizing module 'And2Gate' (16#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'Mux32Bit2To1' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:191]
+INFO: [Synth 8-638] synthesizing module 'MemoryWriteBackReg' [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MemoryWriteBackReg' (17#1) [//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'DataToRegIn' does not match port width (32) of module 'MemoryWriteBackReg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:199]
+WARNING: [Synth 8-3848] Net PCsrc in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:65]
+WARNING: [Synth 8-3848] Net DecodeRegDst in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:114]
+WARNING: [Synth 8-3848] Net DecodeMFHI in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:117]
+WARNING: [Synth 8-3848] Net AddrBranch in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:29]
+WARNING: [Synth 8-3848] Net DecodeALUControl in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:35]
+WARNING: [Synth 8-3848] Net DecodeALUSrc in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:36]
+WARNING: [Synth 8-3848] Net ZeroExtend in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:37]
+WARNING: [Synth 8-3848] Net DecodeBranch in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:37]
+WARNING: [Synth 8-3848] Net DecodeRegWrite in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:38]
+WARNING: [Synth 8-3848] Net ALUInA in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:43]
+WARNING: [Synth 8-3848] Net ExecuteReadHI in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:48]
+WARNING: [Synth 8-3848] Net ExecuteReadLO in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:48]
+WARNING: [Synth 8-3848] Net ExecuteMemRead in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:50]
+WARNING: [Synth 8-3848] Net ExecuteMemWrite in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:50]
+WARNING: [Synth 8-3848] Net MemoryWriteHI in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:56]
+WARNING: [Synth 8-3848] Net MemoryWriteLO in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:56]
+WARNING: [Synth 8-3848] Net MemoryMemToReg in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:57]
+WARNING: [Synth 8-3848] Net WBWriteData in module/entity Processor does not have driver. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:60]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (18#1) [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:23]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[30]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[29]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[28]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[27]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[26]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[25]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[24]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[23]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[22]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[21]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[20]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[19]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[18]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[17]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[16]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[11]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[10]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[1]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 316.914 ; gain = 107.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 316.914 ; gain = 107.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 316.914 ; gain = 107.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "memory" won't be mapped to RAM because it is too sparse
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:57]
+INFO: [Synth 8-3971] The signal registers_reg was recognized as a true dual port RAM template.
+WARNING: [Synth 8-327] inferring latch for variable 'ALUResult_reg' [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:51]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:36 . Memory (MB): peak = 332.336 ; gain = 123.254
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 15    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	 397 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	  16 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Mux32Bit2To1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ProgramCounter 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module PCAdder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module InstructionMemory 
+Detailed RTL Component Info : 
++---Muxes : 
+	 397 Input     32 Bit        Muxes := 1     
+Module RegisterFile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module SignExtension 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module DecodeExecuteReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
+Module Adder32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module ALU32Bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	  16 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 1     
+Module ExecuteMemoryReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module HILORegisters 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+Module MemoryWriteBackReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP ALUResult0, operation Mode is: A*B.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: Generating DSP ALUResult0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: Generating DSP ALUResult0, operation Mode is: A*B.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: Generating DSP ALUResult0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+DSP Report: operator ALUResult0 is absorbed into DSP ALUResult0.
+WARNING: [Synth 8-3936] Found unconnected internal register 'em/WriteRegOut_reg' and it is trimmed from '6' to '5' bits. [Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:59]
+INFO: [Synth 8-5784] Optimized 0 bits of RAM "rf/registers_reg" due to constant propagation. Old ram width 32 bits, new ram width 32 bits.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[31]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[30]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[29]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[28]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[27]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[26]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[25]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[24]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[23]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[22]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[21]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[20]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[19]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[18]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[17]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[16]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[15]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[14]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[13]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[12]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[11]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[10]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[9]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[8]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[7]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[6]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[5]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[4]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[3]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[2]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[1]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/instrOut_reg[0]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[31]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[30]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[29]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[28]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[27]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[26]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[25]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[24]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[23]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[22]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[21]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[20]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[19]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[18]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[17]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[16]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[15]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[14]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[13]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[12]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[11]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[10]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[9]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[8]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[7]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[6]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[5]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[4]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[3]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[2]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[1]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (IfId/PCAddrOut_reg[0]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[31]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[30]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[29]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[28]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[27]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[26]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[25]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[24]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[23]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[22]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[21]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[20]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[19]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[18]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[17]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[16]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[15]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[14]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[13]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[12]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[11]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[10]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[9]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[8]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[7]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[6]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[5]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[4]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[3]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[2]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[1]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (ALU/ALUResult_reg[0]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (pc/PCResult_reg[0]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (pc/PCResult_reg[1]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (pc/PCResult_reg[2]) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (pc/PCResult_reg[3]) is unused and will be removed from module Processor.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:50 . Memory (MB): peak = 451.113 ; gain = 242.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU32Bit    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU32Bit    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU32Bit    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU32Bit    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:50 . Memory (MB): peak = 451.113 ; gain = 242.031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:50 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 452.051 ; gain = 242.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 444 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 452.051 ; gain = 242.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:53 . Memory (MB): peak = 452.051 ; gain = 242.969
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 158 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:47 . Memory (MB): peak = 527.590 ; gain = 318.508
+INFO: [Common 17-1381] The checkpoint 'Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.runs/synth_1/Processor.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.421 . Memory (MB): peak = 527.590 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 18 02:01:20 2017...

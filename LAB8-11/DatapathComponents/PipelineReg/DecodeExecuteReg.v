@@ -143,7 +143,7 @@ module DecodeExecuteReg(
         IsByte <= 1'b0;
         SE <= 1'b0;
     end
-    always@(posedge Clk) begin
+    always@(*) begin
         if(Rst) begin
             ReadData1 <= 32'd0;
             ReadData2 <= 32'd0;

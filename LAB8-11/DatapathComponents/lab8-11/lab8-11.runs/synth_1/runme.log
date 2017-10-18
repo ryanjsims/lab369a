@@ -14,22 +14,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18832 
+INFO: Helper process launched with PID 21016 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 272.957 ; gain = 65.758
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 273.453 ; gain = 65.852
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Processor' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:23]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:30]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:35]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:61]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:68]
+INFO: [Synth 8-638] synthesizing module 'Processor' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:17]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:24]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:25]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:29]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:55]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:62]
 INFO: [Synth 8-638] synthesizing module 'Mux32Bit2To1' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:10]
 INFO: [Synth 8-256] done synthesizing module 'Mux32Bit2To1' (1#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:10]
-INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [D:/Users/Ryan/Documents/ECE369a/lab369a/ProgramCounter.v:27]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/ProgramCounter.v:32]
-INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (2#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/ProgramCounter.v:27]
-INFO: [Synth 8-638] synthesizing module 'PCAdder' [D:/Users/Ryan/Documents/ECE369a/lab369a/PCAdder.v:22]
-INFO: [Synth 8-256] done synthesizing module 'PCAdder' (3#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/PCAdder.v:22]
+INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:27]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:32]
+INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (2#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:27]
+INFO: [Synth 8-638] synthesizing module 'PCAdder' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PCAdder.v:22]
+INFO: [Synth 8-256] done synthesizing module 'PCAdder' (3#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PCAdder.v:22]
 INFO: [Synth 8-638] synthesizing module 'InstructionMemory' [D:/Users/Ryan/Documents/ECE369a/lab369a/InstructionMemory.v:39]
 INFO: [Synth 8-256] done synthesizing module 'InstructionMemory' (4#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/InstructionMemory.v:39]
 INFO: [Synth 8-638] synthesizing module 'FetchDecodeReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:23]
@@ -68,8 +69,8 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan
 INFO: [Synth 8-256] done synthesizing module 'HILORegisters' (20#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:23]
 INFO: [Synth 8-638] synthesizing module 'MemoryWriteBackReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
 INFO: [Synth 8-256] done synthesizing module 'MemoryWriteBackReg' (21#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
-WARNING: [Synth 8-3848] Net AddrBranch in module/entity Processor does not have driver. [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:29]
-INFO: [Synth 8-256] done synthesizing module 'Processor' (22#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:23]
+WARNING: [Synth 8-3848] Net AddrBranch in module/entity Processor does not have driver. [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (22#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:17]
 WARNING: [Synth 8-3331] design HILORegisters has unconnected port hi_read
 WARNING: [Synth 8-3331] design HILORegisters has unconnected port lo_read
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[1]
@@ -77,7 +78,7 @@ WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[0]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 310.375 ; gain = 103.176
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 310.879 ; gain = 103.277
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -86,40 +87,40 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[31] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[30] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[29] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[28] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[27] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[26] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[25] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[24] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[23] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[22] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[21] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[20] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[19] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[18] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[17] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[16] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[15] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[14] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[13] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[12] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[11] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[10] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[9] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[8] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[7] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[6] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[5] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[4] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[3] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[2] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[1] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
-WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[0] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:75]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[31] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[30] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[29] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[28] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[27] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[26] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[25] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[24] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[23] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[22] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[21] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[20] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[19] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[18] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[17] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[16] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[15] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[14] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[13] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[12] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[11] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[10] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[9] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[8] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[7] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[6] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[5] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[4] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[3] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[2] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[1] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
+WARNING: [Synth 8-3295] tying undriven pin PCSrcMux:inB[0] to constant 0 [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 310.375 ; gain = 103.176
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 310.879 ; gain = 103.277
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -135,22 +136,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 618.578 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 618.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "ZeroExtend" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ALUSrc" won't be mapped to RAM because it is too sparse
@@ -172,7 +173,7 @@ INFO: [Synth 8-5546] ROM "DepRegWrite" won't be mapped to RAM because it is too 
 INFO: [Synth 8-5546] ROM "SE" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3971] The signal registers_reg was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -193,11 +194,11 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 33    
 +---Registers : 
-	               32 Bit    Registers := 21    
-	                5 Bit    Registers := 6     
-	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 46    
+	               32 Bit    Registers := 17    
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 30    
 +---Multipliers : 
 	                32x32  Multipliers := 1     
 +---RAMs : 
@@ -276,11 +277,11 @@ Detailed RTL Component Info :
 Module DecodeExecuteReg 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 8     
-	                5 Bit    Registers := 4     
-	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 32    
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
 Module SignExtensionHalfByte 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -340,7 +341,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 618.578 ; gain = 411.379
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -394,9 +395,9 @@ WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[12
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 618.402 ; gain = 410.801
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -452,9 +453,9 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 618.402 ; gain = 410.801
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 618.578 ; gain = 411.379
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 618.402 ; gain = 410.801
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -468,10 +469,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 652.879 ; gain = 445.680
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 650.652 ; gain = 443.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 652.879 ; gain = 445.680
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 650.652 ; gain = 443.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -485,16 +486,16 @@ Start Technology Mapping
 INFO: [Synth 8-4480] The timing for the instance registers_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance registers_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 672.691 ; gain = 465.090
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -511,7 +512,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -524,7 +525,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -536,25 +537,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -573,7 +574,7 @@ Report Cell Usage:
 |1     |BUFG      |     1|
 |2     |CARRY4    |    88|
 |3     |DSP48E1   |     8|
-|4     |LUT1      |    98|
+|4     |LUT1      |   101|
 |5     |LUT2      |   264|
 |6     |LUT3      |   255|
 |7     |LUT4      |   181|
@@ -583,7 +584,7 @@ Report Cell Usage:
 |11    |MUXF8     |     3|
 |12    |RAM256X1S |    32|
 |13    |RAMB18E1  |     2|
-|14    |FDRE      |   664|
+|14    |FDRE      |   504|
 |15    |IBUF      |     2|
 +------+----------+------+
 
@@ -591,17 +592,17 @@ Report Instance Areas:
 +------+--------------+-------------------+------+
 |      |Instance      |Module             |Cells |
 +------+--------------+-------------------+------+
-|1     |top           |                   |  2361|
+|1     |top           |                   |  2204|
 |2     |  pc          |ProgramCounter     |    32|
 |3     |  pcadd       |PCAdder            |    39|
-|4     |  im          |InstructionMemory  |   155|
+|4     |  im          |InstructionMemory  |   158|
 |5     |  IfId        |FetchDecodeReg     |    64|
 |6     |  ShfRSMux    |Mux5Bit2To1__2     |     5|
 |7     |  ShfRTMux    |Mux5Bit2To1        |     5|
 |8     |  rf          |RegisterFile       |     3|
 |9     |  se          |SignExtension      |    17|
 |10    |  ctrl        |Controller         |    76|
-|11    |  de          |DecodeExecuteReg   |   320|
+|11    |  de          |DecodeExecuteReg   |   160|
 |12    |  ALU         |ALU32Bit           |  1095|
 |13    |  hilo        |HILORegisters      |   128|
 |14    |  memtoreg    |Mux32Bit2To1       |    32|
@@ -612,11 +613,11 @@ Report Instance Areas:
 |19    |  mw          |MemoryWriteBackReg |    74|
 +------+--------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 674.801 ; gain = 159.398
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 672.691 ; gain = 157.566
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 672.691 ; gain = 465.090
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -627,8 +628,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-86 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+87 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 674.801 ; gain = 467.602
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 674.801 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 18 03:22:49 2017...
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 672.691 ; gain = 465.090
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 672.691 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 18 12:24:08 2017...

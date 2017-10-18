@@ -58,4 +58,5 @@ module FetchDecodeReg(
             PCAddrOut <= PCAddr;
         end
     end
+    
 endmodule

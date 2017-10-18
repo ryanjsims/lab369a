@@ -1,22 +1,16 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+////////////////////////////////////////////////////////////////////////////////
+// ECE369 - Computer Architecture
 // 
-// Create Date: 10/16/2017 09:06:21 PM
-// Design Name: 
-// Module Name: Processor_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+//
+//
+// Student(s) Name and Last Name: 
+//              Ryan Sims    - 60%
+//              Dennis Hardy - 40%
+//
+//
+// Module - Processor_tb.v
+// Description - Implements a basic MIPS Processor testbench.
 //////////////////////////////////////////////////////////////////////////////////
 
 

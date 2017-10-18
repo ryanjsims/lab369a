@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Wed Oct 18 03:23:55 2017
+| Date             : Wed Oct 18 12:25:45 2017
 | Host             : RyanDesktop running 64-bit major release  (build 9200)
 | Command          : report_power -file Processor_power_routed.rpt -pb Processor_power_summary_routed.pb -rpx Processor_power_routed.rpx
 | Design           : Processor
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 27.970 (Junction temp exceeded!) |
-| Dynamic (W)              | 27.171                           |
+| Total On-Chip Power (W)  | 27.785 (Junction temp exceeded!) |
+| Dynamic (W)              | 26.986                           |
 | Device Static (W)        | 0.799                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -49,19 +49,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    10.903 |     2048 |       --- |             --- |
-|   LUT as Logic |    10.158 |     1241 |     63400 |            1.96 |
+| Slice Logic    |    10.833 |     1929 |       --- |             --- |
+|   LUT as Logic |    10.166 |     1246 |     63400 |            1.97 |
 |   CARRY4       |     0.493 |       88 |     15850 |            0.56 |
-|   Register     |     0.245 |      519 |    126800 |            0.41 |
+|   Register     |     0.167 |      397 |    126800 |            0.31 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |     0.002 |       10 |     63400 |            0.02 |
 |   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    12.860 |     2261 |       --- |             --- |
+| Signals        |    12.745 |     2142 |       --- |             --- |
 | Block RAM      |     0.240 |        1 |       135 |            0.74 |
 | DSPs           |     3.164 |        8 |       240 |            3.33 |
 | I/O            |     0.004 |        2 |       210 |            0.95 |
 | Static Power   |     0.799 |          |           |                 |
-| Total          |    27.970 |          |           |                 |
+| Total          |    27.785 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    27.729 |      27.165 |      0.564 |
+| Vccint    |       1.000 |    27.545 |      26.981 |      0.564 |
 | Vccaux    |       1.800 |     0.093 |       0.000 |      0.093 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,24 +138,24 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| Processor   |    27.171 |
-|   ALU       |    18.414 |
-|   IfId      |     0.044 |
+| Processor   |    26.986 |
+|   ALU       |    18.621 |
+|   IfId      |     0.041 |
 |   RegDstMux |     0.003 |
-|   SEHBMux   |     0.341 |
-|   ShfRSMux  |     0.012 |
-|   ShfRTMux  |     0.022 |
-|   ctrl      |     0.237 |
-|   de        |     4.532 |
-|   em        |     0.627 |
+|   SEHBMux   |     0.335 |
+|   ShfRSMux  |     0.019 |
+|   ShfRTMux  |     0.015 |
+|   ctrl      |     0.226 |
+|   de        |     4.097 |
+|   em        |     0.640 |
 |   hilo      |     0.001 |
-|   im        |     0.698 |
+|   im        |     0.693 |
 |   memtoreg  |     0.000 |
-|   mw        |     0.457 |
-|   pc        |     0.488 |
-|   pcadd     |     0.082 |
-|   rf        |     0.711 |
-|   se        |     0.086 |
+|   mw        |     0.487 |
+|   pc        |     0.473 |
+|   pcadd     |     0.080 |
+|   rf        |     0.737 |
+|   se        |     0.102 |
 +-------------+-----------+
 
 

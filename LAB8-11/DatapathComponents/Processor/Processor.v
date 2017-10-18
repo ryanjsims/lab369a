@@ -1,22 +1,16 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+////////////////////////////////////////////////////////////////////////////////
+// ECE369 - Computer Architecture
 // 
-// Create Date: 10/09/2017 01:59:43 PM
-// Design Name: 
-// Module Name: Processor
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+//
+//
+// Student(s) Name and Last Name: 
+//              Ryan Sims    - 60%
+//              Dennis Hardy - 40%
+//
+//
+// Module - Processor.v
+// Description - Implements a basic MIPS Processor.
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -28,7 +22,7 @@ module Processor(
     //Instruction Fetch wires
     wire [31:0] PCAddrIn, PCAddrAdd4, AddrBranch;
     (* mark_debug = "true" *) wire [31:0] PCAddrOut;
-    wire [31:0] FetchInst;
+    (* mark_debug = "true" *) wire [31:0] FetchInst;
     wire PCSrc;
     
     //Instruction Decode wires

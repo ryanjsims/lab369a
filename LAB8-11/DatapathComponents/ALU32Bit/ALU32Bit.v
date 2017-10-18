@@ -75,7 +75,7 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mt
                     signExtBit = (signExtBit ^ multResult[i]) & signExtBit;
                 end*/
                 ALUResult <= multResult[31:0];
-                ALUResultHI <= multResult[63:32] | multResultSignMask;
+                ALUResultHI <= multResult[63:32] /*| multResultSignMask*/;
             end
             4'b0011: begin //mult unsigned
                 multResult <= ($unsigned(A)) * ($unsigned(B));

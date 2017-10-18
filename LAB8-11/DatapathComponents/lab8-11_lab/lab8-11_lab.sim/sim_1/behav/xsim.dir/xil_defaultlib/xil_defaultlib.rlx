@@ -1,0 +1,10 @@
+0.6
+2016.3
+Oct 10 2016
+19:46:48
+//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionFetchUnit_tb.v,1508305077,verilog,,,,IFU_tb,,,,,,,,
+//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/InstructionMemory.v,1508308354,verilog,,,,InstructionMemory,,,,,,,,
+//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/PCAdder.v,1508302366,verilog,,,,PCAdder,,,,,,,,
+//vmware-host/Shared Folders/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/InstructionFetchUnit/ProgramCounter.v,1508302366,verilog,,,,ProgramCounter,,,,,,,,
+Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v,1508301894,verilog,,,,Mux32Bit2To1,,,,,,,,
+Z:/Documents/2017FALL/ECE369A/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.sim/sim_1/behav/glbl.v,1476033524,verilog,,,,glbl,,,,,,,,
