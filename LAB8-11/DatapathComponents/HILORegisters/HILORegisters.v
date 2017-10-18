@@ -33,14 +33,14 @@ module HILORegisters(
     );
     input [31:0] hi_in, lo_in;
     input Clk, hi_read, hi_write, lo_read, lo_write;
-    reg [31:0] HI, LO;
-    output [31:0] hi_out, lo_out;
+    (* mark_debug = "true" *) reg [31:0] HI, LO;
+    (* mark_debug = "true" *) output [31:0] hi_out, lo_out;
      
     always@(posedge Clk) begin
         if(hi_write) HI <= hi_in;
         if(lo_write) LO <= lo_in;
     end
-    assign hi_out = {32{hi_read}} & HI;
-    assign lo_out = {32{lo_read}} & LO;
+    assign hi_out = /*{32{hi_read}} & */HI;
+    assign lo_out = /*{32{lo_read}} & */LO;
      
 endmodule

@@ -40,12 +40,26 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mt
 	input [31:0] A, B, HI, LO;	    // inputs
 	input mtlo, mthi;
     reg [65:0] multResult;
+    reg [31:0] multResultSignMask;
+    integer i;
+    reg signExtBit;
 	output reg [31:0] ALUResult, ALUResultHI;	// answer(s)
 	output reg Zero;	    // Zero=1 if ALUResult == 0
 
     /* Please fill in the implementation here... */
-    always@(*)begin
+    initial begin
+        signExtBit <= 0;
+        ALUResult <= 32'd0;
         ALUResultHI <= 32'd0;
+        multResultSignMask <= 32'd0;
+        multResult <= 66'd0;
+    end
+    always@(*)begin
+        ALUResult <= 32'd0;
+        ALUResultHI <= 32'd0;
+        signExtBit <= 0;
+        multResultSignMask <= 32'd0;
+        multResult <= 66'd0;
         case(ALUControl)
             4'b0000: begin //Add
                 ALUResult <= A + B;  
@@ -54,22 +68,39 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mt
                 ALUResult <= A - B;
             end
             4'b0010: begin //mult signed
-                multResult = A * B;
+                multResult <= $signed(A) * $signed(B);
+                /*signExtBit = (A[31] ^ B[31]);
+                for(i = 63; i > 31; i = i - 1) begin
+                    multResultSignMask[i - 32] = signExtBit | multResult[i];
+                    signExtBit = (signExtBit ^ multResult[i]) & signExtBit;
+                end*/
                 ALUResult <= multResult[31:0];
-                ALUResultHI <= multResult[63:32];
+                ALUResultHI <= multResult[63:32] | multResultSignMask;
             end
             4'b0011: begin //mult unsigned
-                multResult = {1'b0, A} * {1'b0, B};
+                multResult <= ($unsigned(A)) * ($unsigned(B));
                 ALUResult <= multResult[31:0];
                 ALUResultHI <= multResult[63:32];
             end
             4'b0100: begin //madd
-                multResult = A * B + {HI, LO};
+                multResult = A * B;
+                signExtBit = (A[31] ^ B[31]);
+                for(i = 63; i > 31; i = i - 1) begin
+                    multResultSignMask[i - 32] = signExtBit | multResult[i];
+                    signExtBit = (signExtBit ^ multResult[i]) & signExtBit;
+                end
+                multResult = (multResult | {multResultSignMask, 32'd0}) + {HI, LO};
                 ALUResult <= multResult[31:0];
                 ALUResultHI <= multResult[63:32];
             end
             4'b0101: begin //msub
-                multResult = {HI, LO} - A * B;
+                multResult = A * B;
+                signExtBit = (A[31] ^ B[31]);
+                for(i = 63; i > 31; i = i - 1) begin
+                    multResultSignMask[i - 32] = signExtBit | multResult[i];
+                    signExtBit = (signExtBit ^ multResult[i]) & signExtBit;
+                end
+                multResult = {HI, LO} - (multResult | {multResultSignMask, 32'd0});
                 ALUResult <= multResult[31:0];
                 ALUResultHI <= multResult[63:32];
             end
@@ -86,19 +117,22 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mt
                 ALUResult <= ~(A | B);
             end
             4'b1010: begin //SLL
-                ALUResult <= A << B;
+                ALUResult <= A << B[4:0];
             end
             4'b1011: begin //SRL
-                ALUResult <= A >> B;
+                ALUResult <= A >> B[4:0];
             end
             4'b1100: begin //SRA
-                ALUResult <= {{32{A[31]}}, A} >> B;
+                ALUResult <= {{32{A[31]}}, A} >> B[4:0];
             end
             4'b1101: begin //ROTR
-                ALUResult <= ({A, A} >> B);
+                ALUResult <= ({A, A} >> B[4:0]);
             end
             4'b1110: begin //SLT
                 ALUResult <= ($signed(A)) < ($signed(B));
+            end
+            4'b1111: begin //SLTU
+                ALUResult <= ($unsigned(A)) < ($unsigned(B));
             end
         endcase
         if(mthi) begin

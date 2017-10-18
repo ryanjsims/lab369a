@@ -22,15 +22,40 @@
 
 module FetchDecodeReg(
     Clk,
+    Rst,
     instrIn,
     PCAddrIn,
     instrOut,
     PCAddrOut
     );
-    input [31:0] instrIn, PCAddrIn;
+    (* dont_touch = "true" *) input [31:0] instrIn, PCAddrIn;
+    input Clk, Rst;
+    reg [31:0] instr, PCAddr;
     output reg[31:0] instrOut, PCAddrOut;
-    always@(negedge Clk) begin
-        instrOut <= instrIn;
-        PCAddrOut <= PCAddrIn;
+    initial begin
+        instrOut <= 0;
+        PCAddrOut <= 0;
+        instr <= 0;
+        PCAddr <= 0;
+    end
+    always@(*) begin
+        if(Rst) begin
+            instr <= 0;
+            PCAddr <= 0;
+        end
+        else begin
+            instr <= instrIn;
+            PCAddr <= PCAddrIn;
+        end
+    end
+    always@(posedge Clk) begin
+        if(Rst) begin
+            instrOut <= 0;
+            PCAddrOut <= 0;
+        end
+        else begin
+            instrOut <= instr;
+            PCAddrOut <= PCAddr;
+        end
     end
 endmodule

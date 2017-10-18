@@ -1,0 +1,325 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct 16 15:28:07 2017
+# Process ID: 4912
+# Current directory: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11_lab
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12420 D:\Users\Ryan\Documents\ECE369a\lab369a\LAB8-11\DatapathComponents\lab8-11_lab\lab8-11_lab.xpr
+# Log file: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/vivado.log
+# Journal file: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11_lab\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11_lab/lab8-11_lab.xpr
+update_compile_order -fileset sources_1
+save_project_as lab8-11 D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11 -force
+add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v
+update_compile_order -fileset sources_1
+add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v
+update_compile_order -fileset sources_1
+close [ open D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v w ]
+add_files D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Processor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+close_design
+synth_design -rtl -name rtl_1
+launch_simulation -mode post-synthesis -type timing
+source HILOregisters_tb.tcl
+file mkdir D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.srcs/constrs_1
+close [ open D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/constrants.xdc w ]
+add_files -fileset constrs_1 D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/constrants.xdc
+set_property target_constrs_file D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/constrants.xdc [current_fileset -constrset]
+refresh_design
+create_clock -period 10.000 -name Clock -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*Clk*" && DIRECTION == "IN" }]
+save_constraints
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+close_design
+refresh_design
+close_design
+open_run synth_1 -name synth_1
+close_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close [ open D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v w ]
+add_files D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+close_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_sim
+launch_simulation -mode post-implementation -type functional
+source HILOregisters_tb.tcl
+set_property top Processor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+close_sim
+launch_simulation -mode post-synthesis -type functional
+source Processor.tcl
+close [ open D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor_tb.v w ]
+add_files D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor_tb.v
+update_compile_order -fileset sources_1
+close_sim
+close_design
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Processor_tb [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+set_property top Processor_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation -mode post-synthesis -type functional
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+refresh_design
+launch_simulation -mode post-implementation -type functional
+source Processor_tb.tcl
+create_wave_config
+close_sim
+launch_simulation
+source Processor_tb.tcl
+close_sim
+launch_simulation
+source Processor_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_sim
+close_design
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Processor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+add_files -fileset sim_1 -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor_tb.v
+remove_files D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor_tb.v
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_simulation -mode post-synthesis -type timing
+source Processor_tb.tcl
+close_sim
+set_property top Processor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation -mode post-implementation -type timing
+source Processor.tcl
+close_sim
+close_design
+close_design
+synth_design -rtl -name rtl_1
+close_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type functional
+source Processor.tcl
+add_force {/Processor/Clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 50000 ns
+close_sim
+close_design
+launch_simulation -mode post-implementation -type timing
+source Processor.tcl
+add_force {/Processor/Clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 50000 ns
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type timing
+source Processor.tcl
+close_sim
+close_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_simulation -mode post-synthesis -type timing
+source Processor.tcl
+close_sim
+close_project
+open_project D:/Users/Ryan/Documents/ECE274A/lab4_inLab/Lab4.xpr
+update_compile_order -fileset sources_1
+update_files -from_files D:/Users/Ryan/Documents/ECE274A/lab4_inLab/ClkDiv.v -to_files D:/Users/Ryan/Documents/Downloads/Lab3/ClkDiv.v -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_simulation -mode post-synthesis -type timing
+source LightPatternGenerator_tb.tcl
+close_sim
+close_design
+launch_simulation -mode post-implementation -type timing
+source LightPatternGenerator_tb.tcl
+close_sim
+close_design
+close_project
+open_project D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.xpr
+update_compile_order -fileset sources_1
+set_property top Processor_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+add_wave {{/Processor_tb/u0/PCAddrOut}} 
+add_wave {{/Processor_tb/u0/PCAddrOut}} 
+run 50000 ns
+add_wave {{/Processor_tb/u0/WBWriteData}} 
+add_wave {{/Processor_tb/u0/HIout}} 
+add_wave {{/Processor_tb/u0/LOout}} 
+restart
+run 50000 ns
+close_sim
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+add_wave {{/Processor_tb/u0/PCAddrOut}} 
+add_wave {{/Processor_tb/u0/WBWriteData}} 
+add_wave {{/Processor_tb/u0/HIout}} 
+add_wave {{/Processor_tb/u0/LOout}} 
+restart
+run 50000 ns
+run 50000 ns
+add_wave {{/Processor_tb/u0/FetchInst}} 
+add_wave {{/Processor_tb/u0/DecodeInst}} 
+restart
+run 50000 ns
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_sim
+refresh_design
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+restart
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+add_wave {{/Processor_tb/u0/FetchInst}} 
+add_wave {{/Processor_tb/u0/PCAddrOut}} 
+add_wave {{/Processor_tb/u0/WBWriteData}} 
+add_wave {{/Processor_tb/u0/HIout}} 
+add_wave {{/Processor_tb/u0/LOout}} 
+add_wave {{/Processor_tb/u0/FetchInst}} 
+restart
+run 50000 ns
+add_wave {{/Processor_tb/u0/MemoryALUResult}} 
+add_wave {{/Processor_tb/u0/WBDstAddr}} 
+run all
+restart
+run 50000 ns
+add_wave {{/Processor_tb/u0/WBRegWriteXorOut}} 
+restart
+run 50000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_design
+launch_runs impl_1
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+restart
+add_wave {{/Processor_tb/u0/WBWriteData}} 
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_sim
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+restart
+add_wave {{/Processor_tb/u0/WBWriteData}} 
+add_wave {{/Processor_tb/u0/HIout}} 
+add_wave {{/Processor_tb/u0/LOout}} 
+add_wave {{/Processor_tb/u0/PCAddrOut}} 
+run 50000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source Processor_tb.tcl
+restart
+add_wave {{/Processor_tb/u0/WBWriteData}} 
+add_wave {{/Processor_tb/u0/HIout}} 
+add_wave {{/Processor_tb/u0/LOout}} 
+add_wave {{/Processor_tb/u0/PCAddrOut}} 
+run 50000 ns
+close_sim

@@ -1,0 +1,85 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 92baab12fd0a49c9ae751c73dcde3784 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot Processor_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.Processor xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "Processor_time_synth.sdf", for root module "Processor".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "Processor_time_synth.sdf", for root module "Processor".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.x_lut3_mux4_reduced_0
+Compiling module simprims_ver.LUT3
+Compiling module xil_defaultlib.ALU32Bit
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE(IS_C_INVERTED=1'b1)
+Compiling module xil_defaultlib.FetchDecodeReg
+Compiling module simprims_ver.MUXF7
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.RAMS64E(RAM_ADDRESS_SPACE=2'b11)
+Compiling module simprims_ver.RAMS64E(RAM_ADDRESS_SPACE=2'b10)
+Compiling module simprims_ver.RAMS64E(RAM_ADDRESS_SPACE=2'b01)
+Compiling module simprims_ver.RAMS64E
+Compiling module xil_defaultlib.RAM256X1S_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM256X1S_HD42
+Compiling module xil_defaultlib.RAM256X1S_HD43
+Compiling module xil_defaultlib.RAM256X1S_HD44
+Compiling module xil_defaultlib.RAM256X1S_HD45
+Compiling module xil_defaultlib.RAM256X1S_HD46
+Compiling module xil_defaultlib.RAM256X1S_HD47
+Compiling module xil_defaultlib.RAM256X1S_HD48
+Compiling module xil_defaultlib.RAM256X1S_HD49
+Compiling module xil_defaultlib.RAM256X1S_HD50
+Compiling module xil_defaultlib.RAM256X1S_HD51
+Compiling module xil_defaultlib.RAM256X1S_HD52
+Compiling module xil_defaultlib.RAM256X1S_HD53
+Compiling module xil_defaultlib.RAM256X1S_HD54
+Compiling module xil_defaultlib.RAM256X1S_HD55
+Compiling module xil_defaultlib.RAM256X1S_HD56
+Compiling module xil_defaultlib.RAM256X1S_HD57
+Compiling module xil_defaultlib.RAM256X1S_HD58
+Compiling module xil_defaultlib.RAM256X1S_HD59
+Compiling module xil_defaultlib.RAM256X1S_HD60
+Compiling module xil_defaultlib.RAM256X1S_HD61
+Compiling module xil_defaultlib.RAM256X1S_HD62
+Compiling module xil_defaultlib.RAM256X1S_HD63
+Compiling module xil_defaultlib.RAM256X1S_HD64
+Compiling module xil_defaultlib.RAM256X1S_HD65
+Compiling module xil_defaultlib.RAM256X1S_HD66
+Compiling module xil_defaultlib.RAM256X1S_HD67
+Compiling module xil_defaultlib.RAM256X1S_HD68
+Compiling module xil_defaultlib.RAM256X1S_HD69
+Compiling module xil_defaultlib.RAM256X1S_HD70
+Compiling module xil_defaultlib.RAM256X1S_HD71
+Compiling module xil_defaultlib.RAM256X1S_HD72
+Compiling module xil_defaultlib.DataMemory
+Compiling module simprims_ver.FDRE
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.DecodeExecuteReg
+Compiling module simprims_ver.SRL16E
+Compiling module xil_defaultlib.ExecuteMemoryReg
+Compiling module xil_defaultlib.HILORegisters
+Compiling module simprims_ver.GND
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Mux32Bit2To1
+Compiling module xil_defaultlib.MemoryWriteBackReg
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.PCAdder
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(DOA_REG=0,DOB...
+Compiling module simprims_ver.RAMB18E1(IS_CLKARDCLK_INVERTED=1...
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Processor
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Processor_time_synth
