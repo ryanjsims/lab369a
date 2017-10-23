@@ -35,7 +35,7 @@ module Processor(
     wire ZeroExtend, DecodeBranch, DecodeReadHI, DecodeReadLO;
     wire DecodeWriteHI, DecodeWriteLO, DecodeRegWrite, DecodeMemToReg, DecodeMemRead;
     wire DecodeMemWrite, DecodeMTLO, DecodeMTHI, DecodeMFHI, DecodeDepRegWrite, DecodeShf;
-    wire DecodeIsByte, DecodeSE;
+    wire DecodeIsByte, DecodeSE, DecodeReadByte, DecodeReadWord;
     
     //Execute Wires
     wire [31:0] ExecuteSignExtend, ExecutePCAddrOut, ExecuteJumpOffset, ExecuteJumpAddr;
@@ -47,16 +47,17 @@ module Processor(
     wire ExecuteBranch, ExecuteRegDst, ExecuteReadHI, ExecuteReadLO;
     wire ExecuteWriteHI, ExecuteWriteLO, ExecuteRegWrite, ExecuteMemToReg;
     wire ExecuteMemRead, ExecuteMemWrite, ExecuteMTLO, ExecuteMTHI, ExecuteMFHI;
-    wire ExecuteDepRegWrite, ExecuteIsByte, ExecuteSE;
+    wire ExecuteDepRegWrite, ExecuteIsByte, ExecuteSE, ExecuteReadByte, ExecuteReadWord;
                         
     
     //Memory Wires
     wire [31:0] MemoryJumpAddr, MemoryALUResult, MemoryALUResultHI, MemoryReg2Data, MemoryReadData;
     (* mark_debug = "true" *) wire [31:0] HIout, LOout;
-    wire [31:0] MemoryDataToReg;
+    wire [31:0] MemoryDataToReg, MemoryReadDataSE, MemoryReadDataMuxOut;
     wire  [4:0] MemoryDstAddr;
     wire MemoryZero, MemoryBranch, MemoryWriteHI, MemoryWriteLO, MemoryRegWrite;
     wire MemoryMemToReg, MemoryMemRead, MemoryMemWrite, MemoryDepRegWrite, MemoryMFHI;
+    wire MemoryReadByte, MemoryReadWord, MemSESelect;
     
     //Write Back Wires
     (* mark_debug = "true" *) wire [31:0] WBWriteData;
@@ -110,7 +111,9 @@ module Processor(
                     DecodeDepRegWrite,
                     DecodeShf,
                     DecodeIsByte,
-                    DecodeSE);
+                    DecodeSE,
+                    DecodeReadByte, 
+                    DecodeReadWord);
     //END INSTRUCTION DECODE COMPONENTS
 
     DecodeExecuteReg de(Clk,
@@ -139,6 +142,8 @@ module Processor(
                 DecodeMemToReg,
                 DecodeIsByte,
                 DecodeSE,
+                DecodeReadByte, 
+                DecodeReadWord,
                 ExecuteReadData1, 
                 ExecuteReadData2,
                 ExecuteSignExtend,
@@ -162,7 +167,9 @@ module Processor(
                 ExecuteMemWrite,
                 ExecuteMemToReg,
                 ExecuteIsByte,
-                ExecuteSE);
+                ExecuteSE,
+                ExecuteReadByte, 
+                ExecuteReadWord);
     
     
     //Execute
@@ -201,6 +208,8 @@ module Processor(
                     ExecuteWriteLO,
                     ExecuteDepRegWrite,
                     ExecuteMemToReg,
+                    ExecuteReadByte, 
+                    ExecuteReadWord,
                     MemoryJumpAddr,
                     MemoryALUResult,
                     MemoryALUResultHI,
@@ -215,15 +224,22 @@ module Processor(
                     MemoryWriteHI, 
                     MemoryWriteLO,
                     MemoryDepRegWrite,
-                    MemoryMemToReg);
+                    MemoryMemToReg,
+                    MemoryReadByte, 
+                    MemoryReadWord);
     
     //Memory
     DataMemory data_memory(MemoryALUResult, 
                 MemoryReg2Data, 
                 Clk, 
                 MemoryMemWrite, 
-                MemoryMemRead, 
+                MemoryMemRead,
+                MemoryReadByte, 
+                MemoryReadWord,
                 MemoryReadData);
+    SignExtensionHalfByte MemSE(MemoryReadData, MemoryReadDataSE, MemoryReadByte);
+    Xor2Gate MemIsSE(MemoryReadByte, MemoryReadWord, MemSESelect);
+    Mux32Bit2To1 MemDataOrSE(MemoryReadDataMuxOut, MemoryReadData, MemoryReadDataSE, MemSESelect);
     HILORegisters hilo(
                     Clk,
                     MemoryALUResultHI,
@@ -244,7 +260,7 @@ module Processor(
                         MemoryRegWrite,
                         MemoryDstAddr,
                         MemoryMemToReg,
-                        MemoryReadData,
+                        MemoryReadDataMuxOut,
                         MemoryDataToReg,
                         MemoryZero,
                         MemoryDepRegWrite,

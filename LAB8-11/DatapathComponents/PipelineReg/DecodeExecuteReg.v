@@ -47,6 +47,8 @@ module DecodeExecuteReg(
     MemToRegIn,
     IsByteIn,
     SEIn,
+    ReadByteIn, 
+    ReadWordIn,
     ReadData1Out, 
     ReadData2Out,
     SignExtendOut,
@@ -70,7 +72,9 @@ module DecodeExecuteReg(
     MemWriteOut,
     MemToRegOut,
     IsByteOut,
-    SEOut
+    SEOut,
+    ReadByteOut, 
+    ReadWordOut
     );
     input [31:0] SignExtendIn, PCAddrIn, ReadData1In, ReadData2In;
     input [4:0] rtIn, rdIn;
@@ -79,6 +83,7 @@ module DecodeExecuteReg(
     input BranchIn, Clk, RegDstIn, MFHIIn, RegWriteIn, Rst;
     input MTLOIn, MTHIIn, ReadHIIn, ReadLOIn, WriteHIIn, WriteLOIn;
     input DepRegWriteIn, MemReadIn, MemWriteIn, MemToRegIn, IsByteIn, SEIn;
+    input ReadByteIn, ReadWordIn;
     output reg [31:0] SignExtendOut, PCAddrOut, ReadData1Out, ReadData2Out;
     output reg  [4:0] rtOut, rdOut;
     output reg  [3:0] ALUControlOut;
@@ -86,13 +91,14 @@ module DecodeExecuteReg(
     output reg BranchOut, RegDstOut, MFHIOut, RegWriteOut;
     output reg MTLOOut, MTHIOut, ReadHIOut, ReadLOOut, WriteHIOut, WriteLOOut;
     output reg DepRegWriteOut, MemReadOut, MemWriteOut, MemToRegOut, IsByteOut, SEOut;
+    output reg ReadByteOut, ReadWordOut;
     reg [31:0] SignExtend, PCAddr, ReadData1, ReadData2;
     reg  [4:0] rt, rd;
     reg  [3:0] ALUControl;
     reg  [1:0] ALUSrc;
     reg Branch, RegDst, MFHI, RegWrite;
     reg MTLO, MTHI, ReadHI, ReadLO, WriteHI, WriteLO;
-    reg DepRegWrite, MemRead, MemWrite, MemToReg, IsByte, SE;
+    reg DepRegWrite, MemRead, MemWrite, MemToReg, IsByte, SE, ReadByte, ReadWord;
     initial begin
         ReadData1Out <= 32'd0;
         ReadData2Out <= 32'd0;
@@ -142,6 +148,10 @@ module DecodeExecuteReg(
         MemToReg <= 1'b0;
         IsByte <= 1'b0;
         SE <= 1'b0;
+        ReadByte <= 1'b0;
+        ReadWord <= 1'b0;
+        ReadByteOut <= 1'b0;
+        ReadWordOut <= 1'b0;
     end
     always@(*) begin
         if(Rst) begin
@@ -169,6 +179,8 @@ module DecodeExecuteReg(
             MemToReg <= 1'b0;
             IsByte <= 1'b0;
             SE <= 1'b0;
+            ReadByte <= 1'b0;
+            ReadWord <= 1'b0;
         end
         else begin
             ReadData1 <= ReadData1In;
@@ -195,6 +207,8 @@ module DecodeExecuteReg(
             MemToReg <= MemToRegIn;
             IsByte <= IsByteIn;
             SE <= SEIn;
+            ReadByte <= ReadByteIn;
+            ReadWord <= ReadWordIn;
         end
     end
     always@(posedge Clk) begin
@@ -223,6 +237,8 @@ module DecodeExecuteReg(
             MemToRegOut <= 1'b0;
             IsByteOut <= 1'b0;
             SEOut <= 1'b0;
+            ReadByteOut <= 1'b0;
+            ReadWordOut <= 1'b0;
         end
         else begin
             ReadData1Out <= ReadData1;
@@ -249,6 +265,8 @@ module DecodeExecuteReg(
             MemToRegOut <= MemToReg;
             IsByteOut <= IsByte;
             SEOut <= SE;
+            ReadByteOut <= ReadByte;
+            ReadWordOut <= ReadWord;
         end
     end
 endmodule

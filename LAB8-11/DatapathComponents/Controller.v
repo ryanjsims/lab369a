@@ -1,11 +1,13 @@
 module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                      MemWrite, MemRead, MemToReg, RegWrite, mfhi, mthi, mtlo,
-                     hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE);
+                     hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE,
+                     ReadByte, ReadWord);
    input [31:0] instruction;
    output reg [3:0] ALUControl;
    output reg [1:0] ALUSrc;
    output reg ZeroExtend, Branch, RegDst, MemWrite, MemRead, MemToReg, RegWrite;
    output reg mfhi, mthi, mtlo, hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE;
+   output reg ReadByte, ReadWord;
 
    always@(instruction) begin
     
@@ -30,6 +32,8 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
        shf = 0;
        isByte = 0;
        SE = 0;
+       ReadByte = 0;
+       ReadWord = 0;
        if(instruction != 32'd0) begin
        case(instruction[31:26])
           6'b000000: begin
