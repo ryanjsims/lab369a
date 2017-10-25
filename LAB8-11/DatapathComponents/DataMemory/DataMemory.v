@@ -35,26 +35,42 @@
 // of the "Address" input to index any of the 256 words. 
 ////////////////////////////////////////////////////////////////////////////////
 
- module DataMemory(Address, WriteData, Clk, MemWrite, MemRead, ReadByte, ReadHalf, ReadData); 
+ module DataMemory(Address, WriteData, Clk, MemWrite, MemRead, UseByte, UseHalf, ReadData); 
 
     input [31:0] Address; 	// Input Address 
     input [31:0] WriteData; // Data that needs to be written into the address 
     input Clk;
     input MemWrite; 		// Control signal for memory write 
     input MemRead; 			// Control signal for memory read 
-    input ReadByte, ReadHalf;
+    input UseByte, UseHalf;
 
     output [31:0] ReadData; // Contents of memory location at Address
     
-    reg [31:0]memory [0:1023];
+    reg [31:0] data;
+    reg [31:0] memory [0:1023];
     
-    assign ReadData = {32{MemRead}} & memory[Address[31:2]] & ~{32{ReadByte}} & ~{32{ReadHalf}}
-                    | {32{MemRead}} & (32'h000000ff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & {32{ReadByte}} & ~{32{ReadHalf}}
-                    | {32{MemRead}} & (32'h0000ffff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & ~{32{ReadByte}} & {32{ReadHalf}};
-    
+    assign ReadData = {32{MemRead}} & memory[Address[31:2]] & ~{32{UseByte}} & ~{32{UseHalf}}
+                    | {32{MemRead}} & (32'h000000ff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & {32{UseByte}} & ~{32{UseHalf}}
+                    | {32{MemRead}} & (32'h0000ffff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & ~{32{UseByte}} & {32{UseHalf}};
+    initial begin
+        data = 0;
+    end
     always@(posedge Clk) begin
-        if(MemWrite == 1) begin
+        data = 0;
+        if(MemWrite == 1 && !UseByte && !UseHalf) begin
             memory[Address[31:2]] <= WriteData;
+        end
+        else if(MemWrite == 1 && UseByte && !UseHalf) begin
+            data = 32'h000000ff & WriteData;
+            data = data << (8 * Address[1:0]);
+            data = (memory[Address[31:2]] & ~(32'h000000ff << (8 * Address[1:0]))) | data;
+            memory[Address[31:2]] = data;
+        end
+        else if(MemWrite == 1 && !UseByte && UseHalf) begin
+            data = 32'h0000ffff & WriteData;
+            data = data << (8 * Address[1:0]);
+            data = (memory[Address[31:2]] & ~(32'h0000ffff << (8 * Address[1:0]))) | data;
+            memory[Address[31:2]] = data;
         end
     end
     /* Please fill in the implementation here */

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4.2 (64-bit)
+# SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
+# IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
+# Start of session at: Wed Oct 18 14:09:25 2017
+# Process ID: 11412
+# Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log Processor.vdi -applog -messageDb vivado.pb -mode batch -source Processor.tcl -notrace
+# Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/impl_1/Processor.vdi
+# Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Processor.tcl -notrace

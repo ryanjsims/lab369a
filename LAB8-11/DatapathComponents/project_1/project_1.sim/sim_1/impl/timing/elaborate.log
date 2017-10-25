@@ -1,0 +1,54 @@
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto 4f802cfe9de148118a99b4259f613aa0 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot Processor_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.Processor_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "Processor_tb_time_impl.sdf", for root module "Processor_tb/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "Processor_tb_time_impl.sdf", for root module "Processor_tb/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.x_lut3_mux4_reduced_0
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.ALU32Bit
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE
+Compiling module xil_defaultlib.FetchDecodeReg
+Compiling module xil_defaultlib.Mux5Bit2To1__3
+Compiling module xil_defaultlib.Mux32Bit2To1__4
+Compiling module xil_defaultlib.Mux5Bit2To1__2
+Compiling module xil_defaultlib.Mux5Bit2To1
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.DecodeExecuteReg
+Compiling module xil_defaultlib.ExecuteMemoryReg
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.HILORegisters
+Compiling module simprims_ver.MUXF8
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Mux32Bit2To1
+Compiling module xil_defaultlib.Mux32Bit2To1_0
+Compiling module xil_defaultlib.MemoryWriteBackReg
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.PCAdder
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(DOA_REG=0,DOB...
+Compiling module simprims_ver.RAMB18E1(IS_CLKARDCLK_INVERTED=1...
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.SignExtension
+Compiling module xil_defaultlib.Processor
+Compiling module xil_defaultlib.Processor_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 4 sub-compilation(s) to finish...
+Built simulation snapshot Processor_tb_time_impl

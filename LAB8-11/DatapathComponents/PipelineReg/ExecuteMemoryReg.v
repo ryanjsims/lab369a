@@ -38,8 +38,8 @@ module ExecuteMemoryReg(
     WriteLOIn,
     DepRegWriteIn,
     MemToRegIn,
-    ReadByteIn, 
-    ReadWordIn,
+    UseByteIn, 
+    UseHalfIn,
     JumpAddrOut,
     ALUResultOut,
     ALUResultHIOut,
@@ -55,24 +55,24 @@ module ExecuteMemoryReg(
     WriteLOOut,
     DepRegWriteOut,
     MemToRegOut,
-    ReadByteOut, 
-    ReadWordOut
+    UseByteOut, 
+    UseHalfOut
     );
     input [31:0] JumpAddrIn, ALUResultIn, ALUResultHIIn, ReadData2In;
     input [4:0] WriteRegIn;
     input ZeroIn, MemWriteIn, MemReadIn, MFHIIn, Clk, BranchIn;
     input RegWriteIn, WriteHIIn, WriteLOIn, DepRegWriteIn;
-    input MemToRegIn, Rst, ReadByteIn, ReadWordIn;
+    input MemToRegIn, Rst, UseByteIn, UseHalfIn;
     output reg [31:0] JumpAddrOut, ALUResultOut, ALUResultHIOut, ReadData2Out;
     output reg [4:0] WriteRegOut;
     output reg ZeroOut, MemReadOut, MemWriteOut, MFHIOut;
     output reg BranchOut, RegWriteOut, DepRegWriteOut, WriteHIOut;
-    output reg WriteLOOut, MemToRegOut, ReadByteOut, ReadWordOut;
+    output reg WriteLOOut, MemToRegOut, UseByteOut, UseHalfOut;
     reg [31:0] JumpAddr, ALUResult, ALUResultHI, ReadData2;
     reg [4:0] WriteReg;
     reg Zero, MemRead, MemWrite, MFHI;
     reg Branch, RegWrite, DepRegWrite, WriteHI;
-    reg WriteLO, MemToReg, ReadByte, ReadWord;
+    reg WriteLO, MemToReg, UseByte, UseHalf;
     initial begin
         JumpAddrOut <= 0;
         ALUResultOut <= 0;
@@ -104,10 +104,10 @@ module ExecuteMemoryReg(
         WriteLO <= 0;
         DepRegWrite <= 0;
         MemToReg <= 0;
-        ReadByteOut <= 0;
-        ReadWordOut <= 0;
-        ReadByte <= 0;
-        ReadWord <= 0;
+        UseByteOut <= 0;
+        UseHalfOut <= 0;
+        UseByte <= 0;
+        UseHalf <= 0;
     end
     always@(*) begin
         if(Rst) begin
@@ -126,8 +126,8 @@ module ExecuteMemoryReg(
             WriteLO <= 0;
             DepRegWrite <= 0;
             MemToReg <= 0;
-            ReadByte <= 0;
-            ReadWord <= 0;
+            UseByte <= 0;
+            UseHalf <= 0;
         end
         else begin
             JumpAddr <= JumpAddrIn;
@@ -145,8 +145,8 @@ module ExecuteMemoryReg(
             WriteLO <= WriteLOIn;
             DepRegWrite <= DepRegWriteIn;
             MemToReg <= MemToRegIn;
-            ReadByte <= ReadByteIn;
-            ReadWord <= ReadWordIn;
+            UseByte <= UseByteIn;
+            UseHalf <= UseHalfIn;
         end
     end
     always@(posedge Clk) begin
@@ -166,8 +166,8 @@ module ExecuteMemoryReg(
             WriteLOOut <= 0;
             DepRegWriteOut <= 0;
             MemToRegOut <= 0;
-            ReadByteOut <= 0;
-            ReadWordOut <= 0;
+            UseByteOut <= 0;
+            UseHalfOut <= 0;
         end
         else begin
             JumpAddrOut <= JumpAddr;
@@ -185,8 +185,8 @@ module ExecuteMemoryReg(
             WriteLOOut <= WriteLO;
             DepRegWriteOut <= DepRegWrite;
             MemToRegOut <= MemToReg;
-            ReadByteOut <= ReadByte;
-            ReadWordOut <= ReadWord;
+            UseByteOut <= UseByte;
+            UseHalfOut <= UseHalf;
         end
     end
 endmodule

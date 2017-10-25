@@ -1,13 +1,13 @@
 module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                      MemWrite, MemRead, MemToReg, RegWrite, mfhi, mthi, mtlo,
                      hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE,
-                     ReadByte, ReadWord);
+                     UseByte, UseHalf, LUI, Jump);
    input [31:0] instruction;
    output reg [3:0] ALUControl;
    output reg [1:0] ALUSrc;
    output reg ZeroExtend, Branch, RegDst, MemWrite, MemRead, MemToReg, RegWrite;
    output reg mfhi, mthi, mtlo, hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE;
-   output reg ReadByte, ReadWord;
+   output reg UseByte, UseHalf, LUI;
 
    always@(instruction) begin
     
@@ -32,8 +32,10 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
        shf = 0;
        isByte = 0;
        SE = 0;
-       ReadByte = 0;
-       ReadWord = 0;
+       UseByte = 0;
+       UseHalf = 0;
+       LUI = 0;
+       Jump = 0;
        if(instruction != 32'd0) begin
        case(instruction[31:26])
           6'b000000: begin
@@ -160,7 +162,7 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                     RegWrite = 1;
                 end
                 6'b001000: begin //jr
-                    //TODO: Not needed for this lab
+                    Jump <= 1;
                 end
                 6'b001010: begin //movz
                     ALUControl = 4'b0000;
@@ -279,7 +281,11 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                 ZeroExtend = 1;
             end
             6'b001111: begin //lui
-                //TODO: Not needed for this lab
+                ZeroExtend <= 1;
+                RegDst <= 1;
+                ALUControl <= 4'b0010;
+                RegWrite <= 1;
+                LUI <= 1;
             end
             6'b011100: begin //mul, madd, msub
                 case (instruction[5:0])
@@ -324,22 +330,35 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                 endcase
             end
             6'b100000: begin //lb
-                //TODO: Not needed for this lab
+                RegDst <= 1;
+                MemRead <= 1;
+                MemToReg <= 1;
+                RegWrite <= 1;
+                UseByte <= 1;
             end
             6'b100001: begin //lh
-                //TODO: Not needed for this lab
+                RegDst <= 1;
+                MemRead <= 1;
+                MemToReg <= 1;
+                RegWrite <= 1;
+                UseHalf <= 1;
             end
             6'b100011: begin //lw
-                //TODO: Not needed for this lab
+                RegDst <= 1;
+                MemRead <= 1;
+                MemToReg <= 1;
+                RegWrite <= 1;
             end
             6'b101000: begin //sb
-                //TODO: Not needed for this lab
+                MemWrite <= 1;
+                UseByte <= 1;
             end
             6'b101001: begin //sh
-                //TODO: Not needed for this lab
+                MemWrite <= 1;
+                UseHalf <= 1;
             end
             6'b101011: begin //sw
-                //TODO: Not needed for this lab
+                MemWrite <= 1;
             end
             default:
                 ALUControl = 4'b1111;
