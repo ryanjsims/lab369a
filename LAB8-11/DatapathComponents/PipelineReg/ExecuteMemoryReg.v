@@ -40,6 +40,7 @@ module ExecuteMemoryReg(
     MemToRegIn,
     UseByteIn, 
     UseHalfIn,
+    BranchCtrlIn,
     JumpAddrOut,
     ALUResultOut,
     ALUResultHIOut,
@@ -56,20 +57,24 @@ module ExecuteMemoryReg(
     DepRegWriteOut,
     MemToRegOut,
     UseByteOut, 
-    UseHalfOut
+    UseHalfOut,
+    BranchCtrlOut
     );
     input [31:0] JumpAddrIn, ALUResultIn, ALUResultHIIn, ReadData2In;
     input [4:0] WriteRegIn;
+    input [2:0] BranchCtrlIn;
     input ZeroIn, MemWriteIn, MemReadIn, MFHIIn, Clk, BranchIn;
     input RegWriteIn, WriteHIIn, WriteLOIn, DepRegWriteIn;
     input MemToRegIn, Rst, UseByteIn, UseHalfIn;
     output reg [31:0] JumpAddrOut, ALUResultOut, ALUResultHIOut, ReadData2Out;
     output reg [4:0] WriteRegOut;
+    output reg [2:0] BranchCtrlOut;
     output reg ZeroOut, MemReadOut, MemWriteOut, MFHIOut;
     output reg BranchOut, RegWriteOut, DepRegWriteOut, WriteHIOut;
     output reg WriteLOOut, MemToRegOut, UseByteOut, UseHalfOut;
     reg [31:0] JumpAddr, ALUResult, ALUResultHI, ReadData2;
     reg [4:0] WriteReg;
+    reg [2:0] BranchCtrl;
     reg Zero, MemRead, MemWrite, MFHI;
     reg Branch, RegWrite, DepRegWrite, WriteHI;
     reg WriteLO, MemToReg, UseByte, UseHalf;
@@ -108,6 +113,8 @@ module ExecuteMemoryReg(
         UseHalfOut <= 0;
         UseByte <= 0;
         UseHalf <= 0;
+        BranchCtrl <= 0;
+        BranchCtrlOut <= 0;
     end
     always@(*) begin
         if(Rst) begin
@@ -128,6 +135,7 @@ module ExecuteMemoryReg(
             MemToReg <= 0;
             UseByte <= 0;
             UseHalf <= 0;
+            BranchCtrl <= 0;
         end
         else begin
             JumpAddr <= JumpAddrIn;
@@ -147,6 +155,7 @@ module ExecuteMemoryReg(
             MemToReg <= MemToRegIn;
             UseByte <= UseByteIn;
             UseHalf <= UseHalfIn;
+            BranchCtrl <= BranchCtrlIn;
         end
     end
     always@(posedge Clk) begin
@@ -168,6 +177,7 @@ module ExecuteMemoryReg(
             MemToRegOut <= 0;
             UseByteOut <= 0;
             UseHalfOut <= 0;
+            BranchCtrlOut <= 0;
         end
         else begin
             JumpAddrOut <= JumpAddr;
@@ -187,6 +197,7 @@ module ExecuteMemoryReg(
             MemToRegOut <= MemToReg;
             UseByteOut <= UseByte;
             UseHalfOut <= UseHalf;
+            BranchCtrlOut <= BranchCtrl;
         end
     end
 endmodule

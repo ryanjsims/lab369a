@@ -50,6 +50,7 @@ module DecodeExecuteReg(
     UseByteIn, 
     UseHalfIn,
     LUIIn,
+    BranchCtrlIn,
     ReadData1Out, 
     ReadData2Out,
     SignExtendOut,
@@ -76,11 +77,13 @@ module DecodeExecuteReg(
     SEOut,
     UseByteOut, 
     UseHalfOut,
-    LUIOut
+    LUIOut,
+    BranchCtrlOut
     );
     input [31:0] SignExtendIn, PCAddrIn, ReadData1In, ReadData2In;
     input [4:0] rtIn, rdIn;
     input [3:0] ALUControlIn;
+    input [2:0] BranchCtrlIn;
     input [1:0] ALUSrcIn;
     input BranchIn, Clk, RegDstIn, MFHIIn, RegWriteIn, Rst;
     input MTLOIn, MTHIIn, ReadHIIn, ReadLOIn, WriteHIIn, WriteLOIn;
@@ -89,6 +92,7 @@ module DecodeExecuteReg(
     output reg [31:0] SignExtendOut, PCAddrOut, ReadData1Out, ReadData2Out;
     output reg  [4:0] rtOut, rdOut;
     output reg  [3:0] ALUControlOut;
+    output reg  [2:0] BranchCtrlOut;
     output reg  [1:0] ALUSrcOut;
     output reg BranchOut, RegDstOut, MFHIOut, RegWriteOut;
     output reg MTLOOut, MTHIOut, ReadHIOut, ReadLOOut, WriteHIOut, WriteLOOut;
@@ -97,6 +101,7 @@ module DecodeExecuteReg(
     reg [31:0] SignExtend, PCAddr, ReadData1, ReadData2;
     reg  [4:0] rt, rd;
     reg  [3:0] ALUControl;
+    reg  [2:0] BranchCtrl;
     reg  [1:0] ALUSrc;
     reg Branch, RegDst, MFHI, RegWrite;
     reg MTLO, MTHI, ReadHI, ReadLO, WriteHI, WriteLO;
@@ -156,6 +161,8 @@ module DecodeExecuteReg(
         UseHalfOut <= 1'b0;
         LUI <= 1'b0;
         LUIOut <= 1'b0;
+        BranchCtrl <= 3'b000;
+        BranchCtrlOut <= 3'b000;
     end
     always@(*) begin
         if(Rst) begin
@@ -186,6 +193,7 @@ module DecodeExecuteReg(
             UseByte <= 1'b0;
             UseHalf <= 1'b0;
             LUI <= 1'b0;
+            BranchCtrl <= 3'b000;
         end
         else begin
             ReadData1 <= ReadData1In;
@@ -215,6 +223,7 @@ module DecodeExecuteReg(
             UseByte <= UseByteIn;
             UseHalf <= UseHalfIn;
             LUI <= LUIIn;
+            BranchCtrl <= BranchCtrlIn;
         end
     end
     always@(posedge Clk) begin
@@ -246,6 +255,7 @@ module DecodeExecuteReg(
             UseByteOut <= 1'b0;
             UseHalfOut <= 1'b0;
             LUIOut <= 1'b0;
+            BranchCtrlOut <= 3'b000;
         end
         else begin
             ReadData1Out <= ReadData1;
@@ -275,6 +285,7 @@ module DecodeExecuteReg(
             UseByteOut <= UseByte;
             UseHalfOut <= UseHalf;
             LUIOut <= LUI;
+            BranchCtrlOut <= BranchCtrl;
         end
     end
 endmodule

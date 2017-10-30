@@ -1,9 +1,10 @@
 module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                      MemWrite, MemRead, MemToReg, RegWrite, mfhi, mthi, mtlo,
                      hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE,
-                     UseByte, UseHalf, LUI, Jump);
+                     UseByte, UseHalf, LUI, Jump, BranchCtrl);
    input [31:0] instruction;
    output reg [3:0] ALUControl;
+   output reg [2:0] BranchCtrl;
    output reg [1:0] ALUSrc;
    output reg ZeroExtend, Branch, RegDst, MemWrite, MemRead, MemToReg, RegWrite;
    output reg mfhi, mthi, mtlo, hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE;
@@ -36,6 +37,7 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
        UseHalf = 0;
        LUI = 0;
        Jump = 0;
+       BranchCtrl = 0;
        if(instruction != 32'd0) begin
        case(instruction[31:26])
           6'b000000: begin
@@ -163,6 +165,7 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                 end
                 6'b001000: begin //jr
                     Jump <= 1;
+                    RegDst <= 1;
                 end
                 6'b001010: begin //movz
                     ALUControl = 4'b0000;
@@ -210,33 +213,44 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                 case(instruction[20:16])
                     5'b00000: begin //bltz
                         ALUControl = 4'b0001;
-                        //TODO: Not needed for this lab
+                        Branch <= 1;
+                        BranchCtrl <= 3'b000;
                     end
                     5'b00001: begin //bgez
                         ALUControl = 4'b0001;
-                        //TODO: Not needed for this lab
+                        Branch <= 1;
+                        BranchCtrl <= 3'b011;
                     end
                     default:
                     ALUControl = 4'b1111;
                 endcase
             end
             6'b000010: begin //j
-                //TODO: Not needed for this lab
+                Jump <= 1;
             end
             6'b000011: begin //jal
-                //TODO: Not needed for this lab
+                Jump <= 1;
+                RegWrite <= 1;
             end
             6'b000100: begin //beq
-                //TODO: Not needed for this lab
+                Branch <= 1;
+                BranchCtrl <= 3'b101;
+                ALUControl <= 4'b0001;
             end
             6'b000101: begin //bne
-                //TODO: Not needed for this lab
+                Branch <= 1;
+                BranchCtrl <= 3'b100;
+                ALUControl <= 4'b0001;
             end
             6'b000110: begin //blez
-                //TODO: Not needed for this lab
+                Branch <= 1;
+                BranchCtrl <= 3'b001;
+                ALUControl <= 4'b0001;
             end
             6'b000111: begin //bgtz
-                //TODO: Not needed for this lab
+                Branch <= 1;
+                BranchCtrl <= 3'b010;
+                ALUControl <= 4'b0001;
             end
             6'b001000: begin //addi
                 ALUControl = 4'b0000;
