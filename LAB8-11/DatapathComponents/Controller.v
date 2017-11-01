@@ -8,7 +8,7 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
    output reg [1:0] ALUSrc;
    output reg ZeroExtend, Branch, RegDst, MemWrite, MemRead, MemToReg, RegWrite;
    output reg mfhi, mthi, mtlo, hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE;
-   output reg UseByte, UseHalf, LUI;
+   output reg UseByte, UseHalf, LUI, Jump;
 
    always@(instruction) begin
     
@@ -215,11 +215,13 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                         ALUControl = 4'b0001;
                         Branch <= 1;
                         BranchCtrl <= 3'b000;
+                        ALUSrc <= 2'b10;
                     end
                     5'b00001: begin //bgez
                         ALUControl = 4'b0001;
                         Branch <= 1;
                         BranchCtrl <= 3'b011;
+                        ALUSrc <= 2'b10;
                     end
                     default:
                     ALUControl = 4'b1111;
@@ -236,21 +238,25 @@ module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                 Branch <= 1;
                 BranchCtrl <= 3'b101;
                 ALUControl <= 4'b0001;
+                ALUSrc <= 2'b01;
             end
             6'b000101: begin //bne
                 Branch <= 1;
                 BranchCtrl <= 3'b100;
                 ALUControl <= 4'b0001;
+                ALUSrc <= 2'b01;
             end
             6'b000110: begin //blez
                 Branch <= 1;
                 BranchCtrl <= 3'b001;
                 ALUControl <= 4'b0001;
+                ALUSrc <= 2'b10;
             end
             6'b000111: begin //bgtz
                 Branch <= 1;
                 BranchCtrl <= 3'b010;
                 ALUControl <= 4'b0001;
+                ALUSrc <= 2'b10;
             end
             6'b001000: begin //addi
                 ALUControl = 4'b0000;

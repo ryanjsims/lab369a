@@ -2,10 +2,10 @@
 # Vivado v2015.4.2 (64-bit)
 # SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
 # IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
-# Start of session at: Mon Oct 30 14:00:11 2017
-# Process ID: 13676
+# Start of session at: Wed Nov 01 13:56:24 2017
+# Process ID: 15188
 # Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15064 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17052 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\project_1\project_1.xpr
 # Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/vivado.log
 # Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1\vivado.jou
 #-----------------------------------------------------------
@@ -16,10 +16,205 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 807.887 ; gain = 165.086
-close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v w ]
-add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 15:13:32 2017...
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/InstructionMemory.v" into library work [C:/Users/ryanjsims/lab369a/InstructionMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:1]
+[Wed Nov 01 14:16:46 2017] Launched synth_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/InstructionMemory.v" into library work [C:/Users/ryanjsims/lab369a/InstructionMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:1]
+[Wed Nov 01 14:17:24 2017] Launched synth_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/InstructionMemory.v" into library work [C:/Users/ryanjsims/lab369a/InstructionMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:1]
+[Wed Nov 01 14:18:08 2017] Launched synth_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/InstructionMemory.v" into library work [C:/Users/ryanjsims/lab369a/InstructionMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:1]
+[Wed Nov 01 14:30:11 2017] Launched synth_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1
+[Wed Nov 01 14:30:50 2017] Launched impl_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILOregisters_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/InstructionMemory.v" into library work [C:/Users/ryanjsims/lab369a/InstructionMemory.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/PipelineReg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension_tb.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v" into library work [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:1]
+[Wed Nov 01 14:31:32 2017] Launched synth_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1
+[Wed Nov 01 14:32:13 2017] Launched impl_1...
+Run output will be captured here: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 234 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.4.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/.Xil/Vivado-15188-ENGR-ECE301PC09/dcp/Processor.xdc]
+Finished Parsing XDC File [C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/.Xil/Vivado-15188-ENGR-ECE301PC09/dcp/Processor.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.375 . Memory (MB): peak = 1043.996 ; gain = 5.977
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.375 . Memory (MB): peak = 1043.996 ; gain = 5.977
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 128 instances were transformed.
+  RAM256X1S => RAM256X1S (RAMS64E, RAMS64E, RAMS64E, RAMS64E, MUXF7, MUXF7, MUXF8): 128 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1131.957 ; gain = 293.996
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.

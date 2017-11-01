@@ -37,9 +37,10 @@ module Processor(
     wire DecodeWriteHI, DecodeWriteLO, DecodeRegWrite, DecodeMemToReg, DecodeMemRead;
     wire DecodeMemWrite, DecodeMTLO, DecodeMTHI, DecodeMFHI, DecodeDepRegWrite, DecodeShf;
     wire DecodeIsByte, DecodeSE, DecodeUseByte, DecodeUseHalf, DecodeLUI, DecodeJump, DecodeRAWrite;
+    wire DecodeExecuteRst;
     
     //Execute Wires
-    wire [31:0] ExecuteSignExtend, ExecutePCAddrOut, ExecuteJumpOffset, ExecuteJumpAddr;
+    wire [31:0] ExecuteSignExtend, ExecutePCAddrOut, ExecuteBranchOffset, ExecuteBranchAddr;
     wire [31:0] ExecuteReadData1, ExecuteReadData2, ALUInA, ALUInB, ExecuteALUResult;
     wire [31:0] ExecuteALUResultHI, ExecuteSignExtendHalfByte, ExecuteHalfByteMuxOut; 
     wire [4:0] ExecuteRT, ExecuteRD, ExecuteDstAddr;
@@ -54,7 +55,7 @@ module Processor(
                         
     
     //Memory Wires
-    wire [31:0] MemoryJumpAddr, MemoryALUResult, MemoryALUResultHI, MemoryReg2Data, MemoryReadData;
+    wire [31:0] MemoryBranchAddr, MemoryALUResult, MemoryALUResultHI, MemoryReg2Data, MemoryReadData;
     (* mark_debug = "true" *) wire [31:0] HIout, LOout;
     wire [31:0] MemoryDataToReg, MemoryReadDataSE, MemoryReadDataMuxOut;
     wire  [4:0] MemoryDstAddr;
@@ -72,7 +73,7 @@ module Processor(
     
     //Instruction Fetch
     Or2Gate JumpOrBranch(PCsrc, DecodeJump, BranchOut);
-    Mux32Bit2To1 JumpOrBranchMux(AddrJumpOrBranch, AddrBranch, DecodeJumpAddr, DecodeJump);
+    Mux32Bit2To1 JumpOrBranchMux(AddrJumpOrBranch, MemoryBranchAddr, DecodeJumpAddr, DecodeJump);
     Mux32Bit2To1 PCSrcMux(PCAddrIn, PCAddrAdd4, AddrJumpOrBranch, PCsrc);
     ProgramCounter pc(PCAddrIn, PCAddrOut, Rst, Clk);
     PCAdder pcadd(PCAddrOut, PCAddrAdd4);
@@ -127,10 +128,11 @@ module Processor(
                     DecodeJump,
                     DecodeBranchCtrl);
     And2Gate jalWrite(DecodeRegWrite, DecodeJump, DecodeRAWrite);
+    Or2Gate jalRst(DecodeExecuteRst, DecodeRAWrite, Rst);
     //END INSTRUCTION DECODE COMPONENTS
 
     DecodeExecuteReg de(Clk,
-                Rst,
+                DecodeExecuteRst,
                 DecodeReadData1, 
                 DecodeReadData2,
                 DecodeSignExtend,
@@ -191,9 +193,9 @@ module Processor(
     
     //Execute
     Mux5Bit2To1 RegDstMux(ExecuteDstAddr, ExecuteRD, ExecuteRT, ExecuteRegDst);
-    ShiftLeft2 shf(ExecuteSignExtend, ExecuteJumpOffset);
+    ShiftLeft2 shf(ExecuteSignExtend, ExecuteBranchOffset);
     SignExtensionHalfByte sehb(ExecuteReadData2[15:0], ExecuteSignExtendHalfByte, ExecuteIsByte);
-    Adder32 addj(ExecutePCAddrOut, ExecuteJumpOffset, ExecuteJumpAddr);
+    Adder32 addj(ExecutePCAddrOut, ExecuteBranchOffset, ExecuteBranchAddr);
     Mux32Bit2To1 LUIMux(ALUInA, ExecuteReadData1, 32'h00010000, ExecuteLUI);
     Mux32Bit3To1 ALUImmMux(ALUInB, ExecuteSignExtend, ExecuteReadData2,  32'd0, ExecuteALUSrc);
     ALU32Bit ALU(ExecuteALUControl, 
@@ -211,7 +213,7 @@ module Processor(
     
     ExecuteMemoryReg em(Clk,
                     Rst,
-                    ExecuteJumpAddr,
+                    ExecuteBranchAddr,
                     ExecuteHalfByteMuxOut,
                     ExecuteALUResultHI,
                     ExecuteReadData2,
@@ -229,7 +231,7 @@ module Processor(
                     ExecuteUseByte, 
                     ExecuteUseHalf,
                     ExecuteBranchCtrl,
-                    MemoryJumpAddr,
+                    MemoryBranchAddr,
                     MemoryALUResult,
                     MemoryALUResultHI,
                     MemoryReg2Data,

@@ -4,8 +4,6 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -16,6 +14,9 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 read_verilog -library xil_defaultlib {
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PCAdder.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ProgramCounter.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v
@@ -32,7 +33,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v
-  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v
