@@ -1,5 +1,8 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.sim/sim_1/impl/func/Processor_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.sim/sim_1/impl/func/Processor_tb_func_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU32Bit
+INFO: [VRFC 10-311] analyzing module Adder32
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-311] analyzing module DataMemory
 INFO: [VRFC 10-311] analyzing module DecodeExecuteReg
 INFO: [VRFC 10-311] analyzing module ExecuteMemoryReg
 INFO: [VRFC 10-311] analyzing module FetchDecodeReg
@@ -7,8 +10,17 @@ INFO: [VRFC 10-311] analyzing module HILORegisters
 INFO: [VRFC 10-311] analyzing module InstructionMemory
 INFO: [VRFC 10-311] analyzing module MemoryWriteBackReg
 INFO: [VRFC 10-311] analyzing module Mux32Bit2To1
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1_0
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1__7
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1__8
+INFO: [VRFC 10-311] analyzing module Mux5Bit2To1
+INFO: [VRFC 10-311] analyzing module Mux5Bit2To1__2
+INFO: [VRFC 10-311] analyzing module Mux5Bit2To1__3
 INFO: [VRFC 10-311] analyzing module PCAdder
 INFO: [VRFC 10-311] analyzing module Processor
 INFO: [VRFC 10-311] analyzing module ProgramCounter
 INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-311] analyzing module SignExtension
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_tb

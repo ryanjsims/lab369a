@@ -32,3 +32,53 @@ wait_on_run synth_1
 launch_runs impl_1
 wait_on_run impl_1
 open_run impl_1
+close_design
+close_project
+open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.xpr
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type functional
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+source Processor_tb.tcl
+add_wave {{/Processor_tb/u0/DecodeRAWrite}} 
+add_wave {{/Processor_tb/u0/DecodePCAddr}} 
+restart
+run 100 us
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+save_wave_config {C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
+close_sim
+close_design
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+source Processor_tb.tcl
+run 100 us
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_design
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing

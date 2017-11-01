@@ -259,7 +259,7 @@ module Processor(
                 MemoryUseByte, 
                 MemoryUseHalf,
                 MemoryReadData);
-    SignExtensionHalfByte MemSE(MemoryReadData, MemoryReadDataSE, MemoryUseByte);
+    SignExtensionHalfByte MemSE(MemoryReadData[15:0], MemoryReadDataSE, MemoryUseByte);
     Xor2Gate MemIsSE(MemoryUseByte, MemoryUseHalf, MemSESelect);
     Mux32Bit2To1 MemDataOrSE(MemoryReadDataMuxOut, MemoryReadData, MemoryReadDataSE, MemSESelect);
     HILORegisters hilo(

@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2015.4.2 (64-bit)
+# SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
+# IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
+# Start of session at: Mon Oct 30 14:00:11 2017
+# Process ID: 13676
+# Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15064 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\project_1\project_1.xpr
+# Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/vivado.log
+# Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.xpr
+close [ open C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v w ]
+add_files C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
