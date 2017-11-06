@@ -90,7 +90,7 @@ main:
     nop
     nop
     nop
-    sw      $s0, 12($a0)        # Memory[2] = 32'h00000002.
+    sw      $s0, 12($a0)        # Memory[3] = 32'h00000002.
     nop
     nop
     nop
@@ -153,7 +153,7 @@ main:
     nop
     nop
     nop
-    bgez    $s0, branch2        # $s0 = 1 >= 0, branch2 taken.
+    bgez    $s0, branch2        # $s0 = 0 >= 0, branch2 taken.
     nop
     nop
     nop

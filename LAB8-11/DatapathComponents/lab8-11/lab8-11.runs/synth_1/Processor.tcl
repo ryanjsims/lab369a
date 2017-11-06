@@ -35,6 +35,8 @@ read_verilog -library xil_defaultlib {
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v
+  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v
+  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v
   D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {

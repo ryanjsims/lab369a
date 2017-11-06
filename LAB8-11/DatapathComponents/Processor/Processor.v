@@ -20,8 +20,8 @@ module Processor(
     input Clk, Rst;
     
     //Instruction Fetch wires
-    wire [31:0] PCAddrIn, PCAddrAdd4, AddrBranch, AddrJumpOrBranch;
-    (* mark_debug = "true" *) wire [31:0] PCAddrOut;
+    wire [31:0] PCAddrIn, PCAddrAdd4, AddrBranch;
+    (* mark_debug = "true" *) wire [31:0] PCAddrOut, AddrJumpOrBranch;
     (* mark_debug = "true" *) wire [31:0] FetchInst;
     wire PCSrc, BranchOut;
     
@@ -55,8 +55,8 @@ module Processor(
                         
     
     //Memory Wires
-    wire [31:0] MemoryBranchAddr, MemoryALUResult, MemoryALUResultHI, MemoryReg2Data, MemoryReadData;
-    (* mark_debug = "true" *) wire [31:0] HIout, LOout;
+    wire [31:0] MemoryBranchAddr, MemoryALUResult, MemoryALUResultHI, MemoryReadData;
+    (* mark_debug = "true" *) wire [31:0] HIout, LOout, MemoryReg2Data;
     wire [31:0] MemoryDataToReg, MemoryReadDataSE, MemoryReadDataMuxOut;
     wire  [4:0] MemoryDstAddr;
     wire  [2:0] MemoryBranchCtrl;
