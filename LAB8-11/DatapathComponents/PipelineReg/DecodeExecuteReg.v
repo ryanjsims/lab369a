@@ -27,6 +27,7 @@ module DecodeExecuteReg(
     ReadData2In,
     SignExtendIn,
     PCAddrIn,
+    rsIn,
     rtIn,
     rdIn,
     BranchIn,
@@ -55,6 +56,7 @@ module DecodeExecuteReg(
     ReadData2Out,
     SignExtendOut,
     PCAddrOut,
+    rsOut,
     rtOut,
     rdOut,
     BranchOut,
@@ -81,7 +83,7 @@ module DecodeExecuteReg(
     BranchCtrlOut
     );
     input [31:0] SignExtendIn, PCAddrIn, ReadData1In, ReadData2In;
-    input [4:0] rtIn, rdIn;
+    input [4:0] rsIn, rtIn, rdIn;
     input [3:0] ALUControlIn;
     input [2:0] BranchCtrlIn;
     input [1:0] ALUSrcIn;
@@ -90,7 +92,7 @@ module DecodeExecuteReg(
     input DepRegWriteIn, MemReadIn, MemWriteIn, MemToRegIn, IsByteIn, SEIn;
     input UseByteIn, UseHalfIn, LUIIn;
     output reg [31:0] SignExtendOut, PCAddrOut, ReadData1Out, ReadData2Out;
-    output reg  [4:0] rtOut, rdOut;
+    output reg  [4:0] rsOut, rtOut, rdOut;
     output reg  [3:0] ALUControlOut;
     output reg  [2:0] BranchCtrlOut;
     output reg  [1:0] ALUSrcOut;
@@ -99,7 +101,7 @@ module DecodeExecuteReg(
     output reg DepRegWriteOut, MemReadOut, MemWriteOut, MemToRegOut, IsByteOut, SEOut;
     output reg UseByteOut, UseHalfOut, LUIOut;
     reg [31:0] SignExtend, PCAddr, ReadData1, ReadData2;
-    reg  [4:0] rt, rd;
+    reg  [4:0] rs, rt, rd;
     reg  [3:0] ALUControl;
     reg  [2:0] BranchCtrl;
     reg  [1:0] ALUSrc;
@@ -111,6 +113,7 @@ module DecodeExecuteReg(
         ReadData2Out <= 32'd0;
         SignExtendOut <= 32'd0;
         PCAddrOut <= 32'd0;
+        rsOut <= 5'd0;
         rtOut <= 5'd0;
         rdOut <= 5'd0;
         BranchOut <= 1'b0;
@@ -135,6 +138,7 @@ module DecodeExecuteReg(
         ReadData2 <= 32'd0;
         SignExtend <= 32'd0;
         PCAddr <= 32'd0;
+        rs <= 5'd0;
         rt <= 5'd0;
         rd <= 5'd0;
         Branch <= 1'b0;
@@ -170,6 +174,7 @@ module DecodeExecuteReg(
             ReadData2 <= 32'd0;
             SignExtend <= 32'd0;
             PCAddr <= 32'd0;
+            rs <= 5'd0;
             rt <= 5'd0;
             rd <= 5'd0;
             Branch <= 1'b0;
@@ -200,6 +205,7 @@ module DecodeExecuteReg(
             ReadData2 <= ReadData2In;
             SignExtend <= SignExtendIn;
             PCAddr <= PCAddrIn;
+            rs <= rsIn;
             rt <= rtIn;
             rd <= rdIn;
             Branch <= BranchIn;
@@ -232,6 +238,7 @@ module DecodeExecuteReg(
             ReadData2Out <= 32'd0;
             SignExtendOut <= 32'd0;
             PCAddrOut <= 32'd0;
+            rsOut <= 5'd0;
             rtOut <= 5'd0;
             rdOut <= 5'd0;
             BranchOut <= 1'b0;
@@ -262,6 +269,7 @@ module DecodeExecuteReg(
             ReadData2Out <= ReadData2;
             SignExtendOut <= SignExtend;
             PCAddrOut <= PCAddr;
+            rsOut <= rs;
             rtOut <= rt;
             rdOut <= rd;
             BranchOut <= Branch;

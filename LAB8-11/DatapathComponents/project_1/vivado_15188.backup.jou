@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2015.4.2 (64-bit)
+# SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
+# IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
+# Start of session at: Wed Nov 01 13:56:24 2017
+# Process ID: 15188
+# Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17052 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\project_1\project_1.xpr
+# Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/vivado.log
+# Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.xpr
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+close_design
+close_project
+open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1/project_1.xpr
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type functional
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+source Processor_tb.tcl
+add_wave {{/Processor_tb/u0/DecodeRAWrite}} 
+add_wave {{/Processor_tb/u0/DecodePCAddr}} 
+restart
+run 100 us
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+save_wave_config {C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
+close_sim
+close_design
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+source Processor_tb.tcl
+run 100 us
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_design
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+source Processor_tb.tcl
+run 100 us
+add_wave {{/Processor_tb/u0/MemoryALUResult}} 
+close_sim

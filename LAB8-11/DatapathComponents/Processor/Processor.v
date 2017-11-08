@@ -42,8 +42,9 @@ module Processor(
     //Execute Wires
     wire [31:0] ExecuteSignExtend, ExecutePCAddrOut, ExecuteBranchOffset, ExecuteBranchAddr;
     wire [31:0] ExecuteReadData1, ExecuteReadData2, ALUInA, ALUInB, ExecuteALUResult;
+    wire [31:0] ExecuteForward1, ExecuteForward2, ExecuteRSData, ExecuteRTData;
     wire [31:0] ExecuteALUResultHI, ExecuteSignExtendHalfByte, ExecuteHalfByteMuxOut; 
-    wire [4:0] ExecuteRT, ExecuteRD, ExecuteDstAddr;
+    wire [4:0] ExecuteRS, ExecuteRT, ExecuteRD, ExecuteDstAddr;
     wire [3:0] ExecuteALUControl;
     wire [2:0] ExecuteBranchCtrl;
     wire [1:0] ExecuteALUSrc;
@@ -57,7 +58,7 @@ module Processor(
     //Memory Wires
     wire [31:0] MemoryBranchAddr, MemoryALUResult, MemoryALUResultHI, MemoryReadData;
     (* mark_debug = "true" *) wire [31:0] HIout, LOout, MemoryReg2Data;
-    wire [31:0] MemoryDataToReg, MemoryReadDataSE, MemoryReadDataMuxOut;
+    wire [31:0] MemoryDataToReg, MemoryReadDataSE, MemoryReadDataMuxOut, MemoryDataToForward;
     wire  [4:0] MemoryDstAddr;
     wire  [2:0] MemoryBranchCtrl;
     wire MemoryZero, MemoryBranch, MemoryWriteHI, MemoryWriteLO, MemoryRegWrite;
@@ -71,6 +72,10 @@ module Processor(
     wire WBRegWrite, WBMemToReg, WBDepRegWrite, WBRegWriteXorOut, WBZero;
     wire WBAndOut;
     
+    //Forwarding/Hazard detection wires
+    wire ForwardRSMem, ForwardRTMem, ForwardRSWB, ForwardRTWB;
+    wire PCStall, FetchStall, DecodeStall;
+    
     //Instruction Fetch
     Or2Gate JumpOrBranch(PCsrc, DecodeJump, BranchOut);
     Mux32Bit2To1 JumpOrBranchMux(AddrJumpOrBranch, MemoryBranchAddr, DecodeJumpAddr, DecodeJump);
@@ -81,7 +86,7 @@ module Processor(
     //END INSTRUCTION FETCH COMPONENTS
 
     
-    FetchDecodeReg IfId(Clk, Rst, FetchInst, PCAddrAdd4, DecodeInst, DecodePCAddr);
+    FetchDecodeReg IfId(Clk, DecodeExecuteRst, FetchInst, PCAddrAdd4, DecodeInst, DecodePCAddr);
     
     
     //Instruction Decode
@@ -128,7 +133,7 @@ module Processor(
                     DecodeJump,
                     DecodeBranchCtrl);
     And2Gate jalWrite(DecodeRegWrite, DecodeJump, DecodeRAWrite);
-    Or2Gate jalRst(DecodeExecuteRst, DecodeRAWrite, Rst);
+    Or2Gate jalRst(DecodeExecuteRst, DecodeJump, Rst);
     //END INSTRUCTION DECODE COMPONENTS
 
     DecodeExecuteReg de(Clk,
@@ -137,6 +142,7 @@ module Processor(
                 DecodeReadData2,
                 DecodeSignExtend,
                 DecodePCAddr,
+                DecodeInst[25:21],
                 DecodeInst[20:16],
                 DecodeInst[15:11],
                 DecodeBranch,
@@ -165,6 +171,7 @@ module Processor(
                 ExecuteReadData2,
                 ExecuteSignExtend,
                 ExecutePCAddrOut,
+                ExecuteRS,
                 ExecuteRT,
                 ExecuteRD,
                 ExecuteBranch,
@@ -196,8 +203,16 @@ module Processor(
     ShiftLeft2 shf(ExecuteSignExtend, ExecuteBranchOffset);
     SignExtensionHalfByte sehb(ExecuteReadData2[15:0], ExecuteSignExtendHalfByte, ExecuteIsByte);
     Adder32 addj(ExecutePCAddrOut, ExecuteBranchOffset, ExecuteBranchAddr);
-    Mux32Bit2To1 LUIMux(ALUInA, ExecuteReadData1, 32'h00010000, ExecuteLUI);
-    Mux32Bit3To1 ALUImmMux(ALUInB, ExecuteSignExtend, ExecuteReadData2,  32'd0, ExecuteALUSrc);
+    
+    ForwardingController fwdCtrl(ExecuteRS, ExecuteRT, MemoryDstAddr, WBDstAddr, MemRegWrite, WBRegWriteXorOut, ForwardRSMem, ForwardRTMem, ForwardRSWB, ForwardRTWB);
+    
+    Mux32Bit2To1 ForwardRSWBMux(ExecuteForward1, ExecuteReadData1, WBWriteData, ForwardRSWB);
+    Mux32Bit2To1 ForwardRTWBMux(ExecuteForward2, ExecuteReadData2, WBWriteData, ForwardRTWB);
+    Mux32Bit2To1 ForwardRSMemMux(ExecuteRSData, ExecuteForward1, MemoryDataToForward, ForwardRSMem);
+    Mux32Bit2To1 ForwardRTMemMux(ExecuteRTData, ExecuteForward2, MemoryDataToForward, ForwardRTMem);
+    
+    Mux32Bit2To1 LUIMux(ALUInA, ExecuteRSData, 32'h00010000, ExecuteLUI);
+    Mux32Bit3To1 ALUImmMux(ALUInB, ExecuteSignExtend, ExecuteRTData,  32'd0, ExecuteALUSrc);
     ALU32Bit ALU(ExecuteALUControl, 
                 ALUInA, 
                 ALUInB, 
@@ -216,7 +231,7 @@ module Processor(
                     ExecuteBranchAddr,
                     ExecuteHalfByteMuxOut,
                     ExecuteALUResultHI,
-                    ExecuteReadData2,
+                    ExecuteRTData,
                     ExecuteDstAddr,
                     ExecuteZero,
                     ExecuteBranch,
@@ -262,6 +277,7 @@ module Processor(
     SignExtensionHalfByte MemSE(MemoryReadData[15:0], MemoryReadDataSE, MemoryUseByte);
     Xor2Gate MemIsSE(MemoryUseByte, MemoryUseHalf, MemSESelect);
     Mux32Bit2To1 MemDataOrSE(MemoryReadDataMuxOut, MemoryReadData, MemoryReadDataSE, MemSESelect);
+    Mux32Bit2To1 ForwardALUOrReadData(MemoryDataToForward, MemoryALUResult, MemoryReadDataMuxOut, MemoryMemRead);
     HILORegisters hilo(
                     Clk,
                     MemoryALUResultHI,
