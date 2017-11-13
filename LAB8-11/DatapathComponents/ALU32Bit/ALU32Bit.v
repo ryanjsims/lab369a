@@ -13,13 +13,13 @@
 //
 // OUTPUTS:-
 // ALUResult: 32-Bit ALU result output.
-// ZERO: 1-Bit output flag. 
+//  
 //
 // FUNCTIONALITY:-
 // Design a 32-Bit ALU behaviorally, so that it supports addition,  subtraction,
 // AND, OR, and set on less than (SLT). The 'ALUResult' will output the 
 // corresponding result of the operation based on the 32-Bit inputs, 'A', and 
-// 'B'. The 'Zero' flag is high when 'ALUResult' is '0'. The 'ALUControl' signal 
+// 'B'. The 'ALUControl' signal 
 // should determine the function of the ALU based on the table below:-
 // Op   | 'ALUControl' value
 // ==========================
@@ -34,7 +34,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mtlo);
+module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, mthi, mtlo);
 
 	input [3:0] ALUControl; // control bits for ALU operation
 	input [31:0] A, B, HI, LO;	    // inputs
@@ -44,7 +44,6 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mt
     integer i;
     reg signExtBit;
 	output reg [31:0] ALUResult, ALUResultHI;	// answer(s)
-	output reg Zero;	    // Zero=1 if ALUResult == 0
 
     /* Please fill in the implementation here... */
     initial begin
@@ -141,7 +140,6 @@ module ALU32Bit(ALUControl, A, B, HI, LO, ALUResult, ALUResultHI, Zero, mthi, mt
         else if(mtlo) begin
             ALUResult <= A;
         end
-        Zero <= ALUResult == 0;
         
         
     end

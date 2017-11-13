@@ -20,27 +20,49 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ForwardingController(RSIn, RTIn, MemDstReg, WBDstReg, MemRegWrite, WBRegWrite, ForwardRSMem, ForwardRTMem, ForwardRSWB, ForwardRTWB);
-    input [4:0] RSIn, RTIn, MemDstReg, WBDstReg;
+module ForwardingController(DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, 
+                            MemDstReg, WBDstReg, MemRegWrite, WBRegWrite,
+                            ForwardRSMemDec, ForwardRTMemDec, 
+                            ForwardRSWBDec, ForwardRTWBDec,
+                            ForwardRSMemExec, ForwardRTMemExec, 
+                            ForwardRSWBExec, ForwardRTWBExec);
+    input [4:0] DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, MemDstReg, WBDstReg;
     input MemRegWrite, WBRegWrite;
-    output ForwardRSMem, ForwardRTMem, ForwardRSWB, ForwardRTWB;
+    output reg ForwardRSMemDec,  ForwardRTMemDec,  ForwardRSWBDec,  ForwardRTWBDec;
+    output reg ForwardRSMemExec, ForwardRTMemExec, ForwardRSWBExec, ForwardRTWBExec;
     
     always@(*) begin
-        ForwardRSMem <= 0;
-        ForwardRTMem <= 0;
-        ForwardRSWB <= 0;
-        ForwardRTWB <= 0;
-        if(RSIn == MemDstReg && MemRegWrite) begin
-            ForwardRSMem <= 1;
+        ForwardRSMemDec <= 0;
+        ForwardRTMemDec <= 0;
+        ForwardRSWBDec <= 0;
+        ForwardRTWBDec <= 0;
+        ForwardRSMemExec <= 0;
+        ForwardRTMemExec <= 0;
+        ForwardRSWBExec <= 0;
+        ForwardRTWBExec <= 0;
+        if(ExecRSIn == MemDstReg && MemRegWrite) begin
+            ForwardRSMemExec <= 1;
         end
-        if(RTIn == MemDstReg && MemRegWrite) begin
-            ForwardRTMem <= 1;
+        if(ExecRTIn == MemDstReg && MemRegWrite) begin
+            ForwardRTMemExec <= 1;
         end
-        if(RSIn == WBDstReg && WBRegWrite) begin
-            ForwardRSWB <= 1;
+        if(ExecRSIn == WBDstReg && WBRegWrite) begin
+            ForwardRSWBExec <= 1;
         end
-        if(RTIn == WBDstReg && WBRegWrite) begin
-            ForwardRTWB <= 1;
+        if(ExecRTIn == WBDstReg && WBRegWrite) begin
+            ForwardRTWBExec <= 1;
+        end
+        if(DecRSIn == MemDstReg && MemRegWrite) begin
+            ForwardRSMemDec <= 1;
+        end
+        if(DecRTIn == MemDstReg && MemRegWrite) begin
+            ForwardRTMemDec <= 1;
+        end
+        if(DecRSIn == WBDstReg && WBRegWrite) begin
+            ForwardRSWBDec <= 1;
+        end
+        if(DecRTIn == WBDstReg && WBRegWrite) begin
+            ForwardRTWBDec <= 1;
         end
     end
 endmodule

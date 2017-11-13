@@ -20,13 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CheckEqual(inA, inB, Zero, Sign);
+module CheckEqual(inA, inB, BranchCtrl, Zero, Sign);
     input[31:0] inA, inB;
+    input BranchCtrl; //MSB of branch control signals
     output reg Zero, Sign;
     reg [31:0] result;
     
     always@(*) begin
-        result = inA - inB;
+        result <= 0;
+        Zero <= 0;
+        Sign <= 0;
+        case(BranchCtrl)
+            1'b0: begin //Branch dependant on A compared to zero
+                result = inA; //inA - 0. If sign(inA) == 1, less than zero
+            end
+            1'b1: begin //Branch dependant on A compared to B
+                result = inA - inB;           
+            end
+        endcase
         if(result == 0) begin
             Zero <= 1;
         end

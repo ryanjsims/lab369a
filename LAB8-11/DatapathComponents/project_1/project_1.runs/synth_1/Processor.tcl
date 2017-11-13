@@ -14,6 +14,9 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 read_verilog -library xil_defaultlib {
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/CheckEqual/IsZero.v
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/CheckEqual/CheckEqual.v
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ForwardingController/ForwardingController.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Controller.v
