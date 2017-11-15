@@ -22,12 +22,13 @@
 
 module ForwardingController(DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, 
                             MemDstReg, WBDstReg, MemRegWrite, WBRegWrite,
+                            Branch, Jump,
                             ForwardRSMemDec, ForwardRTMemDec, 
                             ForwardRSWBDec, ForwardRTWBDec,
                             ForwardRSMemExec, ForwardRTMemExec, 
                             ForwardRSWBExec, ForwardRTWBExec);
     input [4:0] DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, MemDstReg, WBDstReg;
-    input MemRegWrite, WBRegWrite;
+    input MemRegWrite, WBRegWrite, Branch, Jump;
     output reg ForwardRSMemDec,  ForwardRTMemDec,  ForwardRSWBDec,  ForwardRTWBDec;
     output reg ForwardRSMemExec, ForwardRTMemExec, ForwardRSWBExec, ForwardRTWBExec;
     
@@ -40,28 +41,28 @@ module ForwardingController(DecRSIn, DecRTIn, ExecRSIn, ExecRTIn,
         ForwardRTMemExec <= 0;
         ForwardRSWBExec <= 0;
         ForwardRTWBExec <= 0;
-        if(ExecRSIn == MemDstReg && MemRegWrite) begin
+        if(ExecRSIn == MemDstReg && MemRegWrite && ExecRSIn != 0) begin
             ForwardRSMemExec <= 1;
         end
-        if(ExecRTIn == MemDstReg && MemRegWrite) begin
+        if(ExecRTIn == MemDstReg && MemRegWrite && ExecRTIn != 0) begin
             ForwardRTMemExec <= 1;
         end
-        if(ExecRSIn == WBDstReg && WBRegWrite) begin
+        if(ExecRSIn == WBDstReg && WBRegWrite && ExecRSIn != 0) begin
             ForwardRSWBExec <= 1;
         end
-        if(ExecRTIn == WBDstReg && WBRegWrite) begin
+        if(ExecRTIn == WBDstReg && WBRegWrite && ExecRTIn != 0) begin
             ForwardRTWBExec <= 1;
         end
-        if(DecRSIn == MemDstReg && MemRegWrite) begin
+        if(DecRSIn == MemDstReg && MemRegWrite && (Branch || Jump)) begin
             ForwardRSMemDec <= 1;
         end
-        if(DecRTIn == MemDstReg && MemRegWrite) begin
+        if(DecRTIn == MemDstReg && MemRegWrite && (Branch || Jump)) begin
             ForwardRTMemDec <= 1;
         end
-        if(DecRSIn == WBDstReg && WBRegWrite) begin
+        if(DecRSIn == WBDstReg && WBRegWrite && (Branch || Jump)) begin
             ForwardRSWBDec <= 1;
         end
-        if(DecRTIn == WBDstReg && WBRegWrite) begin
+        if(DecRTIn == WBDstReg && WBRegWrite && (Branch || Jump)) begin
             ForwardRTWBDec <= 1;
         end
     end

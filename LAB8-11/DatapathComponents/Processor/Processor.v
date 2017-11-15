@@ -38,7 +38,7 @@ module Processor(
     wire DecodeWriteHI, DecodeWriteLO, DecodeRegWrite, DecodeMemToReg, DecodeMemRead;
     wire DecodeMemWrite, DecodeMTLO, DecodeMTHI, DecodeMFHI, DecodeDepRegWrite, DecodeShf;
     wire DecodeIsByte, DecodeSE, DecodeUseByte, DecodeUseHalf, DecodeLUI, DecodeJump, DecodeRAWrite;
-    wire DecodeExecuteRst, DecodeEqualZero, DecodeEqualSign;
+    wire DecodeExecuteRst, DecodeEqualZero, DecodeEqualSign, FetchDecodeRst;
     
     //Execute Wires
     wire [31:0] ExecuteSignExtend, ExecutePCAddrOut, ExecuteBranchOffset, ExecuteBranchAddr;
@@ -76,19 +76,19 @@ module Processor(
     //Forwarding/Hazard detection wires
     wire ForwardRSMemDec, ForwardRTMemDec, ForwardRSWBDec, ForwardRTWBDec;
     wire ForwardRSMemExec, ForwardRTMemExec, ForwardRSWBExec, ForwardRTWBExec;
-    wire PCStall, FetchStall, DecodeStall;
+    wire Stall;
     
     //Instruction Fetch
     Or2Gate JumpOrBranch(PCsrc, DecodeJump, BranchOut);
     Mux32Bit2To1 JumpOrBranchMux(AddrJumpOrBranch, DecodeBranchAddr, DecodeJumpAddr, DecodeJump);
     Mux32Bit2To1 PCSrcMux(PCAddrIn, PCAddrAdd4, AddrJumpOrBranch, PCsrc);
-    ProgramCounter pc(PCAddrIn, PCAddrOut, Rst, Clk);
+    ProgramCounter pc(PCAddrIn, PCAddrOut, Rst, Clk, Stall);
     PCAdder pcadd(PCAddrOut, PCAddrAdd4);
     InstructionMemory im(PCAddrOut, FetchInst);
     //END INSTRUCTION FETCH COMPONENTS
 
     
-    FetchDecodeReg IfId(Clk, DecodeExecuteRst, FetchInst, PCAddrAdd4, DecodeInst, DecodePCAddr);
+    FetchDecodeReg IfId(Clk, FetchDecodeRst, Stall, FetchInst, PCAddrAdd4, DecodeInst, DecodePCAddr);
     
     //Forwarding
     ForwardingController fwdCtrl(
@@ -100,6 +100,8 @@ module Processor(
                     WBDstAddr, 
                     MemoryRegWrite, 
                     WBRegWriteXorOut,
+                    DecodeBranch,
+                    DecodeJump,
                     ForwardRSMemDec, 
                     ForwardRTMemDec, 
                     ForwardRSWBDec, 
@@ -108,6 +110,16 @@ module Processor(
                     ForwardRTMemExec, 
                     ForwardRSWBExec, 
                     ForwardRTWBExec);
+    HazardDetectionUnit hzdDetect(Branch, 
+                BranchCtrl, 
+                Jump, 
+                ExecMemRead, 
+                DecRegDst, 
+                ExecRegWrite, 
+                DecodeRS, 
+                DecodeRT, 
+                ExecRD, 
+                Stall);
     //END FORWARDING COMPONENTS
     
     //Instruction Decode
@@ -161,7 +173,8 @@ module Processor(
                     DecodeJump,
                     DecodeBranchCtrl);
     And2Gate jalWrite(DecodeRegWrite, DecodeJump, DecodeRAWrite);
-    Or2Gate jalRst(DecodeExecuteRst, DecodeJump, Rst);
+    Or2Gate jalRst(FetchDecodeRst, DecodeJump, Rst);
+    Or2Gate stallRst(DecodeExecuteRst, FetchDecodeRst, Stall);
     ShiftLeft2 shf(DecodeSignExtend, DecodeBranchOffset);
     Adder32 addj(DecodePCAddr, DecodeBranchOffset, DecodeBranchAddr);
     CheckEqual takeBranch(DecodeRSData, DecodeRTData, DecodeBranchCtrl[2], DecodeEqualZero, DecodeEqualSign);

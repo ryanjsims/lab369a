@@ -23,6 +23,7 @@
 module DecodeExecuteReg(
     Clk,
     Rst,
+    Stall,
     ReadData1In, 
     ReadData2In,
     SignExtendIn,
@@ -82,7 +83,7 @@ module DecodeExecuteReg(
     input [4:0] rsIn, rtIn, rdIn;
     input [3:0] ALUControlIn;
     input [1:0] ALUSrcIn;
-    input Clk, RegDstIn, MFHIIn, RegWriteIn, Rst;
+    input Clk, RegDstIn, MFHIIn, RegWriteIn, Rst, Stall;
     input MTLOIn, MTHIIn, ReadHIIn, ReadLOIn, WriteHIIn, WriteLOIn;
     input DepRegWriteIn, MemReadIn, MemWriteIn, MemToRegIn, IsByteIn, SEIn;
     input UseByteIn, UseHalfIn, LUIIn;
@@ -187,7 +188,7 @@ module DecodeExecuteReg(
             UseHalf <= 1'b0;
             LUI <= 1'b0;
         end
-        else begin
+        else if(!Stall) begin
             ReadData1 <= ReadData1In;
             ReadData2 <= ReadData2In;
             SignExtend <= SignExtendIn;
@@ -215,6 +216,9 @@ module DecodeExecuteReg(
             UseByte <= UseByteIn;
             UseHalf <= UseHalfIn;
             LUI <= LUIIn;
+        end
+        else begin
+            //Stalled, do nothing
         end
     end
     always@(posedge Clk) begin
