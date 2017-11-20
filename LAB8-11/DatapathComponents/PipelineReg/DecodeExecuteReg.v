@@ -88,7 +88,7 @@ module DecodeExecuteReg(
     input DepRegWriteIn, MemReadIn, MemWriteIn, MemToRegIn, IsByteIn, SEIn;
     input UseByteIn, UseHalfIn, LUIIn;
     output reg [31:0] SignExtendOut, PCAddrOut, ReadData1Out, ReadData2Out;
-    output reg  [4:0] rsOut, rtOut, rdOut;
+    (* mark_debug = "true" *) output reg  [4:0] rsOut, rtOut, rdOut;
     output reg  [3:0] ALUControlOut;
     output reg  [1:0] ALUSrcOut;
     output reg RegDstOut, MFHIOut, RegWriteOut;
@@ -102,6 +102,14 @@ module DecodeExecuteReg(
     reg RegDst, MFHI, RegWrite;
     reg MTLO, MTHI, ReadHI, ReadLO, WriteHI, WriteLO;
     reg DepRegWrite, MemRead, MemWrite, MemToReg, IsByte, SE, UseByte, UseHalf, LUI;
+    
+    reg [31:0] prevSignExtend, prevPCAddr, prevReadData1, prevReadData2;
+    reg  [4:0] prevrs, prevrt, prevrd;
+    reg  [3:0] prevALUControl;
+    reg  [1:0] prevALUSrc;
+    reg prevRegDst, prevMFHI, prevRegWrite;
+    reg prevMTLO, prevMTHI, prevReadHI, prevReadLO, prevWriteHI, prevWriteLO;
+    reg prevDepRegWrite, prevMemRead, prevMemWrite, prevMemToReg, prevIsByte, prevSE, prevUseByte, prevUseHalf, prevLUI;
     initial begin
         ReadData1Out <= 32'd0;
         ReadData2Out <= 32'd0;
@@ -159,7 +167,7 @@ module DecodeExecuteReg(
         LUIOut <= 1'b0;
     end
     always@(*) begin
-        if(Rst) begin
+        if(Rst && Stall || Rst && !Stall) begin
             ReadData1 <= 32'd0;
             ReadData2 <= 32'd0;
             SignExtend <= 32'd0;
@@ -188,7 +196,7 @@ module DecodeExecuteReg(
             UseHalf <= 1'b0;
             LUI <= 1'b0;
         end
-        else if(!Stall) begin
+        else if(!Rst && !Stall) begin
             ReadData1 <= ReadData1In;
             ReadData2 <= ReadData2In;
             SignExtend <= SignExtendIn;
@@ -218,7 +226,33 @@ module DecodeExecuteReg(
             LUI <= LUIIn;
         end
         else begin
-            //Stalled, do nothing
+            ReadData1 <= prevReadData1;
+            ReadData2 <= prevReadData2;
+            SignExtend <= prevSignExtend;
+            PCAddr <= prevPCAddr;
+            rs <= prevrs;
+            rt <= prevrt;
+            rd <= prevrd;
+            RegDst <= prevRegDst;
+            ALUSrc <= prevALUSrc;
+            MFHI <= prevMFHI;
+            MTLO <= prevMTLO;
+            MTHI <= prevMTHI;
+            RegWrite <= prevRegWrite;
+            ReadHI <= prevReadHI;
+            ReadLO <= prevReadLO;
+            WriteHI <= prevWriteHI; 
+            WriteLO <= prevWriteLO;
+            DepRegWrite <= prevDepRegWrite;
+            ALUControl <= prevALUControl;
+            MemWrite <= prevMemWrite;
+            MemRead <= prevMemRead;
+            MemToReg <= prevMemToReg;
+            IsByte <= prevIsByte;
+            SE <= prevSE;
+            UseByte <= prevUseByte;
+            UseHalf <= prevUseHalf;
+            LUI <= prevLUI;
         end
     end
     always@(posedge Clk) begin
@@ -280,5 +314,32 @@ module DecodeExecuteReg(
             UseHalfOut <= UseHalf;
             LUIOut <= LUI;
         end
+        prevReadData1 <= ReadData1;
+        prevReadData2 <= ReadData2;
+        prevSignExtend <= SignExtend;
+        prevPCAddr <= PCAddr;
+        prevrs <= rs;
+        prevrt <= rt;
+        prevrd <= rd;
+        prevRegDst <= RegDst;
+        prevALUSrc <= ALUSrc;
+        prevMFHI <= MFHI;
+        prevMTLO <= MTLO;
+        prevMTHI <= MTHI;
+        prevRegWrite <= RegWrite;
+        prevReadHI <= ReadHI;
+        prevReadLO <= ReadLO;
+        prevWriteHI <= WriteHI; 
+        prevWriteLO <= WriteLO;
+        prevDepRegWrite <= DepRegWrite;
+        prevALUControl <= ALUControl;
+        prevMemWrite <= MemWrite;
+        prevMemRead <= MemRead;
+        prevMemToReg <= MemToReg;
+        prevIsByte <= IsByte;
+        prevSE <= SE;
+        prevUseByte <= UseByte;
+        prevUseHalf <= UseHalf;
+        prevLUI <= LUI;
     end
 endmodule

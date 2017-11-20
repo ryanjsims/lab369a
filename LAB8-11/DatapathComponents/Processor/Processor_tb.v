@@ -17,14 +17,18 @@
 module Processor_tb();
     reg clk, rst;
     always begin
-        #10
-        clk <= 0;
-        #10
-        clk <= 1;
+        #100
+        clk = 0;
+        #100
+        clk = 1;
     end
     Processor u0(clk, rst);
     initial begin
+        #1
         rst <= 1;
+        @(posedge clk)
+        #5
+        rst <= 0;
         @(posedge clk)
         #5
         rst <= 0;

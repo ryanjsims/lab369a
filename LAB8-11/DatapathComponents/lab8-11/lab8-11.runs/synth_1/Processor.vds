@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Nov 02 22:50:38 2017
-# Process ID: 15208
+# Start of session at: Mon Nov 20 12:48:36 2017
+# Process ID: 5728
 # Current directory: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.runs/synth_1
 # Command line: vivado.exe -log Processor.vds -mode batch -messageDb vivado.pb -notrace -source Processor.tcl
 # Log file: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.runs/synth_1/Processor.vds
@@ -15,16 +15,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15152 
+INFO: Helper process launched with PID 668 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 273.828 ; gain = 66.273
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 273.906 ; gain = 66.328
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Processor' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:17]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:24]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:25]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:29]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:59]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:68]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:46]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:48]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:61]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:70]
 INFO: [Synth 8-638] synthesizing module 'Or2Gate' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:23]
 INFO: [Synth 8-256] done synthesizing module 'Or2Gate' (1#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Or2Gate/Or2Gate.v:23]
 INFO: [Synth 8-638] synthesizing module 'Mux32Bit2To1' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit2To1.v:10]
@@ -35,46 +37,60 @@ INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (3#1) [D:/Users/Ry
 INFO: [Synth 8-638] synthesizing module 'PCAdder' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PCAdder.v:22]
 INFO: [Synth 8-256] done synthesizing module 'PCAdder' (4#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PCAdder.v:22]
 INFO: [Synth 8-638] synthesizing module 'InstructionMemory' [D:/Users/Ryan/Documents/ECE369a/lab369a/InstructionMemory.v:39]
+INFO: [Synth 8-3876] $readmem data file 'Instruction_memory.txt' is read successfully [D:/Users/Ryan/Documents/ECE369a/lab369a/InstructionMemory.v:53]
 INFO: [Synth 8-256] done synthesizing module 'InstructionMemory' (5#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/InstructionMemory.v:39]
 INFO: [Synth 8-638] synthesizing module 'FetchDecodeReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:23]
+INFO: [Synth 8-4471] merging register 'prev_instr_reg[31:0]' into 'instrOut_reg[31:0]' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:60]
+INFO: [Synth 8-4471] merging register 'prev_PCAddr_reg[31:0]' into 'PCAddrOut_reg[31:0]' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:61]
 INFO: [Synth 8-256] done synthesizing module 'FetchDecodeReg' (6#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/FetchDecodeReg.v:23]
+INFO: [Synth 8-638] synthesizing module 'ForwardingController' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ForwardingController/ForwardingController.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ForwardingController' (7#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ForwardingController/ForwardingController.v:23]
+INFO: [Synth 8-638] synthesizing module 'HazardDetectionUnit' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ForwardingController/HazardDetectionUnit.v:23]
+INFO: [Synth 8-256] done synthesizing module 'HazardDetectionUnit' (8#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ForwardingController/HazardDetectionUnit.v:23]
+INFO: [Synth 8-638] synthesizing module 'IsZero' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/CheckEqual/IsZero.v:23]
+INFO: [Synth 8-256] done synthesizing module 'IsZero' (9#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/CheckEqual/IsZero.v:23]
 INFO: [Synth 8-638] synthesizing module 'And2Gate' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:23]
-INFO: [Synth 8-256] done synthesizing module 'And2Gate' (7#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:23]
+INFO: [Synth 8-256] done synthesizing module 'And2Gate' (10#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/And2Gate/And2Gate.v:23]
 INFO: [Synth 8-638] synthesizing module 'Xor2Gate' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Xor2Gate' (8#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Xor2Gate' (11#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Xor2Gate/Xor2Gate.v:23]
 INFO: [Synth 8-638] synthesizing module 'Mux5Bit2To1' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Mux5Bit2To1' (9#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Mux5Bit2To1' (12#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux5Bit2To1.v:23]
 INFO: [Synth 8-638] synthesizing module 'RegisterFile' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:51]
-INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (10#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:51]
+INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (13#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/RegisterFile/RegisterFile.v:51]
 INFO: [Synth 8-638] synthesizing module 'SignExtension' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:8]
-INFO: [Synth 8-256] done synthesizing module 'SignExtension' (11#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:8]
-INFO: [Synth 8-638] synthesizing module 'Controller' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
-INFO: [Synth 8-226] default block is never used [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v:338]
-INFO: [Synth 8-256] done synthesizing module 'Controller' (12#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v:1]
-INFO: [Synth 8-638] synthesizing module 'DecodeExecuteReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'DecodeExecuteReg' (13#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SignExtension' (14#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtension.v:8]
+INFO: [Synth 8-638] synthesizing module 'Controller' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v:3]
+INFO: [Synth 8-226] default block is never used [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v:340]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (15#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v:3]
+INFO: [Synth 8-638] synthesizing module 'NotGate' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/NotGate/NotGate.v:23]
+INFO: [Synth 8-256] done synthesizing module 'NotGate' (16#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/NotGate/NotGate.v:23]
 INFO: [Synth 8-638] synthesizing module 'ShiftLeft2' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:23]
-INFO: [Synth 8-256] done synthesizing module 'ShiftLeft2' (14#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:23]
-INFO: [Synth 8-638] synthesizing module 'SignExtensionHalfByte' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:23]
-INFO: [Synth 8-256] done synthesizing module 'SignExtensionHalfByte' (15#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ShiftLeft2' (17#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ShiftLeft2/ShiftLeft2.v:23]
 INFO: [Synth 8-638] synthesizing module 'Adder32' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Adder32' (16#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Adder32' (18#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v:23]
+INFO: [Synth 8-638] synthesizing module 'CheckEqual' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/CheckEqual/CheckEqual.v:23]
+INFO: [Synth 8-256] done synthesizing module 'CheckEqual' (19#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/CheckEqual/CheckEqual.v:23]
+INFO: [Synth 8-638] synthesizing module 'BranchController' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:23]
+INFO: [Synth 8-256] done synthesizing module 'BranchController' (20#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:23]
+INFO: [Synth 8-638] synthesizing module 'DecodeExecuteReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:23]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:91]
+INFO: [Synth 8-256] done synthesizing module 'DecodeExecuteReg' (21#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/DecodeExecuteReg.v:23]
+INFO: [Synth 8-638] synthesizing module 'SignExtensionHalfByte' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SignExtensionHalfByte' (22#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/SignExtension/SignExtensionHalfByte.v:23]
 INFO: [Synth 8-638] synthesizing module 'Mux32Bit3To1' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:10]
-INFO: [Synth 8-256] done synthesizing module 'Mux32Bit3To1' (17#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Mux32Bit3To1' (23#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Mux32Bit2To1/Mux32Bit3To1.v:10]
 INFO: [Synth 8-638] synthesizing module 'ALU32Bit' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:37]
-INFO: [Synth 8-256] done synthesizing module 'ALU32Bit' (18#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:37]
+INFO: [Synth 8-256] done synthesizing module 'ALU32Bit' (24#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v:37]
 INFO: [Synth 8-638] synthesizing module 'ExecuteMemoryReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'ExecuteMemoryReg' (19#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ExecuteMemoryReg' (25#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/ExecuteMemoryReg.v:23]
 INFO: [Synth 8-638] synthesizing module 'DataMemory' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:38]
-INFO: [Synth 8-256] done synthesizing module 'DataMemory' (20#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:38]
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (26#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v:38]
 INFO: [Synth 8-638] synthesizing module 'HILORegisters' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:23]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:36]
-INFO: [Synth 8-256] done synthesizing module 'HILORegisters' (21#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:23]
-INFO: [Synth 8-638] synthesizing module 'BranchController' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:23]
-INFO: [Synth 8-256] done synthesizing module 'BranchController' (22#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/BranchController/BranchController.v:23]
+INFO: [Synth 8-256] done synthesizing module 'HILORegisters' (27#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/HILORegisters/HILORegisters.v:23]
 INFO: [Synth 8-638] synthesizing module 'MemoryWriteBackReg' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'MemoryWriteBackReg' (23#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Processor' (24#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:17]
+INFO: [Synth 8-256] done synthesizing module 'MemoryWriteBackReg' (28#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/PipelineReg/MemoryWriteBackReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (29#1) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:17]
 WARNING: [Synth 8-3331] design HILORegisters has unconnected port hi_read
 WARNING: [Synth 8-3331] design HILORegisters has unconnected port lo_read
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
@@ -97,10 +113,13 @@ WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ExecRegWrite
+WARNING: [Synth 8-3331] design ForwardingController has unconnected port Shf
+WARNING: [Synth 8-3331] design ForwardingController has unconnected port ZeroExtend
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 314.949 ; gain = 107.395
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 316.844 ; gain = 109.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -110,7 +129,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 314.949 ; gain = 107.395
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 316.844 ; gain = 109.266
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -126,22 +145,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 623.738 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 626.270 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "registers_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "registers_reg[1]" won't be mapped to RAM because it is too sparse
@@ -201,8 +220,9 @@ INFO: [Synth 8-5546] ROM "UseByte" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "UseHalf" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "LUI" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "BranchCtrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,28 +238,27 @@ Detailed RTL Component Info :
 	   2 Input     64 Bit       Adders := 2     
 	   3 Input     64 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 3     
-	   3 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 34    
 +---Registers : 
-	               32 Bit    Registers := 47    
-	                5 Bit    Registers := 4     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 35    
+	               32 Bit    Registers := 50    
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 49    
 +---Multipliers : 
 	                32x32  Multipliers := 1     
 +---RAMs : 
 	              32K Bit         RAMs := 1     
 +---Muxes : 
 	  16 Input     64 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 15    
+	   2 Input     32 Bit        Muxes := 37    
 	   4 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 8     
 	  15 Input      4 Bit        Muxes := 1     
 	  25 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
@@ -248,10 +267,10 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	  25 Input      2 Bit        Muxes := 13    
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 7     
 	   6 Input      2 Bit        Muxes := 1     
 	  16 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 44    
+	   2 Input      1 Bit        Muxes := 63    
 	   3 Input      1 Bit        Muxes := 10    
 	   4 Input      1 Bit        Muxes := 6     
 	  25 Input      1 Bit        Muxes := 20    
@@ -270,6 +289,8 @@ Module ProgramCounter
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 Module PCAdder 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -311,23 +332,35 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit        Muxes := 9     
 	   4 Input      1 Bit        Muxes := 6     
 	  25 Input      1 Bit        Muxes := 20    
-Module DecodeExecuteReg 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 4     
-	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 19    
-Module SignExtensionHalfByte 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 Module Adder32 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
+Module CheckEqual 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module DecodeExecuteReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 36    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 18    
+Module SignExtensionHalfByte 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 Module ALU32Bit 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -348,10 +381,9 @@ Detailed RTL Component Info :
 Module ExecuteMemoryReg 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 4     
-	                5 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 12    
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
 Module DataMemory 
 Detailed RTL Component Info : 
 +---RAMs : 
@@ -370,7 +402,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -383,7 +415,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 623.738 ; gain = 416.184
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -411,6 +443,7 @@ DSP Report: operator multResult0 is absorbed into DSP multResult0.
 DSP Report: Generating DSP multResult0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator multResult0 is absorbed into DSP multResult0.
 DSP Report: operator multResult0 is absorbed into DSP multResult0.
+INFO: [Synth 8-5545] ROM "takeBranch/Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design HILORegisters has unconnected port hi_read
 WARNING: [Synth 8-3331] design HILORegisters has unconnected port lo_read
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
@@ -433,6 +466,9 @@ WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ExecRegWrite
+WARNING: [Synth 8-3331] design ForwardingController has unconnected port Shf
+WARNING: [Synth 8-3331] design ForwardingController has unconnected port ZeroExtend
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[31]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[30]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[29]
@@ -456,9 +492,9 @@ WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[12
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 626.270 ; gain = 418.691
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -509,9 +545,9 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 626.270 ; gain = 418.691
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 623.738 ; gain = 416.184
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 626.270 ; gain = 418.691
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -525,10 +561,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 660.902 ; gain = 453.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 665.477 ; gain = 457.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 660.922 ; gain = 453.367
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 666.461 ; gain = 458.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -540,16 +576,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -566,7 +602,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -579,7 +615,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -591,25 +627,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -626,60 +662,71 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |BUFG      |     1|
-|2     |CARRY4    |    96|
+|2     |CARRY4    |   104|
 |3     |DSP48E1   |     8|
-|4     |LUT1      |   108|
-|5     |LUT2      |   305|
-|6     |LUT3      |   363|
-|7     |LUT4      |   204|
-|8     |LUT5      |   241|
-|9     |LUT6      |  1243|
-|10    |MUXF7     |   261|
-|11    |MUXF8     |     2|
+|4     |LUT1      |   102|
+|5     |LUT2      |   278|
+|6     |LUT3      |   754|
+|7     |LUT4      |   361|
+|8     |LUT5      |   373|
+|9     |LUT6      |  1202|
+|10    |MUXF7     |   322|
+|11    |MUXF8     |    24|
 |12    |RAM256X1S |   128|
-|13    |FDRE      |  1635|
+|13    |FDRE      |  1770|
 |14    |IBUF      |     2|
 +------+----------+------+
 
 Report Instance Areas: 
-+------+------------------+-------------------+------+
-|      |Instance          |Module             |Cells |
-+------+------------------+-------------------+------+
-|1     |top               |                   |  4597|
-|2     |  JumpOrBranchMux |Mux32Bit2To1__5    |    32|
-|3     |  PCSrcMux        |Mux32Bit2To1__6    |    32|
-|4     |  pc              |ProgramCounter     |    32|
-|5     |  pcadd           |PCAdder            |    39|
-|6     |  im              |InstructionMemory  |   144|
-|7     |  IfId            |FetchDecodeReg     |    64|
-|8     |  ShfRSMux        |Mux5Bit2To1__2     |     5|
-|9     |  ShfRTMux        |Mux5Bit2To1        |     5|
-|10    |  rf              |RegisterFile       |  1986|
-|11    |  JumpImmOrReg    |Mux32Bit2To1__7    |    32|
-|12    |  se              |SignExtension      |    17|
-|13    |  ctrl            |Controller         |    98|
-|14    |  de              |DecodeExecuteReg   |   166|
-|15    |  ALU             |ALU32Bit           |  1095|
-|16    |  em              |ExecuteMemoryReg   |   148|
-|17    |  data_memory     |DataMemory         |   265|
-|18    |  hilo            |HILORegisters      |   128|
-|19    |  memtoreg        |Mux32Bit2To1       |    32|
-|20    |  SEHBMux         |Mux32Bit2To1_1     |    32|
-|21    |  LUIMux          |Mux32Bit2To1__8    |    32|
-|22    |  MemDataOrSE     |Mux32Bit2To1_0     |    24|
-|23    |  RegDstMux       |Mux5Bit2To1__3     |     5|
-|24    |  addj            |Adder32            |    39|
-|25    |  mw              |MemoryWriteBackReg |   106|
-+------+------------------+-------------------+------+
++------+-------------------------+----------------------+------+
+|      |Instance                 |Module                |Cells |
++------+-------------------------+----------------------+------+
+|1     |top                      |                      |  5429|
+|2     |  JumpOrBranchMux        |Mux32Bit2To1__9       |    32|
+|3     |  PCSrcMux               |Mux32Bit2To1__10      |    32|
+|4     |  pc                     |ProgramCounter        |    33|
+|5     |  pcadd                  |PCAdder               |    39|
+|6     |  im                     |InstructionMemory     |    82|
+|7     |  IfId                   |FetchDecodeReg        |    65|
+|8     |  fwdCtrl                |ForwardingController  |    38|
+|9     |  hzdDetect              |HazardDetectionUnit   |    13|
+|10    |  depCheck               |IsZero                |     7|
+|11    |  ShfRSMux               |Mux5Bit2To1__1        |     5|
+|12    |  ShfRTMux               |Mux5Bit2To1__2        |     5|
+|13    |  rf                     |RegisterFile          |  1986|
+|14    |  DecodeForwardRSWBMux   |Mux32Bit2To1__11      |    32|
+|15    |  DecodeForwardRTWBMux   |Mux32Bit2To1__12      |    32|
+|16    |  JumpImmOrReg           |Mux32Bit2To1__13      |    32|
+|17    |  se                     |SignExtension         |    17|
+|18    |  ctrl                   |Controller            |    98|
+|19    |  addj                   |Adder32               |    40|
+|20    |  de                     |DecodeExecuteReg      |   668|
+|21    |  RegDstMux              |Mux5Bit2To1           |     5|
+|22    |  sehb                   |SignExtensionHalfByte |     8|
+|23    |  ExecuteForwardRSWBMux  |Mux32Bit2To1__14      |    32|
+|24    |  ExecuteForwardRTWBMux  |Mux32Bit2To1__15      |    32|
+|25    |  ExecuteForwardRSMemMux |Mux32Bit2To1__16      |    32|
+|26    |  ExecuteForwardRTMemMux |Mux32Bit2To1__17      |    32|
+|27    |  LUIMux                 |Mux32Bit2To1__18      |    32|
+|28    |  ALUImmMux              |Mux32Bit3To1          |    32|
+|29    |  ALU                    |ALU32Bit              |  1041|
+|30    |  em                     |ExecuteMemoryReg      |   116|
+|31    |  forwardWBMemMux        |Mux32Bit2To1__19      |    32|
+|32    |  data_memory            |DataMemory            |   265|
+|33    |  hilo                   |HILORegisters         |   128|
+|34    |  memtoreg               |Mux32Bit2To1          |    32|
+|35    |  mw                     |MemoryWriteBackReg    |   129|
+|36    |  takeBranch             |CheckEqual            |   156|
++------+-------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 44 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 683.781 ; gain = 167.438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
+Synthesis finished with 0 errors, 0 critical warnings and 47 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 689.297 ; gain = 172.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 689.297 ; gain = 481.719
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 234 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 242 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 64 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -687,8 +734,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 128 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+144 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 683.781 ; gain = 476.227
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 683.781 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 02 22:51:13 2017...
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.035 . Memory (MB): peak = 689.297 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 20 12:49:11 2017...

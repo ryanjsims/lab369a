@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Controller (instruction, ZeroExtend, Branch, ALUSrc, RegDst, ALUControl,
                      MemWrite, MemRead, MemToReg, RegWrite, mfhi, mthi, mtlo,
                      hi_read, hi_write, lo_read, lo_write, DepRegWrite, shf, isByte, SE,

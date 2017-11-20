@@ -27,7 +27,7 @@
 module ProgramCounter(Address, PCResult, Reset, Clk, Stall);
 
 	input [31:0] Address;
-	input Reset, Clk;
+	input Reset, Clk, Stall;
 
 	(* mark_debug = "true" *) output reg [31:0] PCResult;
     initial begin

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Thu Nov 02 22:51:13 2017
+| Date         : Mon Nov 20 12:49:11 2017
 | Host         : RyanDesktop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Processor_utilization_synth.rpt -pb Processor_utilization_synth.pb
 | Design       : Processor
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2699 |     0 |     63400 |  4.26 |
-|   LUT as Logic             | 2187 |     0 |     63400 |  3.45 |
+| Slice LUTs*                | 3048 |     0 |     63400 |  4.81 |
+|   LUT as Logic             | 2536 |     0 |     63400 |  4.00 |
 |   LUT as Memory            |  512 |     0 |     19000 |  2.69 |
 |     LUT as Distributed RAM |  512 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 1635 |     0 |    126800 |  1.29 |
-|   Register as Flip Flop    | 1635 |     0 |    126800 |  1.29 |
+| Slice Registers            | 1770 |     0 |    126800 |  1.40 |
+|   Register as Flip Flop    | 1770 |     0 |    126800 |  1.40 |
 |   Register as Latch        |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                   |  517 |     0 |     31700 |  1.63 |
-| F8 Muxes                   |  130 |     0 |     15850 |  0.82 |
+| F7 Muxes                   |  578 |     0 |     31700 |  1.82 |
+| F8 Muxes                   |  152 |     0 |     15850 |  0.96 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1635  |          Yes |       Reset |            - |
+| 1770  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,17 +149,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1635 |        Flop & Latch |
-| LUT6     | 1243 |                 LUT |
-| MUXF7    |  517 |               MuxFx |
+| FDRE     | 1770 |        Flop & Latch |
+| LUT6     | 1202 |                 LUT |
+| LUT3     |  754 |                 LUT |
+| MUXF7    |  578 |               MuxFx |
 | RAMS64E  |  512 |  Distributed Memory |
-| LUT3     |  363 |                 LUT |
-| LUT2     |  305 |                 LUT |
-| LUT5     |  241 |                 LUT |
-| LUT4     |  204 |                 LUT |
-| MUXF8    |  130 |               MuxFx |
-| CARRY4   |   96 |          CarryLogic |
-| LUT1     |   74 |                 LUT |
+| LUT5     |  373 |                 LUT |
+| LUT4     |  361 |                 LUT |
+| LUT2     |  278 |                 LUT |
+| MUXF8    |  152 |               MuxFx |
+| CARRY4   |  104 |          CarryLogic |
+| LUT1     |   69 |                 LUT |
 | DSP48E1  |    8 |    Block Arithmetic |
 | IBUF     |    2 |                  IO |
 | BUFG     |    1 |               Clock |

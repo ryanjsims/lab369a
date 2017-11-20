@@ -20,50 +20,32 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ForwardingController(DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, 
-                            MemDstReg, WBDstReg, MemRegWrite, WBRegWrite,
-                            Branch, Jump,
+module ForwardingController(DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, MemRTIn, 
+                            ExecDstReg, MemDstReg, WBDstReg, ExecRegWrite, MemRegWrite, WBRegWrite,
+                            Branch, Jump, Shf, ZeroExtend,
+                            ForwardRSExecDec, ForwardRTExecDec,
                             ForwardRSMemDec, ForwardRTMemDec, 
                             ForwardRSWBDec, ForwardRTWBDec,
                             ForwardRSMemExec, ForwardRTMemExec, 
-                            ForwardRSWBExec, ForwardRTWBExec);
-    input [4:0] DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, MemDstReg, WBDstReg;
-    input MemRegWrite, WBRegWrite, Branch, Jump;
-    output reg ForwardRSMemDec,  ForwardRTMemDec,  ForwardRSWBDec,  ForwardRTWBDec;
-    output reg ForwardRSMemExec, ForwardRTMemExec, ForwardRSWBExec, ForwardRTWBExec;
+                            ForwardRSWBExec, ForwardRTWBExec,
+                            ForwardRTWBMem);
+    input [4:0] DecRSIn, DecRTIn, ExecRSIn, ExecRTIn, ExecDstReg, MemRTIn, MemDstReg, WBDstReg;
+    input MemRegWrite, WBRegWrite, Branch, Jump, Shf, ZeroExtend, ExecRegWrite;
+    output ForwardRSMemDec,  ForwardRTMemDec,  ForwardRSWBDec,  ForwardRTWBDec;
+    output ForwardRSMemExec, ForwardRTMemExec, ForwardRSWBExec, ForwardRTWBExec;
+    output ForwardRTWBMem, ForwardRSExecDec, ForwardRTExecDec;
     
-    always@(*) begin
-        ForwardRSMemDec <= 0;
-        ForwardRTMemDec <= 0;
-        ForwardRSWBDec <= 0;
-        ForwardRTWBDec <= 0;
-        ForwardRSMemExec <= 0;
-        ForwardRTMemExec <= 0;
-        ForwardRSWBExec <= 0;
-        ForwardRTWBExec <= 0;
-        if(ExecRSIn == MemDstReg && MemRegWrite && ExecRSIn != 0) begin
-            ForwardRSMemExec <= 1;
-        end
-        if(ExecRTIn == MemDstReg && MemRegWrite && ExecRTIn != 0) begin
-            ForwardRTMemExec <= 1;
-        end
-        if(ExecRSIn == WBDstReg && WBRegWrite && ExecRSIn != 0) begin
-            ForwardRSWBExec <= 1;
-        end
-        if(ExecRTIn == WBDstReg && WBRegWrite && ExecRTIn != 0) begin
-            ForwardRTWBExec <= 1;
-        end
-        if(DecRSIn == MemDstReg && MemRegWrite && (Branch || Jump)) begin
-            ForwardRSMemDec <= 1;
-        end
-        if(DecRTIn == MemDstReg && MemRegWrite && (Branch || Jump)) begin
-            ForwardRTMemDec <= 1;
-        end
-        if(DecRSIn == WBDstReg && WBRegWrite && (Branch || Jump)) begin
-            ForwardRSWBDec <= 1;
-        end
-        if(DecRTIn == WBDstReg && WBRegWrite && (Branch || Jump)) begin
-            ForwardRTWBDec <= 1;
-        end
-    end
+    assign ForwardRSMemExec = (ExecRSIn == MemDstReg && MemRegWrite && ExecRSIn != 0);
+    assign ForwardRTMemExec = (ExecRTIn == MemDstReg && MemRegWrite && ExecRTIn != 0);
+    assign ForwardRSWBExec  = (ExecRSIn == WBDstReg && WBRegWrite && ExecRSIn != 0);
+    assign ForwardRTWBExec  = (ExecRTIn == WBDstReg && WBRegWrite && ExecRTIn != 0);
+    
+    assign ForwardRSExecDec = (DecRSIn == ExecDstReg && ExecRegWrite && (Branch || Jump) && DecRSIn != 0);
+    assign ForwardRTExecDec = (DecRTIn == ExecDstReg && ExecRegWrite && (Branch || Jump) && DecRTIn != 0);
+    assign ForwardRSMemDec  = (DecRSIn == MemDstReg && MemRegWrite && (Branch || Jump) && DecRSIn != 0);
+    assign ForwardRTMemDec  = (DecRTIn == MemDstReg && MemRegWrite && (Branch || Jump) && DecRTIn != 0);
+    assign ForwardRSWBDec   = (DecRSIn == WBDstReg && WBRegWrite && DecRSIn != 0);
+    assign ForwardRTWBDec   = (DecRTIn == WBDstReg && WBRegWrite && DecRTIn != 0);
+    
+    assign ForwardRTWBMem   = (MemRTIn == WBDstReg && WBRegWrite && MemRTIn != 0);
 endmodule

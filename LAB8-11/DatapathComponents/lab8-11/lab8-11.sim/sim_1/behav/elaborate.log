@@ -1,15 +1,40 @@
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 92baab12fd0a49c9ae751c73dcde3784 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Controller_tb_behav xil_defaultlib.Controller_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 92baab12fd0a49c9ae751c73dcde3784 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Processor_tb_behav xil_defaultlib.Processor_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Or2Gate
+Compiling module xil_defaultlib.Mux32Bit2To1
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.PCAdder
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.FetchDecodeReg
+Compiling module xil_defaultlib.ForwardingController
+Compiling module xil_defaultlib.HazardDetectionUnit
+Compiling module xil_defaultlib.IsZero
+Compiling module xil_defaultlib.And2Gate
+Compiling module xil_defaultlib.Xor2Gate
+Compiling module xil_defaultlib.Mux5Bit2To1
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.SignExtension
 Compiling module xil_defaultlib.Controller
-Compiling module xil_defaultlib.Controller_tb
+Compiling module xil_defaultlib.ShiftLeft2
+Compiling module xil_defaultlib.Adder32
+Compiling module xil_defaultlib.CheckEqual
+Compiling module xil_defaultlib.BranchController
+Compiling module xil_defaultlib.DecodeExecuteReg
+Compiling module xil_defaultlib.SignExtensionHalfByte
+Compiling module xil_defaultlib.Mux32Bit3To1
+Compiling module xil_defaultlib.ALU32Bit
+Compiling module xil_defaultlib.ExecuteMemoryReg
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.HILORegisters
+Compiling module xil_defaultlib.MemoryWriteBackReg
+Compiling module xil_defaultlib.Processor
+Compiling module xil_defaultlib.Processor_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Controller_tb_behav
+Built simulation snapshot Processor_tb_behav

@@ -26,6 +26,7 @@ module ExecuteMemoryReg(
     ALUResultIn,
     ALUResultHIIn,
     ReadData2In,
+    RTIn,
     WriteRegIn,
     MemWriteIn,
     MemReadIn,
@@ -40,6 +41,7 @@ module ExecuteMemoryReg(
     ALUResultOut,
     ALUResultHIOut,
     ReadData2Out,
+    RTOut,
     WriteRegOut,
     MemWriteOut,
     MemReadOut,
@@ -53,17 +55,17 @@ module ExecuteMemoryReg(
     UseHalfOut
     );
     input [31:0] ALUResultIn, ALUResultHIIn, ReadData2In;
-    input [4:0] WriteRegIn;
+    input [4:0] WriteRegIn, RTIn;
     input MemWriteIn, MemReadIn, MFHIIn, Clk;
     input RegWriteIn, WriteHIIn, WriteLOIn, DepRegWriteIn;
     input MemToRegIn, Rst, UseByteIn, UseHalfIn;
     output reg [31:0] ALUResultOut, ALUResultHIOut, ReadData2Out;
-    output reg [4:0] WriteRegOut;
+    output reg [4:0] WriteRegOut, RTOut;
     output reg MemReadOut, MemWriteOut, MFHIOut;
     output reg RegWriteOut, DepRegWriteOut, WriteHIOut;
     output reg WriteLOOut, MemToRegOut, UseByteOut, UseHalfOut;
     reg [31:0] ALUResult, ALUResultHI, ReadData2;
-    reg [4:0] WriteReg;
+    reg [4:0] WriteReg, RT;
     reg MemRead, MemWrite, MFHI;
     reg RegWrite, DepRegWrite, WriteHI;
     reg WriteLO, MemToReg, UseByte, UseHalf;
@@ -72,6 +74,7 @@ module ExecuteMemoryReg(
         ALUResultHIOut <= 0;
         ReadData2Out <= 0;
         WriteRegOut <= 0;
+        RTOut <= 0;
         MemReadOut <= 0;
         MemWriteOut <= 0;
         MFHIOut <= 0;
@@ -84,6 +87,7 @@ module ExecuteMemoryReg(
         ALUResultHI <= 0;
         ReadData2 <= 0;
         WriteReg <= 0;
+        RT <= 0;
         MemRead <= 0;
         MemWrite <= 0;
         MFHI <= 0;
@@ -103,6 +107,7 @@ module ExecuteMemoryReg(
             ALUResultHI <= 0;
             ReadData2 <= 0;
             WriteReg <= 0;
+            RT <= 0;
             MemRead <= 0;
             MemWrite <= 0;
             MFHI <= 0;
@@ -119,6 +124,7 @@ module ExecuteMemoryReg(
             ALUResultHI <= ALUResultHIIn;
             ReadData2 <= ReadData2In;
             WriteReg <= WriteRegIn;
+            RT <= RTIn;
             MemRead <= MemReadIn;
             MemWrite <= MemWriteIn;
             MFHI <= MFHIIn;
@@ -137,6 +143,7 @@ module ExecuteMemoryReg(
             ALUResultHIOut <= 0;
             ReadData2Out <= 0;
             WriteRegOut <= 0;
+            RTOut <= 0;
             MemReadOut <= 0;
             MemWriteOut <= 0;
             MFHIOut <= 0;
@@ -153,6 +160,7 @@ module ExecuteMemoryReg(
             ALUResultHIOut <= ALUResultHI;
             ReadData2Out <= ReadData2;
             WriteRegOut <= WriteReg;
+            RTOut <= RT;
             MemReadOut <= MemRead;
             MemWriteOut <= MemWrite;
             MFHIOut <= MFHI;

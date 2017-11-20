@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2015.4.2 (64-bit)
+# SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
+# IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
+# Start of session at: Wed Oct 18 14:00:46 2017
+# Process ID: 12124
+# Current directory: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8004 C:\Users\ryanjsims\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
+# Log file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/vivado.log
+# Journal file: C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.xpr
+reset_run impl_1 -noclean_dir 
+reset_run impl_1
+save_project_as project_1 C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/project_1 -force
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+close_design
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+source Processor_tb.tcl
+run 100 us
+add_wave {{/Processor_tb/u0/WBDstAddr}} 
+restart
+run 100 us
+save_wave_config {C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
+close_sim

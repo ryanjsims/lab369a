@@ -20,9 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module HazardDetectionUnit(Branch, BranchCtrl, Jump, ExecMemRead, DecRegDst, ExecRegWrite, DecodeRS, DecodeRT, ExecRD, StallOut);
-    input Branch, Jump, ExecMemRead, DecRegDst, ExecRegWrite, BranchCtrl;
-    input [4:0] DecodeRS, DecodeRT, ExecRD, MemRD;
+module HazardDetectionUnit(Branch, BranchCtrl, Jump, ExecMemRead, DecRegDst, ExecRegWrite, 
+                           ExecHIWrite, ExecLOWrite, DecHIRead, DecLORead, DecodeRS, DecodeRT, 
+                           ExecRD, DecMemWrite, StallOut);
+    input Branch, Jump, ExecMemRead, DecRegDst, ExecRegWrite, BranchCtrl, ExecHIWrite, ExecLOWrite, DecHIRead, DecLORead, DecMemWrite;
+    input [4:0] DecodeRS, DecodeRT, ExecRD;
     output reg StallOut;
     
     initial begin
@@ -33,8 +35,10 @@ module HazardDetectionUnit(Branch, BranchCtrl, Jump, ExecMemRead, DecRegDst, Exe
         if((Branch && ExecMemRead && DecodeRS == ExecRD && DecodeRS != 0) 
             || (Jump && DecRegDst && ExecMemRead && DecodeRS == ExecRD && DecodeRS != 0)
             || (Branch && ExecMemRead && BranchCtrl && DecodeRT == ExecRD && DecodeRT != 0)
-            || (Branch && ExecRegWrite && DecodeRS == ExecRD && DecodeRS != 0)
-            || (Jump && DecRegDst && ExecRegWrite && DecodeRS == ExecRD && DecodeRS != 0)) begin
+            || (ExecHIWrite && DecHIRead || ExecLOWrite && DecLORead)
+            || (DecMemWrite && ExecMemRead && DecodeRT == ExecRD && DecodeRT != 0)
+            //|| (Branch && ExecRegWrite && DecodeRS == ExecRD && DecodeRS != 0)
+            /*|| (Jump && DecRegDst && ExecRegWrite && DecodeRS == ExecRD && DecodeRS != 0)*/) begin
             StallOut <= 1;
         end
     end

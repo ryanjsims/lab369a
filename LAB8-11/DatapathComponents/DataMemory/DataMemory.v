@@ -55,12 +55,13 @@
                     | {32{MemRead}} & (32'h0000ffff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & ~{32{UseByte}} & {32{UseHalf}};
     initial begin
         data = 0;
-        memory[0] <= 0;
-        memory[1] <= 1;
-        memory[2] <= 2;
-        for(i = 3; i < 1024; i = i + 1) begin
+        for(i = 0; i < 1024; i = i + 1) begin
             memory[i] <= 0;
         end
+        for(i = 0; i < 12; i = i + 1) begin
+            memory[i] <= (i + 1) * 100;
+        end
+        
     end
     always@(posedge Clk) begin
         data = 0;
