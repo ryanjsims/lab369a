@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Controller
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Controller_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Controller_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
