@@ -61,6 +61,7 @@ module RegisterFile(ReadRegister1, ReadRegister2, WriteRegister, WriteData, Writ
 	   for(i = 0; i < 32; i = i + 1) begin
 	       registers[i] <= 0;
 	   end
+	   registers[29] = 32'd65532;
 	end
 	
 	always@(posedge Clk) begin

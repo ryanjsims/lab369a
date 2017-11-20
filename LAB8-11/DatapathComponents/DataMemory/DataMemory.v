@@ -48,19 +48,17 @@
     output [31:0] ReadData; // Contents of memory location at Address
     
     reg [31:0] data;
-    reg [31:0] memory [0:1023];
+    reg [31:0] memory [0:16383];
     
     assign ReadData = {32{MemRead}} & memory[Address[31:2]] & ~{32{UseByte}} & ~{32{UseHalf}}
                     | {32{MemRead}} & (32'h000000ff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & {32{UseByte}} & ~{32{UseHalf}}
                     | {32{MemRead}} & (32'h0000ffff & (memory[Address[31:2]] >> (8 * Address[1:0]))) & ~{32{UseByte}} & {32{UseHalf}};
     initial begin
         data = 0;
-        for(i = 0; i < 1024; i = i + 1) begin
+        for(i = 0; i < 16384; i = i + 1) begin
             memory[i] <= 0;
         end
-        for(i = 0; i < 12; i = i + 1) begin
-            memory[i] <= (i + 1) * 100;
-        end
+        $readmemh("vbsme_data.txt", memory);
         
     end
     always@(posedge Clk) begin

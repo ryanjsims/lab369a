@@ -13,7 +13,12 @@ set_property parent.project_path C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComp
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
+read_mem {
+  C:/Users/ryanjsims/lab369a/Lab4-7/vbsme.txt
+  C:/Users/ryanjsims/lab369a/Lab4-7/vbsme_data.txt
+}
 read_verilog -library xil_defaultlib {
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ForwardingController/HazardDetectionUnit.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/CheckEqual/IsZero.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/CheckEqual/CheckEqual.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ForwardingController/ForwardingController.v
@@ -40,6 +45,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/ALU32Bit/ALU32Bit.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Adder32/Adder32.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/DataMemory/DataMemory.v
+  C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/NotGate/NotGate.v
   C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v
 }
 read_xdc C:/Users/ryanjsims/lab369a/LAB8-11/DatapathComponents/constrants.xdc

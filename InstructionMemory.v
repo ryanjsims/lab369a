@@ -50,7 +50,7 @@ module InstructionMemory(Address, Instruction);
         for(i = 0; i < 1024; i = i + 1) begin
             memory[i] = 32'b00000000000000000000000000000000;
         end       
-        $readmemh("Instruction_memory.txt", memory);
+        $readmemh("vbsme.txt", memory);
     end
     
     
