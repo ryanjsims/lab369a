@@ -1,0 +1,3 @@
+fix lw -> beq (1 test case)
+stall more on add/others -> branches/jumps, and lw->sw (8 test cases total)
+lw -> beq/etc should be a 2x stall

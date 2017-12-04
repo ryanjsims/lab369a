@@ -1,0 +1,230 @@
+23bdfffc ->	main:		addi	$sp, $sp, -4
+afbf0000 ->			sw	$ra, 0($sp)
+34040000 ->			ori	$a0, $zero, 0
+34050010 ->			ori	$a1, $zero, 16
+34060090 ->			ori	$a2, $zero, 144
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+8fbf0000 ->			lw	$ra, 0($sp)
+23bd0004 ->			addi	$sp, $sp, 4
+03e00008 ->			jr	$ra
+340400a0 ->			ori	$a0, $zero, 160
+340500b0 ->			ori	$a1, $zero, 176
+340604b0 ->			ori	$a2, $zero, 1200
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+340404f0 ->			ori	$a0, $zero, 1264
+34050500 ->			ori	$a1, $zero, 1280
+34060900 ->			ori	$a2, $zero, 2304
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34040980 ->			ori	$a0, $zero, 2432
+34050990 ->			ori	$a1, $zero, 2448
+34060d90 ->			ori	$a2, $zero, 3472
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34040e10 ->			ori	$a0, $zero, 3600
+34050e20 ->			ori	$a1, $zero, 3616
+34061220 ->			ori	$a2, $zero, 4640
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34041260 ->			ori	$a0, $zero, 4704
+34051270 ->			ori	$a1, $zero, 4720
+34062270 ->			ori	$a2, $zero, 8816
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34042470 ->			ori	$a0, $zero, 9328
+34052480 ->			ori	$a1, $zero, 9344
+34063480 ->			ori	$a2, $zero, 13440
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+340434c0 ->			ori	$a0, $zero, 13504
+340534d0 ->			ori	$a1, $zero, 13520
+340644d0 ->			ori	$a2, $zero, 17616
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34044550 ->			ori	$a0, $zero, 17744
+34054560 ->			ori	$a1, $zero, 17760
+34064960 ->			ori	$a2, $zero, 18784
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+340449e0 ->			ori	$a0, $zero, 18912
+340549f0 ->			ori	$a1, $zero, 18928
+34064df0 ->			ori	$a2, $zero, 19952
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34044e30 ->			ori	$a0, $zero, 20016
+34054e40 ->			ori	$a1, $zero, 20032
+34065240 ->			ori	$a2, $zero, 21056
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34045340 ->			ori	$a0, $zero, 21312
+34055350 ->			ori	$a1, $zero, 21328
+34066350 ->			ori	$a2, $zero, 25424
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34046750 ->			ori	$a0, $zero, 26448
+34056760 ->			ori	$a1, $zero, 26464
+34066b60 ->			ori	$a2, $zero, 27488
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34046ba0 ->			ori	$a0, $zero, 27552
+34056bb0 ->			ori	$a1, $zero, 27568
+34067bb0 ->			ori	$a2, $zero, 31664
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+34047bf0 ->			ori	$a0, $zero, 31728
+34057c00 ->			ori	$a1, $zero, 31744
+34067c40 ->			ori	$a2, $zero, 31808
+0c000058 ->			jal	vbsme
+0c000053 ->			jal	print_result
+8fbf0000 ->			lw	$ra, 0($sp)
+23bd0004 ->			addi	$sp, $sp, 4
+03e00008 ->			jr	$ra
+00402020 ->	print_result:	add	$a0, $v0, $zero
+00602020 ->			add	$a0, $v1, $zero
+03e00008 ->			jr	$ra
+00402020 ->	print_val:	add	$a0, $v0, $zero
+03e00008 ->			jr	$ra
+34020000 ->	vbsme:		ori	$v0, $zero, 0
+34030000 ->			ori	$v1, $zero, 0
+8ca803fc ->			lw	$t0, 1020($a1)
+34080000 ->	loop:		ori	$t0, $zero, 0
+340a0000 ->			ori	$t2, $zero, 0
+8c8c0000 ->			lw	$t4, 0($a0)
+8c8e000c ->			lw	$t6, 12($a0)
+018e4822 ->			sub	$t1, $t4, $t6
+00094880 ->			sll	$t1, $t1, 2
+8c8d0004 ->			lw	$t5, 4($a0)
+8c8e0008 ->			lw	$t6, 8($a0)
+01ae5822 ->			sub	$t3, $t5, $t6
+000b5880 ->			sll	$t3, $t3, 2
+00008020 ->			add	$s0, $0, $0
+00008820 ->			add	$s1, $0, $0
+200dffff ->			addi	$t5, $0, -1
+23bdfff8 ->			addi	$sp, $sp, -8
+afa00000 ->			sw	$0, 0($sp)
+afa00004 ->			sw	$0, 4($sp)
+022c0018 ->	right:		mult	$s1, $t4
+23bdfff8 ->			addi	$sp, $sp, -8
+00009012 ->			mflo	$s2
+02509020 ->			add	$s2, $s2, $s0
+02459020 ->			add	$s2, $s2, $a1
+afbf0000 ->			sw	$ra, 0($sp)
+afa40004 ->			sw	$a0, 4($sp)
+0c0000c7 ->			jal	SAD
+8fbf0000 ->			lw	$ra, 0($sp)
+8fa40004 ->			lw	$a0, 4($sp)
+23bd0008 ->			addi	$sp, $sp, 8
+004d702b ->			sltu	$t6, $v0, $t5
+11c00003 ->			beq	$t6, $0, nextRight
+00406820 ->			add	$t5, $v0, $0
+afb00000 ->			sw	$s0, 0($sp)
+afb10004 ->			sw	$s1, 4($sp)
+22100004 ->	nextRight:	addi	$s0, $s0, 4
+0209702a ->			slt	$t6, $s0, $t1
+15c0ffef ->			bne	$t6, $0, right
+214a0004 ->			addi	$t2, $t2, 4
+022c0018 ->	down:		mult	$s1, $t4
+23bdfff8 ->			addi	$sp, $sp, -8
+00009012 ->			mflo	$s2
+02509020 ->			add	$s2, $s2, $s0
+02459020 ->			add	$s2, $s2, $a1
+afbf0000 ->			sw	$ra, 0($sp)
+afa40004 ->			sw	$a0, 4($sp)
+0c0000c7 ->			jal	SAD
+8fbf0000 ->			lw	$ra, 0($sp)
+8fa40004 ->			lw	$a0, 4($sp)
+23bd0008 ->			addi	$sp, $sp, 8
+004d702b ->			sltu	$t6, $v0, $t5
+11c00003 ->			beq	$t6, $0, nextDown
+00406820 ->			add	$t5, $v0, $0
+afb00000 ->			sw	$s0, 0($sp)
+afb10004 ->			sw	$s1, 4($sp)
+22310004 ->	nextDown:	addi	$s1, $s1, 4
+022b702a ->			slt	$t6, $s1, $t3
+15c0ffef ->			bne	$t6, $0, down
+2129fffc ->			addi	$t1, $t1, -4
+022c0018 ->	left:		mult	$s1, $t4
+23bdfff8 ->			addi	$sp, $sp, -8
+00009012 ->			mflo	$s2
+02509020 ->			add	$s2, $s2, $s0
+02459020 ->			add	$s2, $s2, $a1
+afbf0000 ->			sw	$ra, 0($sp)
+afa40004 ->			sw	$a0, 4($sp)
+0c0000c7 ->			jal	SAD
+8fbf0000 ->			lw	$ra, 0($sp)
+8fa40004 ->			lw	$a0, 4($sp)
+23bd0008 ->			addi	$sp, $sp, 8
+004d702b ->			sltu	$t6, $v0, $t5
+11c00003 ->			beq	$t6, $0, nextLeft
+00406820 ->			add	$t5, $v0, $0
+afb00000 ->			sw	$s0, 0($sp)
+afb10004 ->			sw	$s1, 4($sp)
+2210fffc ->	nextLeft:	addi	$s0, $s0, -4
+0110702a ->			slt	$t6, $t0, $s0
+15c0ffef ->			bne	$t6, $0, left
+216bfffc ->			addi	$t3, $t3, -4
+022c0018 ->	up:		mult	$s1, $t4
+23bdfff8 ->			addi	$sp, $sp, -8
+00009012 ->			mflo	$s2
+02509020 ->			add	$s2, $s2, $s0
+02459020 ->			add	$s2, $s2, $a1
+afbf0000 ->			sw	$ra, 0($sp)
+afa40004 ->			sw	$a0, 4($sp)
+0c0000c7 ->			jal	SAD
+8fbf0000 ->			lw	$ra, 0($sp)
+8fa40004 ->			lw	$a0, 4($sp)
+23bd0008 ->			addi	$sp, $sp, 8
+004d702b ->			sltu	$t6, $v0, $t5
+11c00003 ->			beq	$t6, $0, nextUp
+00406820 ->			add	$t5, $v0, $0
+afb00000 ->			sw	$s0, 0($sp)
+afb10004 ->			sw	$s1, 4($sp)
+2231fffc ->	nextUp:		addi	$s1, $s1, -4
+0151702a ->			slt	$t6, $t2, $s1
+15c0ffef ->			bne	$t6, $0, up
+21080004 ->			addi	$t0, $t0, 4
+0109702a ->			slt	$t6, $t0, $t1
+15c0ffb0 ->			bne	$t6, $0, spiral
+014b702a ->			slt	$t6, $t2, $t3
+15c0ffae ->			bne	$t6, $0, spiral
+8fa30000 ->			lw	$v1, 0($sp)
+8fa20004 ->			lw	$v0, 4($sp)
+23bd0008 ->			addi	$sp, $sp, 8
+00021082 ->			srl	$v0, $v0, 2
+00031882 ->			srl	$v1, $v1, 2
+03e00008 ->			jr	$ra
+00402020 ->	printVal:	add	$a0, $v0, $zero
+03e00008 ->			jr	$ra
+8c93000c ->	SAD:		lw	$s3, 12($a0)
+8c940008 ->			lw	$s4, 8($a0)
+22560000 ->			addi	$s6, $s2, 0
+20d70000 ->			addi	$s7, $a2, 0
+0000c020 ->			add	$t8, $0, $0
+00139880 ->			sll	$s3, $s3, 2
+226e0000 ->			addi	$t6, $s3, 0
+01d40018 ->			mult	$t6, $s4
+0000a812 ->			mflo	$s5
+22b5fffc ->			addi	$s5, $s5, -4
+02b7a820 ->			add	$s5, $s5, $s7
+000ca080 ->			sll	$s4, $t4, 2
+0293a022 ->			sub	$s4, $s4, $s3
+0277c820 ->			add	$t9, $s3, $s7
+2339fffc ->			addi	$t9, $t9, -4
+8ece0000 ->	newRow:		lw	$t6, 0($s6)
+8eef0000 ->			lw	$t7, 0($s7)
+01cf7022 ->			sub	$t6, $t6, $t7
+01c0782a ->			slt	$t7, $t6, $0
+11e00001 ->			beq	$t7, $0, Sum
+000e7022 ->			sub	$t6, $0, $t6
+030ec020 ->	Sum:		add	$t8, $t8, $t6
+16f90005 ->			bne	$s7, $t9, nextPixel
+02d4b020 ->			add	$s6, $s6, $s4
+0277c820 ->			add	$t9, $s3, $s7
+16f50002 ->			bne	$s7, $s5, nextPixel
+23020000 ->			addi	$v0, $t8, 0
+03e00008 ->			jr	$ra
+22d60004 ->	nextPixel:	addi	$s6, $s6, 4
+22f70004 ->			addi	$s7, $s7, 4
+080000d6 ->			j	newRow
