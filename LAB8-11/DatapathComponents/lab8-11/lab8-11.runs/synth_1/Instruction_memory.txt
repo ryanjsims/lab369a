@@ -1,63 +1,41 @@
-3c120000
-8e520000
-3c130000
-8e730004
-02538820
-0233a022
-02348822
-7233a002
-0233a022
-02538820
-7234b002
-02968822
-02568820
-3631aaaa
-00118a80
-22350000
-22b70000
-34120018
-8e510000
-0235a022
-0237b024
-0236b825
-02339022
-02554024
-02d24825
-02525020
-3c110000
-ae290004
-8e2a0004
-02339022
-02555825
-02526020
-02525025
-02eaa020
-3c090000
-8d280000
-8d2a0004
-ad2a0000
-ad280004
-8d280000
-8d2a0004
-34040018
-0800002d
-2004ffff
-2004ffff
-8c900004
-ac900000
-06010003
-22100001
-0601fffd
-0800003e
-2010ffff
-06000004
-20100001
-0010082a
-1420fffb
-0800003e
-06000003
-2010ffff
-0600fffd
-0800003e
-0800003d
-0800003e
+34120000	//	main:	ori	$s2, $zero, 0 ->	main:	ori	$s2, $zero, 0
+8e520000	//		lw	$s2, 0($s2) ->		lw	$s2, 0($s2)
+34130000	//		ori	$s3, $zero, 0 ->		ori	$s3, $zero, 0
+8e730004	//		lw	$s3, 4($s3) ->		lw	$s3, 4($s3)
+34110000	//		ori	$s1, $zero, 0 ->		ori	$s1, $zero, 0
+34140064	//		ori	$s4, $zero, 100 ->		ori	$s4, $zero, 100
+34120000	//		ori	$s2, $zero, 0 ->		ori	$s2, $zero, 0
+8e510000	//		lw	$s1, 0($s2) ->		lw	$s1, 0($s2)
+12910002	//		beq	$s4, $s1, pass ->		beq	$s4, $s1, pass
+341700ff	//	fail:	ori	$s7, $zero, 255 ->	fail:	ori	$s7, $zero, 255
+341600ff	//		ori	$s6, $zero, 255 ->		ori	$s6, $zero, 255
+341700aa	//	pass:	ori	$s7, $zero, 170 ->	pass:	ori	$s7, $zero, 170
+341600aa	//		ori	$s6, $zero, 170 ->		ori	$s6, $zero, 170
+34120000	//		ori	$s2, $zero, 0 ->		ori	$s2, $zero, 0
+3413004c	//		ori	$s3, $zero, 76 ->		ori	$s3, $zero, 76
+0272a020	//		add	$s4, $s3, $s2 ->		add	$s4, $s3, $s2
+02800008	//		jr	$s4 ->		jr	$s4
+341700ee	//	fail2:	ori	$s7, $zero, 238 ->	fail2:	ori	$s7, $zero, 238
+341600ee	//		ori	$s6, $zero, 238 ->		ori	$s6, $zero, 238
+341700bb	//	pass2:	ori	$s7, $zero, 187 ->	pass2:	ori	$s7, $zero, 187
+341600bb	//		ori	$s6, $zero, 187 ->		ori	$s6, $zero, 187
+34120000	//		ori	$s2, $zero, 0 ->		ori	$s2, $zero, 0
+3413006c	//		ori	$s3, $zero, 108 ->		ori	$s3, $zero, 108
+0272a022	//		sub	$s4, $s3, $s2 ->		sub	$s4, $s3, $s2
+02800008	//		jr	$s4 ->		jr	$s4
+341700ee	//	fail3:	ori	$s7, $zero, 238 ->	fail3:	ori	$s7, $zero, 238
+341600ee	//		ori	$s6, $zero, 238 ->		ori	$s6, $zero, 238
+341700bb	//	pass3:	ori	$s7, $zero, 187 ->	pass3:	ori	$s7, $zero, 187
+341600bb	//		ori	$s6, $zero, 187 ->		ori	$s6, $zero, 187
+34110000	//		ori	$s1, $zero, 0 ->		ori	$s1, $zero, 0
+8e310000	//		lw	$s1, 0($s1) ->		lw	$s1, 0($s1)
+ae370000	//		sw	$s7, 0($s1) ->		sw	$s7, 0($s1)
+8e320000	//		lw	$s2, 0($s1) ->		lw	$s2, 0($s1)
+12f20002	//		beq	$s7, $s2, pass4 ->		beq	$s7, $s2, pass4
+341700ee	//	fail4:	ori	$s7, $zero, 238 ->	fail4:	ori	$s7, $zero, 238
+341600ee	//		ori	$s6, $zero, 238 ->		ori	$s6, $zero, 238
+341700aa	//	pass4:	ori	$s7, $zero, 170 ->	pass4:	ori	$s7, $zero, 170
+341600aa	//		ori	$s6, $zero, 170 ->		ori	$s6, $zero, 170
+08000026	//	done:	j	done ->	done:	j	done
+08000027	//	error:	j	error ->	error:	j	error
+

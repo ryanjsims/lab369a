@@ -11,11 +11,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2525000000fs"></ZoomStartTime>
-      <ZoomEndTime time="3749000001fs"></ZoomEndTime>
-      <Cursor1Time time="2947000000fs"></Cursor1Time>
+      <ZoomStartTime time="1455200000fs"></ZoomStartTime>
+      <ZoomEndTime time="2653200001fs"></ZoomEndTime>
+      <Cursor1Time time="2085200000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="37" />
+   <WVObjectSize size="22" />
    <wvobject fp_name="/Processor_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -90,7 +90,30 @@
          <obj_property name="ObjectShortName">[2]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="vbus1693" type="vbus">
+   <wvobject fp_name="/Processor_tb/u0/WBWriteData" type="array">
+      <obj_property name="ElementShortName">WBWriteData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WBWriteData[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/WBRegWriteXorOut" type="logic">
+      <obj_property name="ElementShortName">WBRegWriteXorOut</obj_property>
+      <obj_property name="ObjectShortName">WBRegWriteXorOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/WBDstAddr" type="array">
+      <obj_property name="ElementShortName">WBDstAddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">WBDstAddr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/DecodePCAddr" type="array">
+      <obj_property name="ElementShortName">DecodePCAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DecodePCAddr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/MemoryReg2Data" type="array">
+      <obj_property name="ElementShortName">MemoryReg2Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemoryReg2Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus301" type="vbus">
       <obj_property name="label">DecodeRS</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
@@ -115,11 +138,7 @@
          <obj_property name="ObjectShortName">[21]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/DecodeReadData1" type="array">
-      <obj_property name="ElementShortName">DecodeReadData1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DecodeReadData1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="vbus1699" type="vbus">
+   <wvobject fp_name="vbus307" type="vbus">
       <obj_property name="label">DecodeRT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
@@ -144,254 +163,74 @@
          <obj_property name="ObjectShortName">[16]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/DecodeReadData2" type="array">
-      <obj_property name="ElementShortName">DecodeReadData2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DecodeReadData2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/WBWriteData" type="array">
-      <obj_property name="ElementShortName">WBWriteData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WBWriteData[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/WBRegWriteXorOut" type="logic">
-      <obj_property name="ElementShortName">WBRegWriteXorOut</obj_property>
-      <obj_property name="ObjectShortName">WBRegWriteXorOut</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/WBDstAddr" type="array">
-      <obj_property name="ElementShortName">WBDstAddr[4:0]</obj_property>
-      <obj_property name="ObjectShortName">WBDstAddr[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/HIout" type="array">
-      <obj_property name="ElementShortName">HIout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">HIout[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/LOout" type="array">
-      <obj_property name="ElementShortName">LOout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">LOout[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/DecodeRAWrite" type="logic">
-      <obj_property name="ElementShortName">DecodeRAWrite</obj_property>
-      <obj_property name="ObjectShortName">DecodeRAWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/DecodePCAddr" type="array">
-      <obj_property name="ElementShortName">DecodePCAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DecodePCAddr[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/MemoryReg2Data" type="array">
-      <obj_property name="ElementShortName">MemoryReg2Data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MemoryReg2Data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="vbus52" type="vbus">
-      <obj_property name="label">MemoryWriteAddr</obj_property>
+   <wvobject fp_name="vbus313" type="vbus">
+      <obj_property name="label">DecodeRD</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[31]" type="logic">
-         <obj_property name="ElementShortName">[31]</obj_property>
-         <obj_property name="ObjectShortName">[31]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[30]" type="logic">
-         <obj_property name="ElementShortName">[30]</obj_property>
-         <obj_property name="ObjectShortName">[30]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[29]" type="logic">
-         <obj_property name="ElementShortName">[29]</obj_property>
-         <obj_property name="ObjectShortName">[29]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[28]" type="logic">
-         <obj_property name="ElementShortName">[28]</obj_property>
-         <obj_property name="ObjectShortName">[28]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[27]" type="logic">
-         <obj_property name="ElementShortName">[27]</obj_property>
-         <obj_property name="ObjectShortName">[27]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[26]" type="logic">
-         <obj_property name="ElementShortName">[26]</obj_property>
-         <obj_property name="ObjectShortName">[26]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[25]" type="logic">
-         <obj_property name="ElementShortName">[25]</obj_property>
-         <obj_property name="ObjectShortName">[25]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[24]" type="logic">
-         <obj_property name="ElementShortName">[24]</obj_property>
-         <obj_property name="ObjectShortName">[24]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[23]" type="logic">
-         <obj_property name="ElementShortName">[23]</obj_property>
-         <obj_property name="ObjectShortName">[23]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[22]" type="logic">
-         <obj_property name="ElementShortName">[22]</obj_property>
-         <obj_property name="ObjectShortName">[22]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[21]" type="logic">
-         <obj_property name="ElementShortName">[21]</obj_property>
-         <obj_property name="ObjectShortName">[21]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[20]" type="logic">
-         <obj_property name="ElementShortName">[20]</obj_property>
-         <obj_property name="ObjectShortName">[20]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[19]" type="logic">
-         <obj_property name="ElementShortName">[19]</obj_property>
-         <obj_property name="ObjectShortName">[19]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[18]" type="logic">
-         <obj_property name="ElementShortName">[18]</obj_property>
-         <obj_property name="ObjectShortName">[18]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[17]" type="logic">
-         <obj_property name="ElementShortName">[17]</obj_property>
-         <obj_property name="ObjectShortName">[17]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[16]" type="logic">
-         <obj_property name="ElementShortName">[16]</obj_property>
-         <obj_property name="ObjectShortName">[16]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[15]" type="logic">
+      <wvobject fp_name="/Processor_tb/u0/DecodeInst[15]" type="logic">
          <obj_property name="ElementShortName">[15]</obj_property>
          <obj_property name="ObjectShortName">[15]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[14]" type="logic">
+      <wvobject fp_name="/Processor_tb/u0/DecodeInst[14]" type="logic">
          <obj_property name="ElementShortName">[14]</obj_property>
          <obj_property name="ObjectShortName">[14]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[13]" type="logic">
+      <wvobject fp_name="/Processor_tb/u0/DecodeInst[13]" type="logic">
          <obj_property name="ElementShortName">[13]</obj_property>
          <obj_property name="ObjectShortName">[13]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[12]" type="logic">
+      <wvobject fp_name="/Processor_tb/u0/DecodeInst[12]" type="logic">
          <obj_property name="ElementShortName">[12]</obj_property>
          <obj_property name="ObjectShortName">[12]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[11]" type="logic">
+      <wvobject fp_name="/Processor_tb/u0/DecodeInst[11]" type="logic">
          <obj_property name="ElementShortName">[11]</obj_property>
          <obj_property name="ObjectShortName">[11]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[10]" type="logic">
-         <obj_property name="ElementShortName">[10]</obj_property>
-         <obj_property name="ObjectShortName">[10]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[9]" type="logic">
-         <obj_property name="ElementShortName">[9]</obj_property>
-         <obj_property name="ObjectShortName">[9]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[8]" type="logic">
-         <obj_property name="ElementShortName">[8]</obj_property>
-         <obj_property name="ObjectShortName">[8]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[7]" type="logic">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[6]" type="logic">
-         <obj_property name="ElementShortName">[6]</obj_property>
-         <obj_property name="ObjectShortName">[6]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[5]" type="logic">
-         <obj_property name="ElementShortName">[5]</obj_property>
-         <obj_property name="ObjectShortName">[5]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[4]" type="logic">
-         <obj_property name="ElementShortName">[4]</obj_property>
-         <obj_property name="ObjectShortName">[4]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[3]" type="logic">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Processor_tb/u0/MemoryALUResult[2]" type="logic">
-         <obj_property name="ElementShortName">[2]</obj_property>
-         <obj_property name="ObjectShortName">[2]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/PCAddrIn" type="array">
-      <obj_property name="ElementShortName">PCAddrIn[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PCAddrIn[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/DecodeJumpAddr" type="array">
-      <obj_property name="ElementShortName">DecodeJumpAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DecodeJumpAddr[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Processor_tb/u0/ExecuteRS" type="array">
       <obj_property name="ElementShortName">ExecuteRS[4:0]</obj_property>
       <obj_property name="ObjectShortName">ExecuteRS[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ExecuteRSData" type="array">
-      <obj_property name="ElementShortName">ExecuteRSData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ExecuteRSData[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/Processor_tb/u0/ExecuteRT" type="array">
       <obj_property name="ElementShortName">ExecuteRT[4:0]</obj_property>
       <obj_property name="ObjectShortName">ExecuteRT[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ExecuteRTData" type="array">
-      <obj_property name="ElementShortName">ExecuteRTData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ExecuteRTData[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Processor_tb/u0/ExecuteDstAddr" type="array">
       <obj_property name="ElementShortName">ExecuteDstAddr[4:0]</obj_property>
       <obj_property name="ObjectShortName">ExecuteDstAddr[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ExecuteALUResult" type="array">
-      <obj_property name="ElementShortName">ExecuteALUResult[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ExecuteALUResult[31:0]</obj_property>
+   <wvobject fp_name="/Processor_tb/u0/MemoryDstAddr" type="array">
+      <obj_property name="ElementShortName">MemoryDstAddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">MemoryDstAddr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRSExecDec" type="logic">
-      <obj_property name="ElementShortName">ForwardRSExecDec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRSExecDec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRTExecDec" type="logic">
-      <obj_property name="ElementShortName">ForwardRTExecDec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRTExecDec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRSMemDec" type="logic">
-      <obj_property name="ElementShortName">ForwardRSMemDec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRSMemDec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRTMemDec" type="logic">
-      <obj_property name="ElementShortName">ForwardRTMemDec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRTMemDec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRSWBDec" type="logic">
-      <obj_property name="ElementShortName">ForwardRSWBDec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRSWBDec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRTWBDec" type="logic">
-      <obj_property name="ElementShortName">ForwardRTWBDec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRTWBDec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRSMemExec" type="logic">
-      <obj_property name="ElementShortName">ForwardRSMemExec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRSMemExec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRTMemExec" type="logic">
-      <obj_property name="ElementShortName">ForwardRTMemExec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRTMemExec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRSWBExec" type="logic">
-      <obj_property name="ElementShortName">ForwardRSWBExec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRSWBExec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRTWBExec" type="logic">
-      <obj_property name="ElementShortName">ForwardRTWBExec</obj_property>
-      <obj_property name="ObjectShortName">ForwardRTWBExec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Processor_tb/u0/ForwardRTWBMem" type="logic">
-      <obj_property name="ElementShortName">ForwardRTWBMem</obj_property>
-      <obj_property name="ObjectShortName">ForwardRTWBMem</obj_property>
+   <wvobject fp_name="/Processor_tb/u0/Stall" type="logic">
+      <obj_property name="ElementShortName">Stall</obj_property>
+      <obj_property name="ObjectShortName">Stall</obj_property>
    </wvobject>
    <wvobject fp_name="/Processor_tb/u0/DecodeInst" type="array">
       <obj_property name="ElementShortName">DecodeInst[31:0]</obj_property>
       <obj_property name="ObjectShortName">DecodeInst[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/BranchOut" type="logic">
+      <obj_property name="ElementShortName">BranchOut</obj_property>
+      <obj_property name="ObjectShortName">BranchOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/ExecuteMemRead" type="logic">
+      <obj_property name="ElementShortName">ExecuteMemRead</obj_property>
+      <obj_property name="ObjectShortName">ExecuteMemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/DecodeBranch" type="logic">
+      <obj_property name="ElementShortName">DecodeBranch</obj_property>
+      <obj_property name="ObjectShortName">DecodeBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/u0/DecodeBranchCtrl" type="array">
+      <obj_property name="ElementShortName">DecodeBranchCtrl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DecodeBranchCtrl[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

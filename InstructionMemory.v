@@ -44,13 +44,13 @@ module InstructionMemory(Address, Instruction);
     
     /* Please fill in the implementation here */
     
-    reg [31:0] memory [0:1023];
+    reg [31:0] memory [0:4095];
     integer i;
     initial begin
-        for(i = 0; i < 1024; i = i + 1) begin
+        for(i = 0; i < 4096; i = i + 1) begin
             memory[i] = 32'b00000000000000000000000000000000;
         end       
-        $readmemh("vbsme.txt", memory);
+        $readmemh("Instruction_memory.txt", memory);
     end
     
     

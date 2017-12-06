@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Mon Nov 20 12:49:47 2017
+| Date         : Tue Dec 05 22:38:18 2017
 | Host         : RyanDesktop running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Processor_control_sets_placed.rpt
 | Design       : Processor
@@ -22,7 +22,7 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    43 |
+| Number of unique control sets                            |    44 |
 | Unused register locations in slices containing registers |    10 |
 +----------------------------------------------------------+-------+
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              64 |           21 |
+| No           | No                    | No                     |              64 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             454 |          169 |
-| Yes          | No                    | No                     |            1088 |          438 |
+| No           | Yes                   | No                     |             454 |          161 |
+| Yes          | No                    | No                     |            1088 |          420 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              96 |           39 |
+| Yes          | Yes                   | No                     |              96 |           35 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -48,48 +48,49 @@ Table of Contents
 +----------------+---------------------------------------------+-----------------------------+------------------+----------------+
 |  Clock Signal  |                Enable Signal                |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
 +----------------+---------------------------------------------+-----------------------------+------------------+----------------+
-|  Clk_IBUF_BUFG | rf/registers[0][31]_i_1_n_0                 |                             |               15 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[3][31]_i_1_n_0                 |                             |               16 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[4][31]_i_1_n_0                 |                             |               10 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[6][31]_i_1_n_0                 |                             |               17 |             32 |
+|  Clk_IBUF_BUFG | hzdDetect/StallOut                          | Rst_IBUF                    |                8 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[3][31]_i_1_n_0                 |                             |               12 |             32 |
+|  Clk_IBUF_BUFG | data_memory/memory_reg_0_15_0_0_i_1_n_0     |                             |                8 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[4][31]_i_1_n_0                 |                             |                9 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[6][31]_i_1_n_0                 |                             |               16 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[1][31]_i_1_n_0                 |                             |                8 |             32 |
 |  Clk_IBUF_BUFG | rf/registers[7][31]_i_1_n_0                 |                             |               19 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[1][31]_i_1_n_0                 |                             |               12 |             32 |
-|  Clk_IBUF_BUFG | em/WriteHIOut                               |                             |               11 |             32 |
+|  Clk_IBUF_BUFG | em/WriteHIOut                               |                             |               13 |             32 |
 |  Clk_IBUF_BUFG | em/WriteLOOut                               |                             |               12 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[8][31]_i_1_n_0                 |                             |               17 |             32 |
-|  Clk_IBUF_BUFG | hzdDetect/StallOut                          | Rst_IBUF                    |               11 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[9][31]_i_1_n_0                 |                             |               17 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[8][31]_i_1_n_0                 |                             |               16 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[9][31]_i_1_n_0                 |                             |               20 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[0][31]_i_1_n_0                 |                             |               12 |             32 |
 |  Clk_IBUF_BUFG | rf/registers[10][31]_i_1_n_0                |                             |               11 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[11][31]_i_1_n_0                |                             |               12 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[12][31]_i_1_n_0                |                             |               11 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[13][31]_i_1_n_0                |                             |               12 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[14][31]_i_1_n_0                |                             |               11 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[15][31]_i_1_n_0                |                             |               15 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[16][31]_i_1_n_0                |                             |               14 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[17][31]_i_1_n_0                |                             |               14 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[18][31]_i_1_n_0                |                             |                8 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[19][31]_i_1_n_0                |                             |               10 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[5][31]_i_1_n_0                 |                             |               17 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[20][31]_i_1_n_0                |                             |               11 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[21][31]_i_1_n_0                |                             |               11 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[22][31]_i_1_n_0                |                             |               16 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[23][31]_i_1_n_0                |                             |               18 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[24][31]_i_1_n_0                |                             |                9 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[11][31]_i_1_n_0                |                             |                9 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[12][31]_i_1_n_0                |                             |               10 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[13][31]_i_1_n_0                |                             |                8 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[14][31]_i_1_n_0                |                             |               13 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[15][31]_i_1_n_0                |                             |               13 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[16][31]_i_1_n_0                |                             |               12 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[17][31]_i_1_n_0                |                             |               13 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[18][31]_i_1_n_0                |                             |               13 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[19][31]_i_1_n_0                |                             |               15 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[5][31]_i_1_n_0                 |                             |               15 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[20][31]_i_1_n_0                |                             |               10 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[21][31]_i_1_n_0                |                             |                9 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[22][31]_i_1_n_0                |                             |               17 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[23][31]_i_1_n_0                |                             |               16 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[24][31]_i_1_n_0                |                             |               10 |             32 |
 |  Clk_IBUF_BUFG | rf/registers[25][31]_i_1_n_0                |                             |                7 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[26][31]_i_1_n_0                |                             |                7 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[27][31]_i_1_n_0                |                             |               10 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[28][31]_i_1_n_0                |                             |                8 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[26][31]_i_1_n_0                |                             |                9 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[27][31]_i_1_n_0                |                             |                9 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[28][31]_i_1_n_0                |                             |               11 |             32 |
 |  Clk_IBUF_BUFG | rf/registers[29][31]_i_1_n_0                |                             |               17 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[2][31]_i_1_n_0                 |                             |               12 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[30][31]_i_1_n_0                |                             |               17 |             32 |
-|  Clk_IBUF_BUFG | rf/registers[31][31]_i_1_n_0                |                             |               14 |             32 |
-|  Clk_IBUF_BUFG | IfId/instrOut0                              | takeBranch/PCAddrOut_reg[0] |               28 |             64 |
-| ~Clk_IBUF_BUFG |                                             |                             |               21 |             64 |
+|  Clk_IBUF_BUFG | rf/registers[2][31]_i_1_n_0                 |                             |                7 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[30][31]_i_1_n_0                |                             |               18 |             32 |
+|  Clk_IBUF_BUFG | rf/registers[31][31]_i_1_n_0                |                             |               11 |             32 |
+|  Clk_IBUF_BUFG | IfId/instrOut0                              | takeBranch/PCAddrOut_reg[0] |               27 |             64 |
+| ~Clk_IBUF_BUFG |                                             |                             |               20 |             64 |
 |  Clk_IBUF_BUFG | data_memory/memory_reg_0_255_0_0_i_2_n_0    |                             |               32 |            128 |
 |  Clk_IBUF_BUFG | data_memory/memory_reg_256_511_0_0_i_1_n_0  |                             |               32 |            128 |
-|  Clk_IBUF_BUFG | data_memory/memory_reg_512_767_0_0_i_1_n_0  |                             |               32 |            128 |
 |  Clk_IBUF_BUFG | data_memory/memory_reg_768_1023_0_0_i_1_n_0 |                             |               32 |            128 |
-|  Clk_IBUF_BUFG |                                             | Rst_IBUF                    |               85 |            188 |
+|  Clk_IBUF_BUFG | data_memory/memory_reg_512_767_0_0_i_1_n_0  |                             |               32 |            128 |
+|  Clk_IBUF_BUFG |                                             | Rst_IBUF                    |               77 |            188 |
 |  Clk_IBUF_BUFG |                                             | takeBranch/Rst              |               84 |            266 |
 +----------------+---------------------------------------------+-----------------------------+------------------+----------------+
 

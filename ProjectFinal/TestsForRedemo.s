@@ -47,6 +47,16 @@ pass: ori $s7, $zero, 170        #pass: write 0xAA to s6, s7
          ori $s6, $zero, 238
   pass3: ori $s7, $zero, 187        #pass: write 0xBB to s6, s7
          ori $s6, $zero, 187
+  la	$s1, asize0
+  lw	$s1, 0($s1)
+  sw	$s7, 0($s1)
+  lw	$s2, 0($s1)
+  beq	$s7, $s2, pass4
+
+  fail4: ori $s7, $zero, 238        #failed: write 0xEE to s6, s7
+         ori $s6, $zero, 238
+  pass4: ori $s7, $zero, 170        #pass: write 0xAA to s6, s7
+         ori $s6, $zero, 170
 
 
         done:

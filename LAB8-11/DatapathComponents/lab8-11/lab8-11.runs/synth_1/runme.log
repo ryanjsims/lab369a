@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 668 
+INFO: Helper process launched with PID 10332 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 273.906 ; gain = 66.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 273.887 ; gain = 66.316
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Processor' [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:17]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/Processor/Processor.v:24]
@@ -111,14 +111,12 @@ WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[16]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
-WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ExecRegWrite
 WARNING: [Synth 8-3331] design ForwardingController has unconnected port Shf
 WARNING: [Synth 8-3331] design ForwardingController has unconnected port ZeroExtend
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 316.844 ; gain = 109.266
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 319.809 ; gain = 112.238
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -128,7 +126,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 316.844 ; gain = 109.266
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 319.809 ; gain = 112.238
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -144,22 +142,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 626.270 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 628.141 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "registers_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "registers_reg[1]" won't be mapped to RAM because it is too sparse
@@ -221,7 +219,7 @@ INFO: [Synth 8-5546] ROM "LUI" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "BranchCtrl" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -414,7 +412,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 626.270 ; gain = 418.691
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -464,8 +462,6 @@ WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[16]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
-WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ExecRegWrite
 WARNING: [Synth 8-3331] design ForwardingController has unconnected port Shf
 WARNING: [Synth 8-3331] design ForwardingController has unconnected port ZeroExtend
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[31]
@@ -486,14 +482,12 @@ WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[17
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[16]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[15]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[14]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[12]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 628.141 ; gain = 420.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -508,17 +502,17 @@ ROM:
 +------------------+------------+---------------+----------------+
 |Module Name       | RTL Object | Depth x Width | Implemented As | 
 +------------------+------------+---------------+----------------+
-|InstructionMemory | p_0_out    | 1024x32       | LUT            | 
-|InstructionMemory | p_0_out    | 1024x32       | LUT            | 
+|InstructionMemory | p_0_out    | 4096x32       | LUT            | 
+|InstructionMemory | p_0_out    | 4096x32       | LUT            | 
 +------------------+------------+---------------+----------------+
 
 
 Distributed RAM: Preliminary Mapping  Report (see note below)
-+------------+------------+-----------+----------------------+-------------------+
-|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives        | 
-+------------+------------+-----------+----------------------+-------------------+
-|DataMemory  | memory_reg | Implied   | 1 K x 32             | RAM256X1S x 128   | 
-+------------+------------+-----------+----------------------+-------------------+
++------------+------------+-----------+----------------------+----------------------------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives                       | 
++------------+------------+-----------+----------------------+----------------------------------+
+|DataMemory  | memory_reg | Implied   | 2 K x 32             | RAM16X1S x 32  RAM256X1S x 128   | 
++------------+------------+-----------+----------------------+----------------------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
@@ -544,9 +538,9 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 628.141 ; gain = 420.570
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 626.270 ; gain = 418.691
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 628.141 ; gain = 420.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -560,10 +554,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 665.477 ; gain = 457.898
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 672.172 ; gain = 464.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 666.461 ; gain = 458.883
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 672.188 ; gain = 464.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -575,16 +569,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -601,7 +595,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -614,7 +608,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -626,25 +620,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -663,32 +657,33 @@ Report Cell Usage:
 |1     |BUFG      |     1|
 |2     |CARRY4    |   104|
 |3     |DSP48E1   |     8|
-|4     |LUT1      |   102|
+|4     |LUT1      |   109|
 |5     |LUT2      |   278|
-|6     |LUT3      |   754|
-|7     |LUT4      |   361|
-|8     |LUT5      |   373|
-|9     |LUT6      |  1202|
-|10    |MUXF7     |   322|
+|6     |LUT3      |   791|
+|7     |LUT4      |   368|
+|8     |LUT5      |   364|
+|9     |LUT6      |  1166|
+|10    |MUXF7     |   305|
 |11    |MUXF8     |    24|
-|12    |RAM256X1S |   128|
-|13    |FDRE      |  1770|
-|14    |IBUF      |     2|
+|12    |RAM16X1S  |    32|
+|13    |RAM256X1S |   128|
+|14    |FDRE      |  1770|
+|15    |IBUF      |     2|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+-------------------------+----------------------+------+
 |      |Instance                 |Module                |Cells |
 +------+-------------------------+----------------------+------+
-|1     |top                      |                      |  5429|
+|1     |top                      |                      |  5450|
 |2     |  JumpOrBranchMux        |Mux32Bit2To1__9       |    32|
 |3     |  PCSrcMux               |Mux32Bit2To1__10      |    32|
 |4     |  pc                     |ProgramCounter        |    33|
 |5     |  pcadd                  |PCAdder               |    39|
-|6     |  im                     |InstructionMemory     |    82|
+|6     |  im                     |InstructionMemory     |    56|
 |7     |  IfId                   |FetchDecodeReg        |    65|
 |8     |  fwdCtrl                |ForwardingController  |    38|
-|9     |  hzdDetect              |HazardDetectionUnit   |    13|
+|9     |  hzdDetect              |HazardDetectionUnit   |    19|
 |10    |  depCheck               |IsZero                |     7|
 |11    |  ShfRSMux               |Mux5Bit2To1__1        |     5|
 |12    |  ShfRTMux               |Mux5Bit2To1__2        |     5|
@@ -711,30 +706,31 @@ Report Instance Areas:
 |29    |  ALU                    |ALU32Bit              |  1041|
 |30    |  em                     |ExecuteMemoryReg      |   116|
 |31    |  forwardWBMemMux        |Mux32Bit2To1__19      |    32|
-|32    |  data_memory            |DataMemory            |   265|
+|32    |  data_memory            |DataMemory            |   344|
 |33    |  hilo                   |HILORegisters         |   128|
 |34    |  memtoreg               |Mux32Bit2To1          |    32|
 |35    |  mw                     |MemoryWriteBackReg    |   129|
-|36    |  takeBranch             |CheckEqual            |   156|
+|36    |  takeBranch             |CheckEqual            |   151|
 +------+-------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 695.277 ; gain = 487.707
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 47 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 689.297 ; gain = 172.293
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 689.297 ; gain = 481.719
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 695.277 ; gain = 179.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 695.277 ; gain = 487.707
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 242 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 274 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 64 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 128 instances were transformed.
+  A total of 160 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
   RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 128 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-144 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
+144 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 689.297 ; gain = 481.719
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.035 . Memory (MB): peak = 689.297 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 20 12:49:11 2017...
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 695.277 ; gain = 487.707
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 695.277 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 05 22:37:49 2017...

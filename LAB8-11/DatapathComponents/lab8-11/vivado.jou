@@ -2,303 +2,30 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sun Nov 19 22:03:31 2017
-# Process ID: 11128
+# Start of session at: Tue Dec 05 20:36:45 2017
+# Process ID: 40480
 # Current directory: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10460 D:\Users\Ryan\Documents\ECE369a\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34908 D:\Users\Ryan\Documents\ECE369a\lab369a\LAB8-11\DatapathComponents\lab8-11\lab8-11.xpr
 # Log file: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/vivado.log
 # Journal file: D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/lab8-11.xpr
 update_compile_order -fileset sources_1
-add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ForwardingController/ForwardingController.v
-update_compile_order -fileset sources_1
-add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/ForwardingController/HazardDetectionUnit.v
-update_compile_order -fileset sources_1
-add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/CheckEqual/IsZero.v
-update_compile_order -fileset sources_1
-add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/CheckEqual/CheckEqual.v
-update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
 reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
 launch_runs impl_1
 wait_on_run impl_1
 launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-run 100 us
-restart
-add_wave {{/Processor_tb/u0/ExecuteMemWrite}} 
-add_wave {{/Processor_tb/u0/DecodeMemWrite}} 
-run 10 us
-restart
-add_wave {{/Processor_tb/u0/DecodeRSData}} 
-add_wave {{/Processor_tb/u0/DecodeRTData}} 
-add_wave {{/Processor_tb/u0/DecodeInst}} 
-run 5 us
-add_wave {{/Processor_tb/u0/DecodeReadData1}} 
-add_wave {{/Processor_tb/u0/DecodeReadData2}} 
-restart
-run 3 us
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-close_design
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-restart
-run 3 us
-run 3 us
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-close_sim
-refresh_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-close_sim
-close_design
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-add_wave {{/Processor_tb/u0/ForwardRSMemDec}} 
-add_wave {{/Processor_tb/u0/ForwardRSWBDec}} 
-add_wave {{/Processor_tb/u0/ForwardRTMemDec}} 
-add_wave {{/Processor_tb/u0/ForwardRTWBDec}} 
-restart
-run 3 us
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
 close_design
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-add_wave {{/Processor_tb/u0/ForwardRSMemDec}} {{/Processor_tb/u0/ForwardRSMemExec}} {{/Processor_tb/u0/ForwardRSWBDec}} {{/Processor_tb/u0/ForwardRSWBExec}} 
-restart
-run 3 us
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-run 3 us
-restart
-run 3 us
-close_sim
-launch_simulation
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-run 3 us
-close_sim
-close_sim
-close_design
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-close_sim
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-isim ptrace on
-close_sim
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-close_sim
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-close_sim
-launch_simulation
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-run 3 us
-close_sim
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-close_sim
-close_design
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-add_wave {{/Processor_tb/u0/ForwardRTMemDec}} 
-add_wave {{/Processor_tb/u0/ForwardRTMemExec}} 
-add_wave {{/Processor_tb/u0/ForwardRTWBDec}} 
-add_wave {{/Processor_tb/u0/ForwardRTWBExec}} 
-add_wave {{/Processor_tb/u0/ForwardRTWBMem}} 
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-restart
-run 3 us
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-close_sim
-close_design
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-launch_simulation -mode post-implementation -type timing
-close_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-synth_design -rtl -name rtl_1
-close_design
-close_design
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-source Processor_tb.tcl
-add_wave {{/Processor_tb/u0/ForwardRSMemExec}} 
-add_wave {{/Processor_tb/u0/ForwardRSWBExec}} 
-restart
-run 3 us
-add_wave {{/Processor_tb/u0/ExecuteRSData}} 
-add_wave {{/Processor_tb/u0/ExecuteRTData}} 
-add_wave {{/Processor_tb/u0/ExecuteRS}} 
-add_wave {{/Processor_tb/u0/ExecuteRT}} 
-add_wave {{/Processor_tb/u0/ExecuteRD}} 
-restart
-run 3 us
-add_wave {{/Processor_tb/u0/ExecuteALUResult}} 
-restart
-run 3 us
-add_wave {{/Processor_tb/u0/WBWriteData}} 
-add_wave {{/Processor_tb/u0/DecodeReadData1}} 
-add_wave {{/Processor_tb/u0/DecodeReadData2}} 
-add_wave {{/Processor_tb/u0/DecodeInst}} 
-create_wave_config
-add_wave {{/Processor_tb/u0/DecodeInst}} 
-add_wave {{/Processor_tb/u0/WBWriteData}} 
-add_wave {{/Processor_tb/u0/WBRegWriteXorOut}} 
-add_wave {{/Processor_tb/u0/WBDstAddr}} 
-add_wave {{/Processor_tb/u0/DecodeReadData1}} 
-add_wave {{/Processor_tb/u0/DecodeReadData2}} 
-add_wave {{/Processor_tb/u0/rf/\registers_reg[16]__0 }} 
-add_wave {{/Processor_tb/u0/rf/\registers_reg[17]__0 }} 
-add_wave {{/Processor_tb/u0/rf/\registers_reg[18]__0 }} 
-restart
-run 3 us
-add_wave {{/Processor_tb/clk}} 
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg}
-add_files -fileset sim_1 -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-set_property xsim.view {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg} [get_filesets sim_1]
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 100 us
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg}
-close_sim
-refresh_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 100 us
-add_wave {{/Processor_tb/u0/ForwardRTWBDec}} 
-add_wave {{/Processor_tb/u0/ForwardRSWBDec}} 
-add_wave {{/Processor_tb/u0/DecodeRSData}} 
-add_wave {{/Processor_tb/u0/DecodeRTData}} 
-restart
-run 100 us
-add_wave {{/Processor_tb/u0/rf/\registers_reg[0]__0 }} 
-restart
-run 100 us
-add_wave {{/Processor_tb/u0/ExecuteRSData}} 
-add_wave {{/Processor_tb/u0/ExecuteRTData}} 
-add_wave {{/Processor_tb/u0/ForwardRSWBExec}} 
-add_wave {{/Processor_tb/u0/ForwardRSMemExec}} 
-add_wave {{/Processor_tb/u0/ForwardRTMemExec}} 
-add_wave {{/Processor_tb/u0/ForwardRTWBExec}} 
-add_wave {{/Processor_tb/u0/ExecuteALUResult}} 
-add_wave {{/Processor_tb/u0/ExecuteALUControl}} 
-restart
-run 100 us
-add_wave {{/Processor_tb/u0/ExecuteALUSrc}} 
-restart
-run 20 us
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg}
-close_sim
-close_design
 launch_runs impl_1
 wait_on_run impl_1
 launch_simulation -mode post-implementation -type timing
@@ -307,8 +34,53 @@ open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathCompone
 source Processor_tb.tcl
 run 20 us
 reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_sim
+close_design
+launch_simulation -mode post-implementation -type timing
+open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
+source Processor_tb.tcl
+run 20 us
+add_wave {{/Processor_tb/u0/Stall}} 
+add_wave {{/Processor_tb/u0/DecodeInst}} 
+add_wave {{/Processor_tb/u0/MemoryDstAddr}} 
+restart
+run 20 us
+add_wave {{/Processor_tb/u0/BranchOut}} 
+add_wave {{/Processor_tb/u0/ExecuteMemRead}} 
+run all
+restart
+run 20 us
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
+close_sim
+launch_simulation -mode post-implementation -type timing
+open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
+source Processor_tb.tcl
+run 20 us
+add_wave {{/Processor_tb/u0/DecodeBranch}} 
+restart
+run 20 us
+add_wave {{/Processor_tb/u0/DecodeBranchCtrl}} 
+restart
+run 20 us
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
+close_sim
+refresh_design
+launch_simulation -mode post-implementation -type timing
+open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
+open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
+source Processor_tb.tcl
+run 20 us
+reset_run synth_1
 launch_runs impl_1
 wait_on_run impl_1
 close_sim
@@ -327,167 +99,6 @@ launch_simulation -mode post-implementation -type timing
 open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
 open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
 source Processor_tb.tcl
-close_sim
-close_design
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-close_sim
-close_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-close_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
 run 20 us
 close_sim
 close_design
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run impl_1 -noclean_dir 
-add_files -norecurse D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Instruction_memory.txt
-launch_runs impl_1
-wait_on_run impl_1
-reset_run impl_1 -noclean_dir 
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-close_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-close_sim
-close_design
-launch_simulation -mode post-implementation -type timing
-close_design
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-run 20 us
-add_wave {{/Processor_tb/u0/ForwardRSExecDec}} 
-add_wave {{/Processor_tb/u0/ForwardRTExecDec}} 
-restart
-run 20 us
-add_wave {{/Processor_tb/u0/ExecuteDstAddr}} 
-restart
-run 20 us
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-close_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-close_sim
-close_design
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-save_wave_config {D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg}
-close_sim
-close_design
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run impl_1 -noclean_dir 
-close [ open D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/NotGate/NotGate.v w ]
-add_files D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/NotGate/NotGate.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-close_sim
-close_design
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us
-close_sim
-close_design
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-set_property file_type {Data Files} [get_files  D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Instruction_memory.txt]
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/Processor_tb_time_impl.wcfg
-open_wave_config D:/Users/Ryan/Documents/ECE369a/lab369a/LAB8-11/DatapathComponents/lab8-11/RegFile.wcfg
-source Processor_tb.tcl
-run 20 us

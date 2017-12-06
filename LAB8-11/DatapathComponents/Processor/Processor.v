@@ -118,10 +118,11 @@ module Processor(
                     ForwardRSWBExec, 
                     ForwardRTWBExec,
                     ForwardRTWBMem);
-    HazardDetectionUnit hzdDetect(BranchOut, 
+    HazardDetectionUnit hzdDetect(DecodeBranch, 
                 DecodeBranchCtrl[2], 
                 DecodeJump, 
-                ExecuteMemRead, 
+                ExecuteMemRead,
+                MemoryMemRead,
                 DecodeRegDst, 
                 ExecuteRegWrite,
                 ExecuteWriteHI,
@@ -131,6 +132,7 @@ module Processor(
                 DecodeReadReg1, 
                 DecodeReadReg2, 
                 ExecuteDstAddr,
+                MemoryDstAddr,
                 DecodeMemWrite,
                 Stall);
     //END FORWARDING COMPONENTS
